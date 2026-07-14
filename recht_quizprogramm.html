@@ -1,0 +1,1099 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recht – Klausurquiz</title>
+  <style>
+    :root {
+      --bg: #f3f5f8;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --border: #d9dee8;
+      --primary: #244a7c;
+      --primary-dark: #193557;
+      --primary-soft: #eaf1f9;
+      --success: #17633a;
+      --success-bg: #e9f6ee;
+      --danger: #a02a2a;
+      --danger-bg: #fbecec;
+      --warning: #825d00;
+      --warning-bg: #fff7df;
+      --shadow: 0 10px 30px rgba(22, 34, 51, .08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    button, select, input { font: inherit; }
+    button { cursor: pointer; }
+    button:disabled { cursor: not-allowed; opacity: .55; }
+
+    .app {
+      width: min(980px, calc(100% - 28px));
+      margin: 28px auto 48px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #17365d, #2b5f96);
+      color: white;
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      letter-spacing: -.02em;
+    }
+
+    .header p {
+      margin: 8px 0 0;
+      color: rgba(255,255,255,.84);
+    }
+
+    .panel {
+      margin-top: 18px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .hidden { display: none !important; }
+
+    h2, h3 { line-height: 1.25; }
+    h2 { margin: 0 0 16px; font-size: 1.35rem; }
+    h3 { margin: 0 0 10px; font-size: 1.08rem; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .field-label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .help {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 6px 0 0;
+    }
+
+    select, input[type="number"] {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px 11px;
+      background: white;
+      color: var(--text);
+    }
+
+    .choice-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .choice-row label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 10px 15px;
+      font-weight: 700;
+      background: #eef1f5;
+      color: var(--text);
+    }
+
+    .btn:hover:not(:disabled) { filter: brightness(.97); }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover:not(:disabled) { background: var(--primary-dark); }
+    .btn-outline { background: white; border-color: var(--border); }
+    .btn-danger { background: var(--danger-bg); color: var(--danger); border-color: #efcaca; }
+
+    .bank-status {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      background: var(--warning-bg);
+      color: var(--warning);
+      border: 1px solid #efd99e;
+    }
+
+    .bank-status.ok {
+      background: var(--success-bg);
+      color: var(--success);
+      border-color: #bddfc9;
+    }
+
+    .quiz-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .progress-shell {
+      height: 10px;
+      background: #e7ebf1;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: var(--primary);
+      transition: width .2s ease;
+    }
+
+    .timer {
+      font-variant-numeric: tabular-nums;
+      font-weight: 800;
+      border-radius: 9px;
+      padding: 7px 10px;
+      background: #eef3f9;
+      color: var(--primary-dark);
+    }
+
+    .question-meta {
+      color: var(--muted);
+      font-size: .92rem;
+      margin-bottom: 8px;
+    }
+
+    .question-text {
+      white-space: pre-line;
+      font-size: 1.16rem;
+      font-weight: 750;
+      margin: 0 0 18px;
+    }
+
+    .answers {
+      display: grid;
+      gap: 10px;
+    }
+
+    .answer {
+      display: grid;
+      grid-template-columns: 20px 34px minmax(0, 1fr);
+      gap: 11px;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      background: white;
+      transition: border-color .15s ease, background .15s ease, transform .08s ease;
+    }
+
+    .answer:hover { border-color: #9fadc1; }
+    .answer:active { transform: scale(.998); }
+    .answer input { margin: 0; }
+
+    .answer-text {
+      min-width: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      line-height: 1.45;
+    }
+
+    .letter {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #edf1f6;
+      font-weight: 800;
+    }
+
+    .answer.selected {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .answer.correct {
+      border-color: #74b489;
+      background: var(--success-bg);
+    }
+
+    .answer.incorrect {
+      border-color: #d98a8a;
+      background: var(--danger-bg);
+    }
+
+    .feedback {
+      margin-top: 16px;
+      padding: 13px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      white-space: pre-line;
+    }
+
+    .feedback.success {
+      background: var(--success-bg);
+      border-color: #bddfc9;
+      color: var(--success);
+    }
+
+    .feedback.error {
+      background: var(--danger-bg);
+      border-color: #efcaca;
+      color: var(--danger);
+    }
+
+    .feedback.neutral {
+      background: #f5f7fa;
+      color: var(--muted);
+    }
+
+    .result-score {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 16px 0 20px;
+    }
+
+    .score-box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+      background: #fafbfc;
+    }
+
+    .score-value {
+      display: block;
+      font-size: 1.45rem;
+      font-weight: 850;
+      color: var(--primary-dark);
+    }
+
+    .score-label {
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    .review-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .review-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .review-item.correct-review { border-left: 5px solid #4f9b68; }
+    .review-item.incorrect-review { border-left: 5px solid #c34d4d; }
+
+    .review-title {
+      font-weight: 800;
+      white-space: pre-line;
+      margin-bottom: 8px;
+    }
+
+    .review-detail {
+      color: var(--muted);
+      font-size: .93rem;
+      white-space: pre-line;
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    @media (max-width: 720px) {
+      .grid, .result-score { grid-template-columns: 1fr; }
+      .panel { padding: 17px; }
+      .quiz-topline { align-items: flex-start; }
+      .answer {
+        grid-template-columns: 18px 30px minmax(0, 1fr);
+        gap: 8px;
+        padding: 11px 9px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Recht – Klausurquiz</h1>
+      <p>Single- und Multiple-Choice · zufällige Fragen- und Antwortreihenfolge</p>
+    </header>
+
+    <section id="setupPanel" class="panel">
+      <h2>Quiz konfigurieren</h2>
+
+      <div class="field" style="margin-bottom:16px">
+        <label class="field-label" for="bankSelect">Fragendatenbank auswählen</label>
+        <select id="bankSelect">
+          <option value="">Bitte eine Datenbank auswählen</option>
+          <option value="recht_fragenkatalog_allgemein_136_geprueft.json">Allgemeines Recht – 136 Fragen</option>
+          <option value="recht_fragenkatalog_europarecht_41_geprueft.json">Europarecht – 41 Fragen</option>
+        </select>
+        <p class="help">Die ausgewählte JSON-Datei wird aus demselben Verzeichnis wie diese HTML-Datei geladen.</p>
+      </div>
+
+      <div id="bankStatus" class="bank-status">
+        Noch keine Fragenbank geladen.
+      </div>
+
+      <div class="grid" style="margin-top:16px">
+        <div class="field">
+          <span class="field-label">Fragenumfang</span>
+          <select id="questionCount" disabled>
+            <option value="all">Alle Fragen</option>
+          </select>
+          <p class="help">Die Fragen werden bei jedem Start neu gemischt.</p>
+        </div>
+
+        <div class="field">
+          <span class="field-label">Fragenpool</span>
+          <div class="choice-row">
+            <label><input type="radio" name="pool" value="all" checked> Alle Fragen</label>
+            <label><input type="radio" name="pool" value="errors"> Nur Fehlerfragen</label>
+          </div>
+          <p class="help">Fehlerfragen werden lokal in diesem Browser gespeichert.</p>
+        </div>
+
+        <div class="field">
+          <span class="field-label">Modus</span>
+          <div class="choice-row">
+            <label><input type="radio" name="mode" value="learn" checked> Lernmodus</label>
+            <label><input type="radio" name="mode" value="exam"> Prüfungsmodus</label>
+          </div>
+          <p class="help">Im Lernmodus erfolgt die Rückmeldung sofort, im Prüfungsmodus erst am Ende.</p>
+        </div>
+
+        <div class="field">
+          <span class="field-label">Zeitbegrenzung</span>
+          <label class="choice-row" style="margin-bottom:8px">
+            <input id="timerEnabled" type="checkbox"> Timer aktivieren
+          </label>
+          <input id="timerMinutes" type="number" min="1" max="600" value="60" aria-label="Minuten">
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="startBtn" class="btn btn-primary" disabled>Quiz starten</button>
+        <button id="exportBtn" class="btn btn-outline" disabled>Fragenbank exportieren</button>
+        <button id="clearBankBtn" class="btn btn-danger" disabled>Gespeicherte Fragenbank löschen</button>
+      </div>
+
+      <p class="footer-note">
+        Die Fragenbank bleibt ausschließlich im lokalen Browser-Speicher. Es werden keine Daten übertragen.
+      </p>
+    </section>
+
+    <section id="quizPanel" class="panel hidden">
+      <div class="quiz-topline">
+        <div>
+          <strong id="progressText">Frage 1 von 1</strong>
+          <div id="questionType" class="question-meta"></div>
+        </div>
+        <div id="timerDisplay" class="timer hidden">00:00</div>
+      </div>
+
+      <div class="progress-shell"><div id="progressBar" class="progress-bar"></div></div>
+
+      <div id="sourceHint" class="question-meta"></div>
+      <p id="questionText" class="question-text"></p>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback hidden"></div>
+
+      <div class="button-row">
+        <button id="checkBtn" class="btn btn-primary">Antwort prüfen</button>
+        <button id="prevBtn" class="btn btn-outline">Zurück</button>
+        <button id="nextBtn" class="btn btn-primary">Weiter</button>
+        <button id="finishBtn" class="btn btn-outline">Quiz beenden</button>
+      </div>
+    </section>
+
+    <section id="resultPanel" class="panel hidden">
+      <h2>Auswertung</h2>
+      <div id="resultMessage"></div>
+
+      <div class="result-score">
+        <div class="score-box">
+          <span id="scoreCorrect" class="score-value">0</span>
+          <span class="score-label">richtig</span>
+        </div>
+        <div class="score-box">
+          <span id="scoreWrong" class="score-value">0</span>
+          <span class="score-label">falsch</span>
+        </div>
+        <div class="score-box">
+          <span id="scorePercent" class="score-value">0 %</span>
+          <span class="score-label">Ergebnis</span>
+        </div>
+        <div class="score-box">
+          <span id="scoreTime" class="score-value">00:00</span>
+          <span class="score-label">Bearbeitungszeit</span>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <button id="restartBtn" class="btn btn-primary">Neues Quiz</button>
+        <button id="retryErrorsBtn" class="btn btn-outline">Fehlerfragen wiederholen</button>
+        <button id="showReviewBtn" class="btn btn-outline">Detailauswertung anzeigen</button>
+      </div>
+
+      <div id="reviewList" class="review-list hidden"></div>
+    </section>
+  </main>
+
+<script>
+(() => {
+  "use strict";
+
+  const STORAGE_BANK = "rechtQuiz.questionBank.v1";
+  const STORAGE_STATS = "rechtQuiz.stats.v1";
+  const letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+
+  let questionBank = [];
+  let state = null;
+  let timerHandle = null;
+
+  const els = Object.fromEntries(
+    [...document.querySelectorAll("[id]")].map(el => [el.id, el])
+  );
+
+  function secureRandomInt(maxExclusive) {
+    if (maxExclusive <= 0) return 0;
+    if (window.crypto?.getRandomValues) {
+      const limit = Math.floor(0x100000000 / maxExclusive) * maxExclusive;
+      const values = new Uint32Array(1);
+      do {
+        window.crypto.getRandomValues(values);
+      } while (values[0] >= limit);
+      return values[0] % maxExclusive;
+    }
+    return Math.floor(Math.random() * maxExclusive);
+  }
+
+  function shuffle(array) {
+    const copy = [...array];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const j = secureRandomInt(i + 1);
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function normalizeBank(raw) {
+    const source = Array.isArray(raw) ? raw : raw?.questions;
+    if (!Array.isArray(source) || source.length === 0) {
+      throw new Error("Die Datei enthält keine Fragenliste.");
+    }
+
+    const ids = new Set();
+    return source.map((q, index) => {
+      if (!q || typeof q.question !== "string" || !q.question.trim()) {
+        throw new Error(`Frage ${index + 1}: Fragetext fehlt.`);
+      }
+      if (!Array.isArray(q.answers) || q.answers.length < 2) {
+        throw new Error(`Frage ${index + 1}: Mindestens zwei Antworten erforderlich.`);
+      }
+
+      const id = q.id ?? index + 1;
+      const normalizedId = String(id);
+      if (ids.has(normalizedId)) {
+        throw new Error(`Doppelte Fragen-ID: ${normalizedId}`);
+      }
+      ids.add(normalizedId);
+
+      const answers = q.answers.map((a, answerIndex) => {
+        if (!a || typeof a.text !== "string" || !a.text.trim()) {
+          throw new Error(`Frage ${index + 1}, Antwort ${answerIndex + 1}: Text fehlt.`);
+        }
+        return {
+          uid: String(a.uid ?? `q${normalizedId}_${answerIndex + 1}`),
+          sourceLetter: a.sourceLetter ?? null,
+          text: a.text.trim(),
+          correct: Boolean(a.correct)
+        };
+      });
+
+      if (!answers.some(a => a.correct)) {
+        throw new Error(`Frage ${index + 1}: Keine richtige Antwort markiert.`);
+      }
+
+      return {
+        id: normalizedId,
+        question: q.question.trim(),
+        answers,
+        explanation: typeof q.explanation === "string" ? q.explanation.trim() : "",
+        page: q.page ?? null,
+        source: q.source ?? null
+      };
+    });
+  }
+
+  function saveBank() {
+    localStorage.setItem(STORAGE_BANK, JSON.stringify(questionBank));
+  }
+
+  function loadSavedBank() {
+    try {
+      const saved = localStorage.getItem(STORAGE_BANK);
+      if (!saved) return;
+      questionBank = normalizeBank(JSON.parse(saved));
+      updateBankUI(`Gespeicherte Fragenbank geladen: ${questionBank.length} Fragen.`, true);
+    } catch (error) {
+      console.error(error);
+      localStorage.removeItem(STORAGE_BANK);
+      updateBankUI("Die gespeicherte Fragenbank war beschädigt und wurde entfernt.", false);
+    }
+  }
+
+  function loadStats() {
+    try {
+      const stats = JSON.parse(localStorage.getItem(STORAGE_STATS) || "{}");
+      return {
+        errorIds: Array.isArray(stats.errorIds) ? stats.errorIds.map(String) : [],
+        attempts: Number(stats.attempts) || 0
+      };
+    } catch {
+      return { errorIds: [], attempts: 0 };
+    }
+  }
+
+  function saveStats(stats) {
+    localStorage.setItem(STORAGE_STATS, JSON.stringify(stats));
+  }
+
+  function updateBankUI(message, ok) {
+    els.bankStatus.textContent = message;
+    els.bankStatus.classList.toggle("ok", ok);
+    const ready = questionBank.length > 0;
+    els.startBtn.disabled = !ready;
+    els.exportBtn.disabled = !ready;
+    els.clearBankBtn.disabled = !ready;
+    els.questionCount.disabled = !ready;
+    rebuildQuestionCountOptions();
+  }
+
+  function rebuildQuestionCountOptions() {
+    const total = questionBank.length;
+    els.questionCount.innerHTML = "";
+    const values = [10, 20, 30, 40, 50].filter(n => n < total);
+    values.forEach(n => {
+      const option = document.createElement("option");
+      option.value = String(n);
+      option.textContent = `${n} Fragen`;
+      els.questionCount.appendChild(option);
+    });
+    const all = document.createElement("option");
+    all.value = "all";
+    all.textContent = total ? `Alle ${total} Fragen` : "Alle Fragen";
+    all.selected = true;
+    els.questionCount.appendChild(all);
+  }
+
+  async function loadBundledBank(filename) {
+    if (!filename) return;
+
+    els.bankSelect.disabled = true;
+    updateBankUI(`Fragenbank „${filename}“ wird geladen …`, false);
+
+    try {
+      const response = await fetch(new URL(filename, document.baseURI));
+      if (!response.ok) {
+        throw new Error(`HTTP-Fehler ${response.status}`);
+      }
+
+      questionBank = normalizeBank(await response.json());
+      saveBank();
+      updateBankUI(`Fragenbank „${filename}“ geladen: ${questionBank.length} Fragen.`, true);
+    } catch (error) {
+      console.error(error);
+      const localHint = location.protocol === "file:"
+        ? " Der Browser verhindert den direkten Zugriff auf lokale JSON-Dateien. Öffne den Ordner über einen lokalen Webserver."
+        : "";
+      updateBankUI(`Fragenbank konnte nicht geladen werden: ${error.message}.${localHint}`, false);
+    } finally {
+      els.bankSelect.disabled = false;
+    }
+  }
+
+  function exportBank() {
+    const blob = new Blob([JSON.stringify(questionBank, null, 2)], {
+      type: "application/json;charset=utf-8"
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "recht_fragenbank_export.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function clearBank() {
+    const confirmed = window.confirm(
+      "Gespeicherte Fragenbank und Fehlerstatistik aus diesem Browser löschen?"
+    );
+    if (!confirmed) return;
+    questionBank = [];
+    localStorage.removeItem(STORAGE_BANK);
+    localStorage.removeItem(STORAGE_STATS);
+    updateBankUI("Noch keine Fragenbank geladen.", false);
+  }
+
+  function getSelectedRadio(name) {
+    return document.querySelector(`input[name="${name}"]:checked`)?.value;
+  }
+
+  function prepareQuestion(q) {
+    return {
+      ...q,
+      answers: shuffle(q.answers.map(a => ({ ...a }))),
+      selected: [],
+      checked: false
+    };
+  }
+
+  function startQuiz(forcedPool = null) {
+    stopTimer();
+    const stats = loadStats();
+    const poolMode = forcedPool || getSelectedRadio("pool") || "all";
+    let candidates = questionBank;
+
+    if (poolMode === "errors") {
+      candidates = questionBank.filter(q => stats.errorIds.includes(String(q.id)));
+      if (candidates.length === 0) {
+        alert("Es sind keine Fehlerfragen gespeichert.");
+        return;
+      }
+    }
+
+    const requested = els.questionCount.value === "all"
+      ? candidates.length
+      : Math.min(Number(els.questionCount.value), candidates.length);
+
+    const selectedQuestions = shuffle(candidates)
+      .slice(0, requested)
+      .map(prepareQuestion);
+
+    state = {
+      questions: selectedQuestions,
+      index: 0,
+      mode: getSelectedRadio("mode") || "learn",
+      poolMode,
+      startedAt: Date.now(),
+      remainingSeconds: els.timerEnabled.checked
+        ? Math.max(1, Number(els.timerMinutes.value) || 60) * 60
+        : null,
+      initialSeconds: null,
+      finished: false
+    };
+    state.initialSeconds = state.remainingSeconds;
+
+    els.setupPanel.classList.add("hidden");
+    els.resultPanel.classList.add("hidden");
+    els.quizPanel.classList.remove("hidden");
+    els.timerDisplay.classList.toggle("hidden", state.remainingSeconds === null);
+
+    if (state.remainingSeconds !== null) startTimer();
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function startTimer() {
+    renderTimer();
+    timerHandle = window.setInterval(() => {
+      if (!state || state.finished || state.remainingSeconds === null) return;
+      state.remainingSeconds -= 1;
+      renderTimer();
+      if (state.remainingSeconds <= 0) {
+        stopTimer();
+        finishQuiz(true);
+      }
+    }, 1000);
+  }
+
+  function stopTimer() {
+    if (timerHandle !== null) {
+      clearInterval(timerHandle);
+      timerHandle = null;
+    }
+  }
+
+  function renderTimer() {
+    if (!state || state.remainingSeconds === null) return;
+    els.timerDisplay.textContent = formatSeconds(Math.max(0, state.remainingSeconds));
+  }
+
+  function formatSeconds(seconds) {
+    const whole = Math.max(0, Math.round(seconds));
+    const minutes = Math.floor(whole / 60);
+    const rest = whole % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(rest).padStart(2, "0")}`;
+  }
+
+  function formatMetaValue(value) {
+    if (value === null || value === undefined || value === "") return "";
+    if (typeof value !== "object") return String(value);
+
+    if (Array.isArray(value)) {
+      return value.map(formatMetaValue).filter(Boolean).join(", ");
+    }
+
+    const preferredKeys = ["title", "name", "label", "text", "page", "url"];
+    const preferredValue = preferredKeys
+      .map(key => value[key])
+      .find(entry => entry !== null && entry !== undefined && entry !== "");
+
+    if (preferredValue !== undefined) return formatMetaValue(preferredValue);
+
+    return Object.values(value)
+      .map(formatMetaValue)
+      .filter(Boolean)
+      .join(" · ");
+  }
+
+  function formatLetterList(values) {
+    if (values.length < 2) return values[0] || "";
+    if (values.length === 2) return `${values[0]} und ${values[1]}`;
+    return `${values.slice(0, -1).join(", ")} und ${values.at(-1)}`;
+  }
+
+  function getDisplayAnswerText(answer, question) {
+    const sourceToDisplay = new Map(
+      question.answers.map((item, index) => [
+        String(item.sourceLetter || "").toUpperCase(),
+        letters[index] || String(index + 1)
+      ])
+    );
+
+    const sortDisplayLetters = values => values
+      .filter(Boolean)
+      .sort((a, b) => letters.indexOf(a) - letters.indexOf(b));
+
+    const explicitReferencesReplaced = answer.text.replace(
+      /Die Aussagen ([A-H]) und ([A-H]) sind richtig/gi,
+      (match, first, second) => {
+        const currentLetters = sortDisplayLetters([
+          sourceToDisplay.get(first.toUpperCase()),
+          sourceToDisplay.get(second.toUpperCase())
+        ]);
+
+        if (currentLetters.length !== 2) return match;
+        return `Die Aussagen ${formatLetterList(currentLetters)} sind richtig`;
+      }
+    );
+
+    return explicitReferencesReplaced.replace(
+      /Die Aussagen ([A-H]) bis ([A-H]) sind richtig/gi,
+      (match, first, last) => {
+        const start = letters.indexOf(first.toUpperCase());
+        const end = letters.indexOf(last.toUpperCase());
+        if (start < 0 || end < start) return match;
+
+        const currentLetters = sortDisplayLetters(
+          letters
+            .slice(start, end + 1)
+            .map(sourceLetter => sourceToDisplay.get(sourceLetter))
+        );
+
+        if (currentLetters.length !== end - start + 1) return match;
+        return `Die Aussagen ${formatLetterList(currentLetters)} sind richtig`;
+      }
+    );
+  }
+
+  function renderQuestion() {
+    const q = state.questions[state.index];
+    const correctCount = q.answers.filter(a => a.correct).length;
+    const inputType = correctCount === 1 ? "radio" : "checkbox";
+
+    els.progressText.textContent = `Frage ${state.index + 1} von ${state.questions.length}`;
+    els.progressBar.style.width = `${((state.index + 1) / state.questions.length) * 100}%`;
+    els.questionType.textContent = correctCount === 1
+      ? "Single Choice: genau eine Antwort ist richtig."
+      : `Multiple Choice: ${correctCount} Antworten sind richtig.`;
+
+    const sourceParts = [];
+    const page = formatMetaValue(q.page);
+    const source = formatMetaValue(q.source);
+    if (page) sourceParts.push(`Quellenseite ${page}`);
+    if (source) sourceParts.push(source);
+    els.sourceHint.textContent = sourceParts.join(" · ");
+
+    els.questionText.textContent = q.question;
+    els.answers.innerHTML = "";
+    els.feedback.className = "feedback hidden";
+    els.feedback.textContent = "";
+
+    q.answers.forEach((answer, index) => {
+      const label = document.createElement("label");
+      label.className = "answer";
+      if (q.selected.includes(answer.uid)) label.classList.add("selected");
+
+      if (q.checked && state.mode === "learn") {
+        if (answer.correct) label.classList.add("correct");
+        else if (q.selected.includes(answer.uid)) label.classList.add("incorrect");
+      }
+
+      const input = document.createElement("input");
+      input.type = inputType;
+      input.name = `question_${q.id}`;
+      input.value = answer.uid;
+      input.checked = q.selected.includes(answer.uid);
+      input.disabled = q.checked && state.mode === "learn";
+
+      input.addEventListener("change", () => {
+        if (inputType === "radio") {
+          q.selected = [answer.uid];
+        } else if (input.checked) {
+          q.selected = [...new Set([...q.selected, answer.uid])];
+        } else {
+          q.selected = q.selected.filter(id => id !== answer.uid);
+        }
+        renderQuestion();
+      });
+
+      const letter = document.createElement("span");
+      letter.className = "letter";
+      letter.textContent = letters[index] ?? String(index + 1);
+
+      const text = document.createElement("span");
+      text.className = "answer-text";
+      text.textContent = getDisplayAnswerText(answer, q);
+
+      label.append(input, letter, text);
+      els.answers.appendChild(label);
+    });
+
+    if (q.checked && state.mode === "learn") {
+      showQuestionFeedback(q);
+    }
+
+    els.checkBtn.classList.toggle("hidden", state.mode !== "learn" || q.checked);
+    els.prevBtn.disabled = state.index === 0;
+    els.nextBtn.textContent = state.index === state.questions.length - 1 ? "Auswerten" : "Weiter";
+    els.nextBtn.disabled = state.mode === "learn" && !q.checked;
+  }
+
+  function getCorrectIds(q) {
+    return q.answers.filter(a => a.correct).map(a => a.uid).sort();
+  }
+
+  function isQuestionCorrect(q) {
+    const selected = [...q.selected].sort();
+    const correct = getCorrectIds(q);
+    return selected.length === correct.length &&
+      selected.every((value, index) => value === correct[index]);
+  }
+
+  function checkCurrent() {
+    const q = state.questions[state.index];
+    if (q.selected.length === 0) {
+      alert("Bitte mindestens eine Antwort auswählen.");
+      return;
+    }
+    q.checked = true;
+    renderQuestion();
+  }
+
+  function showQuestionFeedback(q) {
+    const correct = isQuestionCorrect(q);
+    els.feedback.className = `feedback ${correct ? "success" : "error"}`;
+
+    const correctTexts = q.answers
+      .filter(a => a.correct)
+      .map(a => getDisplayAnswerText(a, q))
+      .join("\n• ");
+
+    const explanation = q.explanation ? `\n\n${q.explanation}` : "";
+    els.feedback.textContent = correct
+      ? `Richtig.${explanation}`
+      : `Falsch. Richtige Antwort(en):\n• ${correctTexts}${explanation}`;
+  }
+
+  function nextQuestion() {
+    if (state.mode === "learn" && !state.questions[state.index].checked) return;
+
+    if (state.index >= state.questions.length - 1) {
+      finishQuiz(false);
+      return;
+    }
+    state.index += 1;
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function previousQuestion() {
+    if (state.index <= 0) return;
+    state.index -= 1;
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function finishQuiz(timeExpired = false) {
+    if (!state || state.finished) return;
+
+    if (!timeExpired && state.mode === "exam") {
+      const unanswered = state.questions.filter(q => q.selected.length === 0).length;
+      if (unanswered > 0) {
+        const confirmed = window.confirm(
+          `${unanswered} Frage(n) sind unbeantwortet. Trotzdem auswerten?`
+        );
+        if (!confirmed) return;
+      }
+    }
+
+    state.finished = true;
+    stopTimer();
+
+    const correct = state.questions.filter(isQuestionCorrect).length;
+    const wrong = state.questions.length - correct;
+    const percent = Math.round((correct / state.questions.length) * 100);
+    const elapsed = Math.round((Date.now() - state.startedAt) / 1000);
+
+    const stats = loadStats();
+    const attemptedIds = new Set(state.questions.map(q => String(q.id)));
+    const previousErrorsOutsideQuiz = stats.errorIds.filter(id => !attemptedIds.has(id));
+    const currentErrors = state.questions
+      .filter(q => !isQuestionCorrect(q))
+      .map(q => String(q.id));
+
+    saveStats({
+      attempts: stats.attempts + 1,
+      errorIds: [...new Set([...previousErrorsOutsideQuiz, ...currentErrors])]
+    });
+
+    els.quizPanel.classList.add("hidden");
+    els.resultPanel.classList.remove("hidden");
+
+    els.scoreCorrect.textContent = String(correct);
+    els.scoreWrong.textContent = String(wrong);
+    els.scorePercent.textContent = `${percent} %`;
+    els.scoreTime.textContent = formatSeconds(elapsed);
+    els.resultMessage.textContent = timeExpired
+      ? "Die Zeit ist abgelaufen. Das Quiz wurde automatisch ausgewertet."
+      : "Das Quiz wurde ausgewertet.";
+
+    els.retryErrorsBtn.disabled = currentErrors.length === 0;
+    renderReview();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function renderReview() {
+    els.reviewList.innerHTML = "";
+
+    state.questions.forEach((q, index) => {
+      const correct = isQuestionCorrect(q);
+      const item = document.createElement("article");
+      item.className = `review-item ${correct ? "correct-review" : "incorrect-review"}`;
+
+      const title = document.createElement("div");
+      title.className = "review-title";
+      title.textContent = `${index + 1}. ${q.question}`;
+
+      const selectedTexts = q.answers
+        .filter(a => q.selected.includes(a.uid))
+        .map(a => getDisplayAnswerText(a, q));
+      const correctTexts = q.answers
+        .filter(a => a.correct)
+        .map(a => getDisplayAnswerText(a, q));
+
+      const detail = document.createElement("div");
+      detail.className = "review-detail";
+      detail.textContent =
+        `${correct ? "Richtig" : "Falsch"}\n` +
+        `Ausgewählt: ${selectedTexts.length ? selectedTexts.join(" | ") : "keine Antwort"}\n` +
+        `Richtig: ${correctTexts.join(" | ")}` +
+        (q.explanation ? `\nBegründung: ${q.explanation}` : "");
+
+      item.append(title, detail);
+      els.reviewList.appendChild(item);
+    });
+  }
+
+  function returnToSetup() {
+    stopTimer();
+    state = null;
+    els.resultPanel.classList.add("hidden");
+    els.quizPanel.classList.add("hidden");
+    els.setupPanel.classList.remove("hidden");
+    updateBankUI(`Fragenbank geladen: ${questionBank.length} Fragen.`, true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  els.bankSelect.addEventListener("change", event => loadBundledBank(event.target.value));
+
+  els.startBtn.addEventListener("click", () => startQuiz());
+  els.exportBtn.addEventListener("click", exportBank);
+  els.clearBankBtn.addEventListener("click", clearBank);
+  els.checkBtn.addEventListener("click", checkCurrent);
+  els.prevBtn.addEventListener("click", previousQuestion);
+  els.nextBtn.addEventListener("click", nextQuestion);
+  els.finishBtn.addEventListener("click", () => finishQuiz(false));
+  els.restartBtn.addEventListener("click", returnToSetup);
+  els.retryErrorsBtn.addEventListener("click", () => {
+    els.resultPanel.classList.add("hidden");
+    els.setupPanel.classList.remove("hidden");
+    document.querySelector('input[name="pool"][value="errors"]').checked = true;
+    startQuiz("errors");
+  });
+  els.showReviewBtn.addEventListener("click", () => {
+    const hidden = els.reviewList.classList.toggle("hidden");
+    els.showReviewBtn.textContent = hidden
+      ? "Detailauswertung anzeigen"
+      : "Detailauswertung ausblenden";
+  });
+
+  document.addEventListener("keydown", event => {
+    if (!state || state.finished || els.quizPanel.classList.contains("hidden")) return;
+    if (event.key === "ArrowLeft") previousQuestion();
+    if (event.key === "ArrowRight") nextQuestion();
+  });
+
+  loadSavedBank();
+})();
+</script>
+</body>
+</html>

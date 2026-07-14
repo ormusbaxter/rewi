@@ -1,0 +1,1898 @@
+﻿{
+    "schemaVersion":  "2.0",
+    "title":  "Recht – Europarecht",
+    "language":  "de",
+    "randomization":  {
+                          "shuffleQuestions":  true,
+                          "shuffleAnswers":  true,
+                          "preserveSourcePositionWith":  "answers[].sourceLetter",
+                          "evaluateBy":  "answers[].uid",
+                          "displayLetters":  "Zur Laufzeit nach dem Mischen neu vergeben; sourceLetter bleibt unverändert."
+                      },
+    "questionCount":  41,
+    "questions":  [
+                      {
+                          "id":  "recht-009",
+                          "type":  "single_choice",
+                          "question":  "Welches Rechtsmittel ist bei einer nicht oder nicht fristgerecht umgesetzten Richtlinie heranzuziehen?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-009-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Drittwiderspruchsverfahren",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-009-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Klageerzwingungsverfahren",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-009-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Fortsetzungsfeststellungsverfahren",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-009-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Vertragsverletzungsverfahren",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-009-D"
+                                                ],
+                          "category":  "Europarecht",
+                          "source":  {
+                                         "document":  "Allgemein Recht_111.docx"
+                                     },
+                          "answerBasis":  "Kennzeichnung in der Quelle; einzelne offensichtliche Strukturfehler wurden bereinigt."
+                      },
+                      {
+                          "id":  "recht-109",
+                          "type":  "single_choice",
+                          "question":  "Die Abgeordneten des Europäischen Parlaments sind …",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-109-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "an Weisungen der Partei ihres Herkunftslands gebunden",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-109-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "an Weisungen des Präsidenten des Europäischen Parlaments gebunden",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-109-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "bei Abstimmungen nicht an Aufträge oder Weisungen gebunden",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-109-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "an Weisungen des Europäischen Rates gebunden",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-109-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "an Weisungen des Präsidenten der Europäischen Kommission gebunden",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-109-C"
+                                                ],
+                          "category":  "Europarecht: Europäisches Parlament",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  20
+                                     },
+                          "answerBasis":  "Die Mitglieder des Europäischen Parlaments üben ihr Mandat frei aus und sind bei Abstimmungen weder an Aufträge noch an Weisungen gebunden."
+                      },
+                      {
+                          "id":  "recht-110",
+                          "type":  "single_choice",
+                          "question":  "Welche Obergrenze bestimmt Art. 14 Abs. 2 EUV für die Zusammensetzung des Europäischen Parlaments?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-110-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "750 Mitglieder zuzüglich des Präsidenten, also höchstens 751 Personen",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-110-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Keine zahlenmäßige Obergrenze",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-110-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Stets ebenso viele Mitglieder wie die nationalen Parlamente zusammen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-110-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Genau 720 Mitglieder in jeder Wahlperiode",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-110-A"
+                                                ],
+                          "category":  "Europarecht: Europäisches Parlament",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  18
+                                     },
+                          "answerBasis":  "Art. 14 Abs. 2 EUV setzt die vertragliche Obergrenze auf 750 Mitglieder zuzüglich des Präsidenten. Für die Wahlperiode 2024–2029 wurde die tatsächliche Zahl durch Beschluss des Europäischen Rates auf 720 Sitze festgelegt."
+                      },
+                      {
+                          "id":  "recht-111",
+                          "type":  "single_choice",
+                          "question":  "Welche Aufgabe hat der Präsident des Europäischen Rates nach Art. 15 Abs. 6 EUV?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-111-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Er muss dem Rechnungshof jährlich über sämtliche Aktivitäten des Rates berichten",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-111-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Er nimmt kraft seines Amts als Mitglied am Kollegium der Europäischen Kommission teil",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-111-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Er genehmigt das Programm der halbjährlich wechselnden Vorsitze im Rat der Europäischen Union",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-111-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Er kann Gesetzgebungsvorschläge der Europäischen Kommission untersagen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-111-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Er führt den Vorsitz bei den Arbeiten des Europäischen Rates und gibt ihnen Impulse",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-111-E"
+                                                ],
+                          "category":  "Europarecht: Europäischer Rat",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  21
+                                     },
+                          "answerBasis":  "Nach Art. 15 Abs. 6 EUV führt der Präsident den Vorsitz bei den Arbeiten des Europäischen Rates und gibt ihnen Impulse."
+                      },
+                      {
+                          "id":  "recht-112",
+                          "type":  "single_choice",
+                          "question":  "Wie setzt sich der Europäische Rat nach Art. 15 Abs. 2 EUV zusammen?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-112-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Ausschließlich aus den Fachministern der Mitgliedstaaten",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-112-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Aus den Staats- und Regierungschefs der Mitgliedstaaten sowie seinem Präsidenten und dem Präsidenten der Europäischen Kommission",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-112-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Aus den Abgeordneten des Europäischen Parlaments",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-112-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Aus den Richtern des Gerichtshofs der Europäischen Union",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-112-B"
+                                                ],
+                          "category":  "Europarecht: Europäischer Rat",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  18
+                                     },
+                          "answerBasis":  "Der Europäische Rat besteht aus den Staats- und Regierungschefs der Mitgliedstaaten sowie seinem Präsidenten und dem Präsidenten der Kommission. Er ist vom Rat der Europäischen Union zu unterscheiden."
+                      },
+                      {
+                          "id":  "recht-113",
+                          "type":  "single_choice",
+                          "question":  "Wo hat der Gerichtshof der Europäischen Union seinen Sitz?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-113-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Straßburg",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-113-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Luxemburg",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-113-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Den Haag",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-113-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Paris",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-113-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Brüssel",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-113-B"
+                                                ],
+                          "category":  "Europarecht: Gerichtshof der Europäischen Union",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  22
+                                     },
+                          "answerBasis":  "Der Gerichtshof der Europäischen Union hat seinen Sitz in Luxemburg."
+                      },
+                      {
+                          "id":  "recht-114",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage zur Wirkung von Entscheidungen des Gerichtshofs der Europäischen Union trifft zu?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-114-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Die konkrete Bindungswirkung hängt von der Verfahrensart ab; Auslegungen des Unionsrechts im Vorabentscheidungsverfahren sind für das vorlegende Gericht bindend und für die einheitliche Anwendung des Unionsrechts maßgeblich",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-114-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Entscheidungen gelten immer nur in einem einzigen Mitgliedstaat und haben darüber hinaus keine Bedeutung",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-114-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Sie können jederzeit durch nationale oberste Gerichte aufgehoben werden",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-114-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Sie müssen erst durch alle nationalen Gerichte bestätigt werden",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-114-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Nur die Europäische Kommission darf Verfahren vor dem Gerichtshof beantragen",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-114-A"
+                                                ],
+                          "category":  "Europarecht: Gerichtshof der Europäischen Union",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  23
+                                     },
+                          "answerBasis":  "Die pauschale Aussage, jedes EuGH-Urteil gelte gleichermaßen für alle Mitgliedstaaten, ist zu weit. Im Vorabentscheidungsverfahren bindet die Entscheidung das vorlegende Gericht; die Auslegung ist zugleich für die unionsweit einheitliche Anwendung des Unionsrechts maßgeblich. Andere Verfahrensarten haben jeweils eigene Bindungswirkungen."
+                      },
+                      {
+                          "id":  "recht-115",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage zum Europäischen Rechnungshof ist richtig?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-115-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Er führt Strafverfahren wegen Untreue oder Bestechlichkeit",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-115-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Er ist der unabhängige externe Prüfer der EU und überprüft die Einnahmen und Ausgaben beziehungsweise die Verwendung von EU-Mitteln",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-115-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Er kann Entscheidungen nationaler Rechnungshöfe außer Kraft setzen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-115-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Er kontrolliert sämtliche nationalen Haushalte unabhängig von einem Bezug zu EU-Mitteln",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-115-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Er stellt den Haushaltsplan der Europäischen Union auf",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-115-B"
+                                                ],
+                          "category":  "Europarecht: Europäischer Rechnungshof",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestions":  [
+                                                                   24,
+                                                                   10
+                                                               ]
+                                     },
+                          "answerBasis":  "Der Europäische Rechnungshof ist der unabhängige externe Prüfer der EU. Er prüft Einnahmen und Ausgaben in allen Bereichen der EU und die rechtmäßige, ordnungsgemäße sowie wirtschaftliche Verwendung von EU-Mitteln. Er ist keine Strafverfolgungsbehörde und stellt den EU-Haushalt nicht selbst auf."
+                      },
+                      {
+                          "id":  "recht-116",
+                          "type":  "single_choice",
+                          "question":  "Wo hat die Europäische Zentralbank ihren Sitz?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-116-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Frankfurt am Main",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-116-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "London",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-116-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Brüssel",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-116-A"
+                                                ],
+                          "category":  "Europarecht: Europäische Zentralbank",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  19
+                                     },
+                          "answerBasis":  "Die Europäische Zentralbank hat ihren Sitz in Frankfurt am Main."
+                      },
+                      {
+                          "id":  "recht-117",
+                          "type":  "single_choice",
+                          "question":  "Welche der folgenden Freiheiten zählt nicht zu den vier Grundfreiheiten des EU-Binnenmarkts?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-117-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Freier Warenverkehr",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-117-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Freier Kapitalverkehr",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-117-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Freier Internetverkehr",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-117-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Freier Personenverkehr",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-117-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Freier Dienstleistungsverkehr",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-117-C"
+                                                ],
+                          "category":  "Europarecht: Binnenmarkt",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  11
+                                     },
+                          "answerBasis":  "Die vier Grundfreiheiten des Binnenmarkts sind der freie Verkehr von Waren, Personen, Dienstleistungen und Kapital. Eine eigenständige Grundfreiheit des Internetverkehrs existiert nicht."
+                      },
+                      {
+                          "id":  "recht-118",
+                          "type":  "single_choice",
+                          "question":  "Welches erste europäische Rahmenabkommen schlossen die europäischen Sozialpartner 1995 erfolgreich?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-118-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Ein Rahmenabkommen zum Elternurlaub",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-118-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Ein Rahmenabkommen zur einheitlichen Besteuerung von Freiberuflern",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-118-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Ein Rahmenabkommen zu Organtransplantationen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-118-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Ein Rahmenabkommen zur Sicherheit von Bluttransfusionen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-118-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Ein Rahmenabkommen zur Sicherheit von Herzkathetern",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-118-A"
+                                                ],
+                          "category":  "Europarecht: Sozialpolitik",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  12
+                                     },
+                          "answerBasis":  "Das Rahmenabkommen der europäischen Sozialpartner über Elternurlaub vom Dezember 1995 war das erste auf europäischer Ebene geschlossene Rahmenabkommen dieser Art und wurde anschließend unionsrechtlich umgesetzt."
+                      },
+                      {
+                          "id":  "recht-119",
+                          "type":  "single_choice",
+                          "question":  "Welche Aufzählung enthält vollständig die sieben Organe der Europäischen Union nach Art. 13 Abs. 1 EUV?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-119-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Europäische Wertpapieraufsichtsbehörde, Kommission, Europäischer Rat, Rat, Gerichtshof, Rechnungshof und EZB",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-119-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Europäische Investitionsbank, Kommission, Europäischer Rat, Rat, Gerichtshof, Rechnungshof und EZB",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-119-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Europäisches Parlament, Europäischer Rat, Rat der Europäischen Union, Europäische Kommission, Gerichtshof der Europäischen Union, Europäische Zentralbank und Europäischer Rechnungshof",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-119-C"
+                                                ],
+                          "category":  "Europarecht: Organe der Europäischen Union",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  1
+                                     },
+                          "answerBasis":  "Art. 13 Abs. 1 EUV nennt Parlament, Europäischen Rat, Rat, Kommission, Gerichtshof der Europäischen Union, Europäische Zentralbank und Rechnungshof als Organe der Union."
+                      },
+                      {
+                          "id":  "recht-120",
+                          "type":  "single_choice",
+                          "question":  "Welche beiden Einrichtungen unterstützen Parlament, Rat und Kommission nach Art. 13 Abs. 4 EUV in beratender Funktion?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-120-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Europäischer Wirtschafts- und Sozialausschuss und Europäische Investitionsbank",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-120-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Ausschuss der Regionen und sämtliche Europäischen Agenturen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-120-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Europäischer Wirtschafts- und Sozialausschuss und Ausschuss der Regionen",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-120-C"
+                                                ],
+                          "category":  "Europarecht: Beratende Einrichtungen",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  2
+                                     },
+                          "answerBasis":  "Der Europäische Wirtschafts- und Sozialausschuss und der Ausschuss der Regionen unterstützen Parlament, Rat und Kommission in beratender Funktion."
+                      },
+                      {
+                          "id":  "recht-121",
+                          "type":  "single_choice",
+                          "question":  "Welche Organe üben im ordentlichen Gesetzgebungsverfahren der Europäischen Union gemeinsam die Gesetzgebungsfunktion aus?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-121-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Europäischer Rat und Europäische Kommission",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-121-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Europäisches Parlament und Rat der Europäischen Union",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-121-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Europäische Kommission und Europäisches Parlament ohne Beteiligung des Rates",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-121-B"
+                                                ],
+                          "category":  "Europarecht: Gesetzgebung",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  3
+                                     },
+                          "answerBasis":  "Im ordentlichen Gesetzgebungsverfahren beschließen Europäisches Parlament und Rat der Europäischen Union gemeinsam Rechtsakte auf Vorschlag der Kommission."
+                      },
+                      {
+                          "id":  "recht-122",
+                          "type":  "single_choice",
+                          "question":  "Welches Organ wird im institutionellen Gefüge der Europäischen Union typischerweise als zentrales Exekutivorgan bezeichnet?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-122-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Das Europäische Parlament",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-122-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Der Rat der Europäischen Union",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-122-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Die Europäische Kommission",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-122-C"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  4
+                                     },
+                          "answerBasis":  "Die Europäische Kommission wird typischerweise als zentrales Exekutivorgan der EU bezeichnet. Die Durchführung des Unionsrechts erfolgt allerdings je nach Zuständigkeitsordnung auch durch die Mitgliedstaaten und andere Unionsorgane oder Einrichtungen."
+                      },
+                      {
+                          "id":  "recht-123",
+                          "type":  "single_choice",
+                          "question":  "An welche Stelle kann man sich bei einem Verdacht auf Betrug oder schwere Unregelmäßigkeiten mit möglichen negativen Auswirkungen auf EU-Mittel wenden?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-123-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "An das Europäische Amt für Betrugsbekämpfung (OLAF)",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-123-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "An Frontex",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-123-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "An die Europäische Agentur für die Sicherheit des Seeverkehrs (EMSA)",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-123-A"
+                                                ],
+                          "category":  "Europarecht: Betrugsbekämpfung",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  5
+                                     },
+                          "answerBasis":  "OLAF untersucht Betrug, Korruption und andere schwere Unregelmäßigkeiten zulasten der finanziellen Interessen der EU sowie schweres Fehlverhalten in EU-Organen und -Einrichtungen. Daneben können je nach Sachverhalt nationale Behörden oder die Europäische Staatsanwaltschaft zuständig sein."
+                      },
+                      {
+                          "id":  "recht-124",
+                          "type":  "single_choice",
+                          "question":  "Welches Organ bestimmt die allgemeinen politischen Zielvorstellungen und Prioritäten der Gemeinsamen Außen- und Sicherheitspolitik der EU?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-124-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Der Europäische Rat",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-124-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Die Hohe Vertreterin beziehungsweise der Hohe Vertreter allein",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-124-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Der Präsident der Kommission gemeinsam mit den Präsidenten des Parlaments und des Rates",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-124-A"
+                                                ],
+                          "category":  "Europarecht: Gemeinsame Außen- und Sicherheitspolitik",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  6
+                                     },
+                          "answerBasis":  "Der Europäische Rat bestimmt die allgemeinen politischen Zielvorstellungen und Prioritäten sowie die strategischen Interessen der Gemeinsamen Außen- und Sicherheitspolitik. Der Rat gestaltet sie aus; der Hohe Vertreter trägt zu ihrer Durchführung bei."
+                      },
+                      {
+                          "id":  "recht-125",
+                          "type":  "single_choice",
+                          "question":  "Kann ein Mitgliedstaat aus der Europäischen Union austreten?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-125-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Nein, die Unionsverträge sehen keinen Austritt vor",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-125-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Ja, nach Art. 50 EUV kann jeder Mitgliedstaat im Einklang mit seinen verfassungsrechtlichen Vorschriften den Austritt beschließen und das dort geregelte Verfahren einleiten",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-125-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Nur nach einem unionsrechtlich zwingend vorgeschriebenen Referendum",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-125-B"
+                                                ],
+                          "category":  "Europarecht: Mitgliedschaft",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  11
+                                     },
+                          "answerBasis":  "Art. 50 EUV erlaubt jedem Mitgliedstaat, im Einklang mit seinen verfassungsrechtlichen Vorschriften den Austritt zu beschließen. Ein Referendum ist unionsrechtlich nicht zwingend vorgeschrieben."
+                      },
+                      {
+                          "id":  "recht-126",
+                          "type":  "single_choice",
+                          "question":  "Wie viele Mitgliedstaaten gehören seit dem 1. Januar 2026 zur Eurozone?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-126-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Alle 27 EU-Mitgliedstaaten",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-126-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "21 Mitgliedstaaten",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-126-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Die EU-Mitgliedstaaten sowie Liechtenstein und die Schweiz",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-126-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "19 Mitgliedstaaten",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-126-B"
+                                                ],
+                          "category":  "Europarecht: Wirtschafts- und Währungsunion",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  12
+                                     },
+                          "answerBasis":  "Mit der Einführung des Euro in Bulgarien am 1. Januar 2026 stieg die Zahl der Mitglieder der Eurozone auf 21. Die im Bild markierte Zahl 19 ist veraltet."
+                      },
+                      {
+                          "id":  "recht-127",
+                          "type":  "single_choice",
+                          "question":  "Welche drei Texte bilden seit dem Vertrag von Lissabon die zentralen schriftlichen Grundlagen des Primärrechts der Europäischen Union?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-127-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Nur ein einheitliches Verfassungsdokument",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-127-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "EUV, AEUV und die rechtlich gleichrangige Charta der Grundrechte der Europäischen Union",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-127-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "EUV, NATO-Vertrag, Europäische Menschenrechtskonvention und UN-Charta",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-127-B"
+                                                ],
+                          "category":  "Europarecht: Primärrecht",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  14
+                                     },
+                          "answerBasis":  "Die ursprüngliche Frage nach der Zahl der Dokumente ist missverständlich. Seit Lissabon sind insbesondere der Vertrag über die Europäische Union, der Vertrag über die Arbeitsweise der Europäischen Union und die nach Art. 6 Abs. 1 EUV rechtlich gleichrangige Grundrechtecharta maßgeblich; hinzu kommen Protokolle und weitere Bestandteile des Primärrechts."
+                      },
+                      {
+                          "id":  "recht-128",
+                          "type":  "single_choice",
+                          "question":  "Wie werden die politischen und wirtschaftlichen Voraussetzungen bezeichnet, die ein beitrittswilliger Staat für eine Mitgliedschaft in der EU erfüllen muss?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-128-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Maastricht-Kriterien",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-128-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Kopenhagener Kriterien",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-128-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Schengener Haushaltskriterien",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-128-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Ausschließlich allgemeines Völkerrecht",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-128-B"
+                                                ],
+                          "category":  "Europarecht: Beitritt",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  15
+                                     },
+                          "answerBasis":  "Die Kopenhagener Kriterien wurden 1993 vom Europäischen Rat in Kopenhagen formuliert. Hinzu kommen die vertraglichen Beitrittsvoraussetzungen und das Verfahren nach Art. 49 EUV."
+                      },
+                      {
+                          "id":  "recht-129",
+                          "type":  "single_choice",
+                          "question":  "Welcher Mitgliedstaat führt vom 1. Juli bis 31. Dezember 2026 den Vorsitz im Rat der Europäischen Union?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-129-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Großbritannien",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-129-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Irland",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-129-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Estland",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-129-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Italien",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-129-B"
+                                                ],
+                          "category":  "Europarecht: Rat der Europäischen Union",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  16
+                                     },
+                          "answerBasis":  "Irland führt vom 1. Juli bis 31. Dezember 2026 den turnusmäßigen Vorsitz im Rat der Europäischen Union. Die im Bild markierte Antwort Estland bezieht sich auf eine frühere Ratspräsidentschaft."
+                      },
+                      {
+                          "id":  "recht-130",
+                          "type":  "single_choice",
+                          "question":  "Wie werden die Ressorts beziehungsweise Portfolios der Mitglieder der Europäischen Kommission zugeteilt?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-130-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Sie stehen dauerhaft fest und wechseln nur zwischen den Nationalitäten der Kommissare",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-130-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Sie entsprechen zwingend den früheren nationalen Ministerämtern der designierten Personen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-130-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Sie wechseln nach einem vom Rat festgelegten starren Rotationsplan",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-130-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Sie werden zu Beginn jeder neuen Kommissionsmandatszeit vom Präsidenten der Kommission neu zugeteilt",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-130-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Nationalitäten und Arbeitsbereiche bleiben dauerhaft unverändert",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-130-D"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  13
+                                     },
+                          "answerBasis":  "Der Präsident der Europäischen Kommission entscheidet über ihre interne Organisation und weist den einzelnen Mitgliedern zu Beginn der Mandatszeit die politischen Zuständigkeitsbereiche zu."
+                      },
+                      {
+                          "id":  "recht-131",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage zu den regelmäßigen Sitzungen des Kollegiums der Kommissionsmitglieder ist richtig?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-131-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Das Kollegium berät regelmäßig wichtige und politisch sensible Fragen und trifft seine Entscheidungen nach dem Kollegialitätsprinzip",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-131-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Es entscheidet allein über Auslandseinsätze militärischer EU-Missionen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-131-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Es kann Urteile des Gerichtshofs der Europäischen Union außer Kraft setzen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-131-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Es bestimmt die Tagesordnung der Sitzungen des Rates der Europäischen Union",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-131-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Es genehmigt verbindlich sämtliche Initiativstellungnahmen beratender Einrichtungen",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-131-A"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  14
+                                     },
+                          "answerBasis":  "Das Kollegium tagt grundsätzlich wöchentlich, berät politisch bedeutsame Angelegenheiten und entscheidet kollektiv nach dem Kollegialitätsprinzip."
+                      },
+                      {
+                          "id":  "recht-132",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage zur Hohen Vertreterin beziehungsweise zum Hohen Vertreter der Union für Außen- und Sicherheitspolitik ist richtig?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-132-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Die Person trifft allein sämtliche wichtigen außenpolitischen Entscheidungen der EU",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-132-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Die Person kann nationale außenpolitische Entscheidungen außer Kraft setzen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-132-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Die Person darf verbindliche außenpolitische Entscheidungen für einzelne Mitgliedstaaten allein treffen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-132-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Die Person ist zugleich eine Vizepräsidentin beziehungsweise ein Vizepräsident der Europäischen Kommission",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-132-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Auslandsreisen sind nur gemeinsam mit Vertretern sämtlicher Mitgliedstaaten zulässig",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-132-D"
+                                                ],
+                          "category":  "Europarecht: Außen- und Sicherheitspolitik",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  15
+                                     },
+                          "answerBasis":  "Nach Art. 18 Abs. 4 EUV ist die Hohe Vertreterin beziehungsweise der Hohe Vertreter zugleich eine Vizepräsidentin beziehungsweise ein Vizepräsident der Kommission."
+                      },
+                      {
+                          "id":  "recht-133",
+                          "type":  "single_choice",
+                          "question":  "Innerhalb welcher Grenzen darf die Europäische Kommission tätig werden?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-133-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Sie muss jeden Gesetzgebungsvorschlag vorab von allen nationalen Vertretungen genehmigen lassen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-133-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Sie darf nur nach Einzelgenehmigung des Präsidenten des Europäischen Rates tätig werden",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-133-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Sie darf nationale Gesetze in sämtlichen Bereichen nach eigenem Ermessen außer Kraft setzen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-133-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Sie darf nur im Rahmen der Zuständigkeiten und Aufgaben tätig werden, die ihr die Unionsverträge übertragen",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-133-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Sie kann sich selbst neue Kompetenzen verschaffen, wenn sie dies für erforderlich hält",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-133-D"
+                                                ],
+                          "category":  "Europarecht: Prinzip der begrenzten Einzelermächtigung",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  16
+                                     },
+                          "answerBasis":  "Auch die Kommission ist an die durch die Verträge übertragenen Zuständigkeiten, Verfahren und Ziele gebunden. Sie kann ihre Kompetenzen nicht selbst erweitern."
+                      },
+                      {
+                          "id":  "recht-134",
+                          "type":  "single_choice",
+                          "question":  "Wie wird die Präsidentin beziehungsweise der Präsident der Europäischen Kommission bestimmt?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-134-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Das Europäische Parlament bestimmt die Person ohne Vorschlag eines anderen Organs",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-134-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Der Europarat wählt die Person",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-134-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Der Rat der Europäischen Union bestimmt die Person allein",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-134-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Die Mitgliedstaaten wechseln sich automatisch im Amt ab",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-134-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Der Europäische Rat schlägt unter Berücksichtigung der Europawahl einen Kandidaten vor; das Europäische Parlament wählt ihn. Die Amtszeit der Kommission beträgt fünf Jahre",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-134-E"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  17
+                                     },
+                          "answerBasis":  "Nach Art. 17 Abs. 7 EUV schlägt der Europäische Rat dem Europäischen Parlament einen Kandidaten vor; das Parlament wählt diesen mit der Mehrheit seiner Mitglieder. Die Amtszeit der Kommission beträgt nach Art. 17 Abs. 3 EUV fünf Jahre."
+                      },
+                      {
+                          "id":  "recht-135",
+                          "type":  "single_choice",
+                          "question":  "Aus wie vielen Mitgliedern besteht das Kollegium der Europäischen Kommission in der Amtsperiode 2024–2029?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-135-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "27 Mitgliedern einschließlich der Präsidentin und der Hohen Vertreterin",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-135-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "27 Kommissaren zuzüglich der Präsidentin",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-135-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "27 Kommissaren zuzüglich Präsidentin und Hoher Vertreterin",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-135-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "28 Mitgliedern",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-135-A"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  7
+                                     },
+                          "answerBasis":  "Das Kollegium besteht in der Amtsperiode 2024–2029 aus 27 Mitgliedern, je einem aus jedem Mitgliedstaat. Präsidentin und Hohe Vertreterin sind darin bereits enthalten. Die im Bild markierte Zahl 28 stammt aus der Zeit vor dem Austritt des Vereinigten Königreichs."
+                      },
+                      {
+                          "id":  "recht-136",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage zu den Kabinetten der Mitglieder der Europäischen Kommission ist richtig?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-136-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Ein Kabinett ist das persönliche politische Beratungsteam eines Kommissionsmitglieds und unterstützt es bei der Wahrnehmung seines Ressorts",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-136-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Kabinette bestehen ausschließlich aus dauerhaft beschäftigten Kommissionsbeamten",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-136-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Kabinette setzen sich ausschließlich aus Beschäftigten des Europäischen Parlaments zusammen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-136-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Das Kabinett ist ein eigenständiges EU-Organ mit eigener Gesetzgebungskompetenz",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-136-A"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  8
+                                     },
+                          "answerBasis":  "Die Kabinette unterstützen die Kommissionsmitglieder politisch und fachlich. Ihre Zusammensetzung und Beschäftigungsformen richten sich nach besonderen Kommissionsregeln; die pauschale Bezeichnung sämtlicher Mitglieder als jederzeit abberufbare politische Beamte ist ungenau."
+                      },
+                      {
+                          "id":  "recht-137",
+                          "type":  "single_choice",
+                          "question":  "Sind die Mitglieder der Europäischen Kommission bei der Wahrnehmung ihrer Aufgaben an Weisungen gebunden?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-137-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Nein, sie dürfen grundsätzlich weder Weisungen von Regierungen noch von anderen Organen, Einrichtungen oder Stellen einholen oder entgegennehmen",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-137-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Ja, wenn die Weisung vom Europäischen Parlament oder vom Rat kommt",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-137-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Ja, wenn die Weisung aus ihrem Herkunftsstaat kommt",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-137-A"
+                                                ],
+                          "category":  "Europarecht: Unabhängigkeit der Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  13
+                                     },
+                          "answerBasis":  "Nach Art. 17 Abs. 3 EUV ist die Kommission bei der Wahrnehmung ihrer Aufgaben vollkommen unabhängig. Ihre Mitglieder dürfen grundsätzlich keine Weisungen von Regierungen oder anderen Organen und Stellen einholen oder entgegennehmen."
+                      },
+                      {
+                          "id":  "recht-138",
+                          "type":  "single_choice",
+                          "question":  "Seit wann werden die Mitglieder des Europäischen Parlaments unmittelbar von den Bürgerinnen und Bürgern gewählt?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-138-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Seit 1957",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-138-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Seit 1979",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-138-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Seit 1993",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-138-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Seit 2009",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-138-B"
+                                                ],
+                          "category":  "Europarecht: Europäisches Parlament",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  19
+                                     },
+                          "answerBasis":  "Die ersten allgemeinen unmittelbaren Wahlen zum Europäischen Parlament fanden im Juni 1979 statt. Seitdem werden seine Mitglieder direkt für eine fünfjährige Wahlperiode gewählt."
+                      },
+                      {
+                          "id":  "recht-139",
+                          "type":  "single_choice",
+                          "question":  "Welche zentralen Motive standen am Beginn der europäischen Einigung nach dem Zweiten Weltkrieg im Vordergrund?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-139-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Friedenssicherung und wirtschaftlicher Wiederaufbau",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-139-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Die sofortige Schaffung eines einheitlichen europäischen Sozialstaats",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-139-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Die Gründung der Europäischen Kommission als Selbstzweck",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-139-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Die sofortige Direktwahl eines Europäischen Parlaments",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-139-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Die Umwandlung aller nationalen Währungen in eine gemeinsame Währung",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-139-A"
+                                                ],
+                          "category":  "Europarecht: Geschichte der europäischen Integration",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  1
+                                     },
+                          "answerBasis":  "Die europäische Einigung nach dem Zweiten Weltkrieg sollte insbesondere den Frieden dauerhaft sichern und den wirtschaftlichen Wiederaufbau durch Zusammenarbeit fördern."
+                      },
+                      {
+                          "id":  "recht-140",
+                          "type":  "single_choice",
+                          "question":  "Auf welchen drei Gründungsverträgen beruhten die ursprünglichen Europäischen Gemeinschaften?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-140-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Euratom-Vertrag, Vertrag von Nizza und EGKS-Vertrag",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-140-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "EGKS-Vertrag, Vertrag von Maastricht und Vertrag von Lissabon",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-140-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "EGKS-Vertrag, EWG-Vertrag und Euratom-Vertrag",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-140-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "EU-Vertrag, EWG-Vertrag und Euratom-Vertrag",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-140-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "AEUV, EGKS-Vertrag und Euratom-Vertrag",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-140-C"
+                                                ],
+                          "category":  "Europarecht: Geschichte der europäischen Integration",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  2
+                                     },
+                          "answerBasis":  "Die drei ursprünglichen Gemeinschaften waren die EGKS auf Grundlage des Pariser Vertrags von 1951 sowie die EWG und Euratom auf Grundlage der Römischen Verträge von 1957."
+                      },
+                      {
+                          "id":  "recht-141",
+                          "type":  "single_choice",
+                          "question":  "Wie setzt sich der Europäische Wirtschafts- und Sozialausschuss zusammen?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-141-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Aus Vertretern lokaler und regionaler Gebietskörperschaften",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-141-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Aus Vertretern der nationalen Ministerien für Sozial- und Wirtschaftspolitik",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-141-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Ausschließlich aus in Brüssel ansässigen Lobbyisten",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-141-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Aus Vertretern von Arbeitgeber- und Arbeitnehmerorganisationen sowie anderer repräsentativer Gruppen der Zivilgesellschaft",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-141-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Aus Mitarbeitern der Ständigen Vertretungen der Mitgliedstaaten",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-141-D"
+                                                ],
+                          "category":  "Europarecht: Beratende Einrichtungen",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  3
+                                     },
+                          "answerBasis":  "Nach Art. 300 Abs. 2 AEUV besteht der Europäische Wirtschafts- und Sozialausschuss aus Vertretern der Organisationen der Arbeitgeber und Arbeitnehmer sowie anderer repräsentativer Gruppen der Zivilgesellschaft."
+                      },
+                      {
+                          "id":  "recht-142",
+                          "type":  "single_choice",
+                          "question":  "Was versteht man unter dem Dreiervorsitz beziehungsweise dem Trio der Präsidentschaften des Rates der Europäischen Union?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-142-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Die regelmäßige Abstimmung der Präsidenten von Kommission, Europäischem Rat und Europäischem Parlament",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-142-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Die verpflichtende Teilnahme von drei Kommissionsmitgliedern an jeder Ratssitzung",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-142-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Drei Mitgliedstaaten führen den Ratsvorsitz nacheinander und legen dafür ein gemeinsames Achtzehnmonatsprogramm fest",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-142-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Der gleichzeitige Vorsitz des Präsidenten des Europäischen Rates, des Ratsvorsitzenden und des Kommissionspräsidenten",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-142-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Eine gemeinsame Leitung aller Ratssitzungen durch drei Mitgliedstaaten",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-142-C"
+                                                ],
+                          "category":  "Europarecht: Rat der Europäischen Union",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  4
+                                     },
+                          "answerBasis":  "Die Mitgliedstaaten, die den Vorsitz im Rat nacheinander jeweils sechs Monate ausüben, arbeiten in Dreiergruppen zusammen. Das Trio legt langfristige Ziele und ein gemeinsames Programm für achtzehn Monate fest. Die ältere Bezeichnung „Troika“ wird heute meist durch „Trio“ oder „Dreiervorsitz“ ersetzt."
+                      },
+                      {
+                          "id":  "recht-143",
+                          "type":  "single_choice",
+                          "question":  "Welche Organe beschließen EU-Gesetzgebungsakte im ordentlichen Gesetzgebungsverfahren gemeinsam?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-143-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Das Europäische Parlament und der Rat der Europäischen Union",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-143-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Der Europäische Rat und die Europäische Kommission",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-143-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Der Europäische Rat und das Europäische Parlament",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-143-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Der Rat der Europäischen Union und die Europäische Kommission",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-143-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Der Europäische Rat und der Rat der Europäischen Union",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-143-A"
+                                                ],
+                          "category":  "Europarecht: Ordentliches Gesetzgebungsverfahren",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  5
+                                     },
+                          "answerBasis":  "Im ordentlichen Gesetzgebungsverfahren nach Art. 294 AEUV beschließen das Europäische Parlament und der Rat der Europäischen Union einen Gesetzgebungsakt gemeinsam. In der Regel unterbreitet die Kommission den Vorschlag."
+                      },
+                      {
+                          "id":  "recht-144",
+                          "type":  "single_choice",
+                          "question":  "Welche Gruppe enthält typische Instrumente des sogenannten Soft Law der Europäischen Union?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-144-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Urteile des EuGH, Richtlinien und Verordnungen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-144-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Richtlinien, Empfehlungen und Leitlinien",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-144-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Weißbücher, Mitteilungen und Verordnungen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-144-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Mitteilungen, Grünbücher und Leitlinien",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-144-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Verordnungen, Mitteilungen und Erklärungen",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-144-D"
+                                                ],
+                          "category":  "Europarecht: Soft Law",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  6
+                                     },
+                          "answerBasis":  "Soft Law bezeichnet rechtlich grundsätzlich nicht verbindliche Instrumente, die dennoch politische oder praktische Steuerungswirkung entfalten können. Dazu zählen insbesondere Mitteilungen, Grün- und Weißbücher, Leitlinien sowie Empfehlungen. Richtlinien und Verordnungen sind dagegen verbindliche Rechtsakte."
+                      },
+                      {
+                          "id":  "recht-145",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage zu den Zuständigkeiten der Europäischen Union im Gesundheitsbereich trifft zu?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-145-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Die EU besitzt eine umfassende Zuständigkeit für die Organisation der nationalen Gesundheitssysteme",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-145-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Die EU besitzt überwiegend begrenzte, ergänzende und koordinierende Zuständigkeiten; die Verträge gestatten ihr daneben bestimmte ausdrücklich geregelte Maßnahmen",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-145-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Allein die Mitgliedstaaten entscheiden von Fall zu Fall, welche Zuständigkeiten die Kommission wahrnehmen darf",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-145-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Urteile des EuGH können den Wortlaut der Kompetenzvorschriften in den Verträgen ändern",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-145-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Die EU darf im Gesundheitsbereich ausschließlich unverbindliche Anregungen oder Förderprogramme beschließen",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-145-B"
+                                                ],
+                          "category":  "Europarecht: Gesundheitspolitik",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  7
+                                     },
+                          "answerBasis":  "Nach Art. 168 AEUV ergänzt die Tätigkeit der Union grundsätzlich die Politik der Mitgliedstaaten und fördert deren Zusammenarbeit. Die Verantwortung für Gesundheitspolitik und Versorgung verbleibt bei den Mitgliedstaaten; für bestimmte Bereiche, etwa Qualitäts- und Sicherheitsstandards sowie grenzüberschreitende Gesundheitsgefahren, sehen die Verträge jedoch Unionsmaßnahmen vor."
+                      },
+                      {
+                          "id":  "recht-146",
+                          "type":  "single_choice",
+                          "question":  "Welche Aussage beschreibt das Verhältnis zwischen dem Europarat und der Europäischen Union richtig?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-146-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Der Europarat ist eine eigenständige internationale Organisation und kein Organ der Europäischen Union",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-146-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Der Europarat ist eine Exekutivagentur der Europäischen Union",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-146-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Der Europarat tagt stets gemeinsam mit dem Europäischen Rat",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-146-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Der Europarat wurde durch den Vertrag von Lissabon als EU-Organ geschaffen",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-146-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Der Europarat und der Europäische Rat sind zwei Bezeichnungen für dasselbe Organ",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-146-A"
+                                                ],
+                          "category":  "Europarecht: Europarat und Europäische Union",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  9
+                                     },
+                          "answerBasis":  "Der 1949 gegründete Europarat ist eine von der Europäischen Union getrennte internationale Organisation mit Sitz in Straßburg. Er darf insbesondere nicht mit dem Europäischen Rat oder dem Rat der Europäischen Union verwechselt werden."
+                      },
+                      {
+                          "id":  "recht-147",
+                          "type":  "single_choice",
+                          "question":  "Welches EU-Organ wird wegen seines Initiativrechts und seiner integrationsfördernden Rolle häufig als „Motor der Europäischen Union“ bezeichnet?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-147-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Der Rat der Europäischen Union",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-147-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Der Europarat",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-147-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Der Europäische Rat",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-147-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Die Europäische Kommission",
+                                              "correct":  true
+                                          },
+                                          {
+                                              "uid":  "recht-147-E",
+                                              "sourceLetter":  "E",
+                                              "sourceIndex":  4,
+                                              "text":  "Das Europäische Parlament",
+                                              "correct":  false
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-147-D"
+                                                ],
+                          "category":  "Europarecht: Europäische Kommission",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  10
+                                     },
+                          "answerBasis":  "Die Bezeichnung „Motor der EU“ ist kein Rechtsbegriff. Sie wird traditionell für die Europäische Kommission verwendet, weil diese die allgemeine politische Entwicklung der Union fördert und grundsätzlich das Initiativrecht für EU-Gesetzgebung ausübt."
+                      },
+                      {
+                          "id":  "recht-174",
+                          "type":  "single_choice",
+                          "question":  "Welches unionsrechtliche Verfahren kommt in Betracht, wenn ein Mitgliedstaat eine EU-Richtlinie nicht oder nicht fristgerecht umsetzt?",
+                          "answers":  [
+                                          {
+                                              "uid":  "recht-174-A",
+                                              "sourceLetter":  "A",
+                                              "sourceIndex":  0,
+                                              "text":  "Drittwiderspruchsverfahren",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-174-B",
+                                              "sourceLetter":  "B",
+                                              "sourceIndex":  1,
+                                              "text":  "Klageerzwingungsverfahren",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-174-C",
+                                              "sourceLetter":  "C",
+                                              "sourceIndex":  2,
+                                              "text":  "Fortsetzungsfeststellungsverfahren",
+                                              "correct":  false
+                                          },
+                                          {
+                                              "uid":  "recht-174-D",
+                                              "sourceLetter":  "D",
+                                              "sourceIndex":  3,
+                                              "text":  "Vertragsverletzungsverfahren",
+                                              "correct":  true
+                                          }
+                                      ],
+                          "correctAnswerUids":  [
+                                                    "recht-174-D"
+                                                ],
+                          "category":  "Europarecht: Umsetzung von Richtlinien",
+                          "source":  {
+                                         "document":  "Vom Nutzer bereitgestelltes Bild",
+                                         "originalQuestion":  43
+                                     },
+                          "answerBasis":  "Unterlässt ein Mitgliedstaat die fristgerechte Umsetzung einer Richtlinie, kann die Europäische Kommission ein Vertragsverletzungsverfahren nach Art. 258 AEUV einleiten und den Gerichtshof anrufen. Bei fehlender Mitteilung von Umsetzungsmaßnahmen kann sie unter den Voraussetzungen des Art. 260 Abs. 3 AEUV bereits finanzielle Sanktionen beantragen."
+                      }
+                  ]
+}
