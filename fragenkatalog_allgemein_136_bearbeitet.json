@@ -55,7 +55,7 @@
       "correctAnswerUids": [
         "recht-001-E"
       ],
-      "category": "Allgemein Recht",
+      "category": "Allgemeines Recht",
       "source": {
         "document": "Allgemein Recht_111.docx"
       },
@@ -64,7 +64,7 @@
     {
       "id": "recht-002",
       "type": "single_choice",
-      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an.\nA. Formelles Recht \nB. Strafrecht\nC. Materielles Recht\n\n1. Garantenstellung\n2. Bürgerliches Gesetzbuch (BGB)\n3. Verfahrensrecht",
+      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an.\nA. Formelles Recht\nB. Strafrecht\nC. Materielles Recht\n\n1. Garantenstellung\n2. Bürgerliches Gesetzbuch (BGB)\n3. Verfahrensrecht",
       "answers": [
         {
           "uid": "recht-002-A",
@@ -120,28 +120,28 @@
           "uid": "recht-003-A",
           "sourceLetter": "A",
           "sourceIndex": 0,
-          "text": "1 +2",
+          "text": "1 + 2",
           "correct": false
         },
         {
           "uid": "recht-003-B",
           "sourceLetter": "B",
           "sourceIndex": 1,
-          "text": "2 +3",
+          "text": "2 + 3",
           "correct": false
         },
         {
           "uid": "recht-003-C",
           "sourceLetter": "C",
           "sourceIndex": 2,
-          "text": "2 +4",
+          "text": "2 + 4",
           "correct": true
         },
         {
           "uid": "recht-003-D",
           "sourceLetter": "D",
           "sourceIndex": 3,
-          "text": "3 +4",
+          "text": "3 + 4",
           "correct": false
         },
         {
@@ -170,7 +170,7 @@
           "uid": "recht-004-A",
           "sourceLetter": "A",
           "sourceIndex": 0,
-          "text": "1 + 2+ 4",
+          "text": "1 + 2 + 4",
           "correct": false
         },
         {
@@ -270,7 +270,7 @@
           "uid": "recht-006-A",
           "sourceLetter": "A",
           "sourceIndex": 0,
-          "text": "1 + 3+ 5",
+          "text": "1 + 3 + 5",
           "correct": true
         },
         {
@@ -541,7 +541,7 @@
           "uid": "recht-012-D",
           "sourceLetter": "D",
           "sourceIndex": 3,
-          "text": "Alles Aussagen sind richtig",
+          "text": "Alle Aussagen sind richtig",
           "correct": false
         },
         {
@@ -757,14 +757,14 @@
           "uid": "recht-017-A",
           "sourceLetter": "A",
           "sourceIndex": 0,
-          "text": "Kann ein vom Vollmachtgeber gewählte Person sein",
+          "text": "Kann eine vom Vollmachtgeber gewählte Person sein",
           "correct": true
         },
         {
           "uid": "recht-017-B",
           "sourceLetter": "B",
           "sourceIndex": 1,
-          "text": "dürfen keine nahe Angehörige sein",
+          "text": "dürfen keine nahen Angehörigen sein",
           "correct": false
         },
         {
@@ -800,7 +800,7 @@
           "uid": "recht-018-A",
           "sourceLetter": "A",
           "sourceIndex": 0,
-          "text": "ein vom potentiellen Betreutem Ausgewählter",
+          "text": "ein vom potenziell Betreuten Ausgewählter",
           "correct": true
         },
         {
@@ -821,7 +821,7 @@
           "uid": "recht-018-D",
           "sourceLetter": "D",
           "sourceIndex": 3,
-          "text": "Nur nahe Angehörigen können als Betreuer in Betracht kommen",
+          "text": "Nur nahe Angehörige können als Betreuer in Betracht kommen",
           "correct": false
         }
       ],
@@ -893,7 +893,7 @@
           "uid": "recht-020-C",
           "sourceLetter": "C",
           "sourceIndex": 2,
-          "text": "Bedarf für das Amt des Betreuers zumindest eines Fachhochschulabschluss",
+          "text": "Bedarf für das Amt des Betreuers zumindest eines Fachhochschulabschlusses",
           "correct": false
         },
         {
@@ -907,7 +907,7 @@
           "uid": "recht-020-E",
           "sourceLetter": "E",
           "sourceIndex": 4,
-          "text": "Darf nicht gegen den freien Willen eines geistigen Behinderten angeordneten werden",
+          "text": "Darf nicht gegen den freien Willen eines geistig Behinderten angeordnet werden",
           "correct": true
         }
       ],
@@ -1325,7 +1325,7 @@
           "uid": "recht-029-C",
           "sourceLetter": "C",
           "sourceIndex": 2,
-          "text": "Wenn der Täter nicht vorsätzlich greift",
+          "text": "Wenn der Täter nicht vorsätzlich handelt",
           "correct": false
         },
         {
@@ -1425,7 +1425,7 @@
           "uid": "recht-031-D",
           "sourceLetter": "D",
           "sourceIndex": 3,
-          "text": "Die Aussagen A und B Sind richtig",
+          "text": "Die Aussagen A und B sind richtig",
           "correct": true
         },
         {
@@ -1448,7 +1448,7 @@
     {
       "id": "recht-032",
       "type": "single_choice",
-      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Freiheitsentziehung\nB. Freiheitsberaubung gemäß § 239 Abs. 3 StGB\nC. Betreuungsgerichtliche Genehmigung \n\n1. Ist wegen der Mindeststrafe von einem Jahr ein Verbrechen\n2. Kann bei länger dauernden oder regelmäßig wiederkehrenden Bettgittern trotz Einwilligung eines Vorsorgebevollmächtigten erforderlich sein\n3. Setzt grundsätzlich objektiv vorhandene Fortbewegungsfähigkeit voraus",
+      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an:\nA. Freiheitsentziehung\nB. Freiheitsberaubung gemäß § 239 Abs. 3 StGB\nC. Betreuungsgerichtliche Genehmigung\n\n1. Ist wegen der Mindeststrafe von einem Jahr ein Verbrechen\n2. Kann bei länger dauernden oder regelmäßig wiederkehrenden Bettgittern trotz Einwilligung eines Vorsorgebevollmächtigten erforderlich sein\n3. Setzt grundsätzlich objektiv vorhandene Fortbewegungsfähigkeit voraus",
       "answers": [
         {
           "uid": "recht-032-A",
@@ -1791,14 +1791,14 @@
           "uid": "recht-039-A",
           "sourceLetter": "A",
           "sourceIndex": 0,
-          "text": "Beim hochziehen eines Bettseitenteils bei einem bewusstlosen Patienten",
+          "text": "Beim Hochziehen eines Bettseitenteils bei einem bewusstlosen Patienten",
           "correct": false
         },
         {
           "uid": "recht-039-B",
           "sourceLetter": "B",
           "sourceIndex": 1,
-          "text": "Beim Abschließen des Raums ohne, dass es die dementen Patienten bemerken",
+          "text": "Beim Abschließen des Raums, ohne dass es die dementen Patienten bemerken",
           "correct": true
         },
         {
@@ -1924,7 +1924,7 @@
           "uid": "recht-042-C",
           "sourceLetter": "C",
           "sourceIndex": 2,
-          "text": "Beim Vorliegen der Vorrausetzung der Notwehr gemäß § 32 StGB",
+          "text": "Beim Vorliegen der Voraussetzung der Notwehr gemäß § 32 StGB",
           "correct": true
         },
         {
@@ -2060,7 +2060,7 @@
           "uid": "recht-045-B",
           "sourceLetter": "B",
           "sourceIndex": 1,
-          "text": "wenn der Patient in eine durchgeführte Maßnahme (z.B. Injektion oder Punktion) nicht eingewilligt hat",
+          "text": "wenn der Patient in eine durchgeführte Maßnahme (z. B. Injektion oder Punktion) nicht eingewilligt hat",
           "correct": false
         },
         {
@@ -2383,7 +2383,7 @@
     {
       "id": "recht-052",
       "type": "single_choice",
-      "question": "Welche Antworten sind richtig?\n\n1. Wenn in einer Patientenverfügung Festlegungen für ärztliche Maßnahmen in bestimmten Situationen enthalten sind, sind sie verbindlich und vom Arzt unbedingt zu beachten, wenn durch diese Festlegungen der Wille für eine konkrete Behandlungssituation eindeutig und sicher festgestellt werden kann.\n\n2. Eine Patientenverfügung muss schriftlich fixiert werden.\n\n3. Die Verfügung muss ausdrücken, welche Maßnahmen konkret gewünscht werden mit möglichst ausführlicher Begründung.\n\n4. Bei vagen und unklaren Formulierungen, wenn nicht deutlich ist, was der Patient in einer konkreten Situation wirklich wünscht, entscheidet der Chefarzt, ob Maßnahmen der Lebenserhaltung abgebrochen werden oder nicht.\n\n5. Empfehlenswert ist die Bestätigung, dass der Verfasser einsichts- und urteilsfähig ist, z.B. durch zusätzliche Unterschrift eines oder mehrerer Zeugen.",
+      "question": "Welche Antworten sind richtig?\n\n1. Wenn in einer Patientenverfügung Festlegungen für ärztliche Maßnahmen in bestimmten Situationen enthalten sind, sind sie verbindlich und vom Arzt unbedingt zu beachten, wenn durch diese Festlegungen der Wille für eine konkrete Behandlungssituation eindeutig und sicher festgestellt werden kann.\n\n2. Eine Patientenverfügung muss schriftlich fixiert werden.\n\n3. Die Verfügung muss ausdrücken, welche Maßnahmen konkret gewünscht werden mit möglichst ausführlicher Begründung.\n\n4. Bei vagen und unklaren Formulierungen, wenn nicht deutlich ist, was der Patient in einer konkreten Situation wirklich wünscht, entscheidet der Chefarzt, ob Maßnahmen der Lebenserhaltung abgebrochen werden oder nicht.\n\n5. Empfehlenswert ist die Bestätigung, dass der Verfasser einsichts- und urteilsfähig ist, z. B. durch zusätzliche Unterschrift eines oder mehrerer Zeugen.",
       "answers": [
         {
           "uid": "recht-052-A",
@@ -2560,7 +2560,7 @@
           "uid": "recht-055-C",
           "sourceLetter": "C",
           "sourceIndex": 2,
-          "text": "2 +3",
+          "text": "2 + 3",
           "correct": false
         },
         {
@@ -2940,7 +2940,7 @@
     {
       "id": "recht-063",
       "type": "single_choice",
-      "question": "Welcher Straftatbestand verbirgt sich hinter dem Beispiel:\nIst jemand durch das ausdrückliche und ernstliche Verlangen des Getöteten zur Tötung bestimmt worden, so ist er eine Freiheitsstrafe von sechs Monaten bis zu fünf Jahren zu verhängen. Der Versuch ist strafbar.",
+      "question": "Welcher Straftatbestand verbirgt sich hinter dem Beispiel:\nIst jemand durch das ausdrückliche und ernstliche Verlangen des Getöteten zur Tötung bestimmt worden, so ist auf Freiheitsstrafe von sechs Monaten bis zu fünf Jahren zu erkennen. Der Versuch ist strafbar.",
       "answers": [
         {
           "uid": "recht-063-A",
@@ -3112,7 +3112,7 @@
     {
       "id": "recht-068",
       "type": "single_choice",
-      "question": "Welches Beispiel zählt zu passiven Sterbehilfe?",
+      "question": "Welches Beispiel zählt zur passiven Sterbehilfe?",
       "answers": [
         {
           "uid": "recht-068-A",
@@ -3182,7 +3182,7 @@
           "uid": "recht-069-D",
           "sourceLetter": "D",
           "sourceIndex": 3,
-          "text": "Straffreiheit wegen Indirekter Sterbehilfe",
+          "text": "Straffreiheit wegen indirekter Sterbehilfe",
           "correct": true
         }
       ],
@@ -3420,7 +3420,7 @@
     {
       "id": "recht-075",
       "type": "single_choice",
-      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Schuld\nB. Rechtswidrigkeit\nC. Tatbestandsmäßigkeit \n\n1. Einwilligung\n2. Vorsatz\n3. Unrechtbewusstsein",
+      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an:\nA. Schuld\nB. Rechtswidrigkeit\nC. Tatbestandsmäßigkeit\n\n1. Einwilligung\n2. Vorsatz\n3. Unrechtbewusstsein",
       "answers": [
         {
           "uid": "recht-075-A",
@@ -3570,7 +3570,7 @@
     {
       "id": "recht-078",
       "type": "single_choice",
-      "question": "Welche strafrechtlichen Folgen können bei einer Verurteilung wegen fahrlässiger Tötung eintreten?\n1. Freiheitstrafe oder Geldstrafe\n2. Schadensersatz\n3. Berufsverbot\n4. Entzug der Approbation\n5. Schmerzensgeld",
+      "question": "Welche strafrechtlichen Folgen können bei einer Verurteilung wegen fahrlässiger Tötung eintreten?\n1. Freiheitsstrafe oder Geldstrafe\n2. Schadensersatz\n3. Berufsverbot\n4. Entzug der Approbation\n5. Schmerzensgeld",
       "answers": [
         {
           "uid": "recht-078-A",
@@ -3604,7 +3604,7 @@
           "uid": "recht-078-E",
           "sourceLetter": "E",
           "sourceIndex": 4,
-          "text": "Alle Aussage sind richtig",
+          "text": "Alle Aussagen sind richtig",
           "correct": false
         }
       ],
@@ -3720,7 +3720,7 @@
     {
       "id": "recht-081",
       "type": "single_choice",
-      "question": "Ordnen Sie dir aufgeführten Begriffen der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an\nA. Art. 103 Abs. 2 GG, § 1 StGB \nB. Vorsatz \nC. Fahrlässigkeit \n\n1. Handeln mit Wissen und Wollen der Tatbestandsverwirklichung.\n2. Keine Strafe ohne Gesetz.\n3. Handeln unter Außerachtlassung der im Verkehr erforderlichen Sorgfalt.\n",
+      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an:\nA. Art. 103 Abs. 2 GG, § 1 StGB\nB. Vorsatz\nC. Fahrlässigkeit\n\n1. Handeln mit Wissen und Wollen der Tatbestandsverwirklichung.\n2. Keine Strafe ohne Gesetz.\n3. Handeln unter Außerachtlassung der im Verkehr erforderlichen Sorgfalt.",
       "answers": [
         {
           "uid": "recht-081-A",
@@ -3870,7 +3870,7 @@
     {
       "id": "recht-084",
       "type": "single_choice",
-      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Mord\nB. Körperverletzung\nC. Tötung auf Verlangen\n\n1. Antragsdelikt\n2. Ausdrücklich und ernstliches Bestimmen\n3. Heimtücke",
+      "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Mord\nB. Körperverletzung\nC. Tötung auf Verlangen\n\n1. Antragsdelikt\n2. Ausdrückliches und ernstliches Bestimmen\n3. Heimtücke",
       "answers": [
         {
           "uid": "recht-084-A",
@@ -3897,7 +3897,7 @@
           "uid": "recht-084-D",
           "sourceLetter": "D",
           "sourceIndex": 3,
-          "text": "A 2, B3, C1",
+          "text": "A2, B3, C1",
           "correct": false
         },
         {
