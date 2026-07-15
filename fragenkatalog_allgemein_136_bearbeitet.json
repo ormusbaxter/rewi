@@ -1918,14 +1918,14 @@
           "sourceLetter": "B",
           "sourceIndex": 1,
           "text": "Durch die Einwilligung einer einsichtsfähigen Bewohnerin",
-          "correct": false
+          "correct": true
         },
         {
           "uid": "recht-042-C",
           "sourceLetter": "C",
           "sourceIndex": 2,
           "text": "Beim Vorliegen der Vorrausetzung der Notwehr gemäß § 32 StGB",
-          "correct": false
+          "correct": true
         },
         {
           "uid": "recht-042-D",
