@@ -13,11 +13,10 @@
 <body>
   <header class="top">
     <h1 id="heading">Fragenkatalog-Editor</h1>
-    <p>JSON laden, Fragen und Antworten bearbeiten und als neue JSON-Datei speichern.</p>
+    <p>JSON-Kataloge vom Webserver laden, bearbeiten und direkt dort speichern.</p>
     <div class="toolbar">
-      <button class="filebtn" id="openBtn">Stammverzeichnis wählen</button>
+      <button class="filebtn" id="openBtn">Kataloge aktualisieren</button>
       <select id="catalogSelect" disabled><option value="">JSON auswählen …</option></select>
-      <input id="fileInput" type="file" accept="application/json,.json" hidden>
       <button class="btn secondary" id="newBtn" disabled>Neuer Katalog</button>
       <button class="btn secondary" id="addBtn" disabled>+ Frage</button>
       <button class="btn" id="saveBtn" disabled>Katalog speichern</button>
@@ -33,7 +32,7 @@
   <div class="status" id="status" role="status"></div>
 <script>
 (()=>{'use strict';
-  let data=null, selected=-1, filename='fragenkatalog.json', dirty=false, questionDirty=false, savedQuestion=null, fileHandle=null, directoryHandle=null;
+  let data=null, selected=-1, filename='fragenkatalog.json', dirty=false, questionDirty=false, savedQuestion=null;
   const $=s=>document.querySelector(s), list=$('#list'), editor=$('#editor'), search=$('#search');
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const uid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2);
@@ -53,7 +52,7 @@
   }
   function load(d,name){data=normalize(d);filename=name||filename;selected=data.questions.length?0:-1;search.disabled=false;$('#addBtn').disabled=$('#saveBtn').disabled=false;setDirty(false);render();toast(`${data.questions.length} Fragen geladen`)}
   function render(){renderList();renderEditor();$('#stats').textContent=data?`${data.questions.length} Fragen · ${data.title||'Ohne Titel'}`:'Noch kein Katalog geladen'}
-  function renderList(){if(!data){list.innerHTML='';return}const term=search.value.trim().toLowerCase();list.innerHTML=data.questions.map((q,i)=>({q,i})).filter(x=>!term||`${x.q.id} ${x.q.question} ${x.q.category||''}`.toLowerCase().includes(term)).map(({q,i})=>`<button class="qitem ${i===selected?'active':''}" data-i="${i}"><span class="qnum">${i+1}.</span><span class="qtxt" title="${esc(q.question)}">${esc(q.question||'(ohne Fragentext)')}</span></button>`).join('')||'<p class="stats" style="padding:10px">Keine Treffer</p>'}
+  function renderList(){if(!data){list.innerHTML='';return}const term=search.value.trim().toLowerCase();list.innerHTML=data.questions.map((q,i)=>({q,i})).filter(({q})=>!term||`${q.id} ${q.question} ${q.category||''} ${q.answers.map(a=>a.text||'').join(' ')}`.toLowerCase().includes(term)).map(({q,i})=>`<button class="qitem ${i===selected?'active':''}" data-i="${i}"><span class="qnum">${i+1}.</span><span class="qtxt" title="${esc(q.question)}">${esc(q.question||'(ohne Fragentext)')}</span></button>`).join('')||'<p class="stats" style="padding:10px">Keine Treffer</p>'}
   function renderEditor(){if(!data||selected<0){editor.innerHTML='<div class="empty"><div><h2>Keine Frage vorhanden</h2><p>Lege eine neue Frage an.</p></div></div>';return}const q=data.questions[selected];editor.innerHTML=`
     <div class="meta"><span class="pill">Frage ${selected+1} von ${data.questions.length}</span><span>${esc(q.id)}</span></div>
     <div class="field" style="margin-top:16px"><label for="question">Fragentext</label><textarea id="question">${esc(q.question)}</textarea></div>
@@ -65,33 +64,10 @@
   }
   function sync(){if(!data||selected<0)return;const q=data.questions[selected];q.question=$('#question').value;q.id=$('#qid').value.trim()||q.id;q.category=$('#category').value.trim();q.type=$('#type').value;q.answerBasis=$('#basis').value;document.querySelectorAll('.answer').forEach((row,i)=>{q.answers[i].text=row.querySelector('.answertext').value;q.answers[i].correct=row.querySelector('.correct').checked});setQuestionDirty(JSON.stringify(q)!==JSON.stringify(savedQuestion));renderList()}
   function syncDerived(){data.questionCount=data.questions.length;data.questions.forEach((q,qi)=>{q.id=q.id||`frage-${qi+1}`;q.answers.forEach((a,i)=>{a.sourceIndex=i;a.sourceLetter=String.fromCharCode(65+i);a.uid=a.uid||`${q.id}-${a.sourceLetter}`});q.correctAnswerUids=q.answers.filter(a=>a.correct).map(a=>a.uid)})}
-  $('#fileInput').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{load(JSON.parse(await f.text()),f.name)}catch(err){toast('Fehler: '+err.message,true)}e.target.value='' });
-  $('#newBtn').onclick=()=>{if(dirty&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;load({schemaVersion:'2.0',title:'Neuer Fragenkatalog',language:'de',questions:[]},'neuer_fragenkatalog.json')};
-  $('#addBtn').onclick=()=>{const n=data.questions.length+1,id='frage-'+String(n).padStart(3,'0');data.questions.push({id,type:'single_choice',question:'Neue Frage',answers:[{uid:id+'-A',sourceLetter:'A',sourceIndex:0,text:'Antwort',correct:true}],correctAnswerUids:[id+'-A'],category:''});selected=data.questions.length-1;setDirty();render()};
-  $('#saveBtn').onclick=()=>{sync();syncDerived();const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename.replace(/\.json$/i,'')+'_bearbeitet.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);setDirty(false);toast('JSON heruntergeladen')};
   list.onclick=e=>{const b=e.target.closest('.qitem');if(!b)return;sync();selected=Number(b.dataset.i);render()};search.oninput=renderList;
   editor.addEventListener('input',e=>{if(e.target.matches('input,textarea,select'))sync()});
   editor.addEventListener('change',e=>{if(e.target.id==='type'){sync();renderEditor()}if(e.target.classList.contains('correct'))sync()});
   editor.addEventListener('click',e=>{if(!data||selected<0)return;const q=data.questions[selected];if(e.target.id==='addAnswer'){sync();const i=q.answers.length;q.answers.push({uid:`${q.id}-${uid().slice(0,8)}`,sourceLetter:String.fromCharCode(65+i),sourceIndex:i,text:'Neue Antwort',correct:false});setDirty();renderEditor()}const row=e.target.closest('.answer');if(row){const i=Number(row.dataset.ai);if(e.target.classList.contains('remove')){if(q.answers.length<=1)return toast('Mindestens eine Antwort ist erforderlich.',true);sync();q.answers.splice(i,1);setDirty();renderEditor()}if(e.target.classList.contains('up')&&i>0){sync();[q.answers[i-1],q.answers[i]]=[q.answers[i],q.answers[i-1]];setDirty();renderEditor()}if(e.target.classList.contains('down')&&i<q.answers.length-1){sync();[q.answers[i+1],q.answers[i]]=[q.answers[i],q.answers[i+1]];setDirty();renderEditor()}}if(e.target.id==='deleteQ'&&confirm('Diese Frage wirklich löschen?')){data.questions.splice(selected,1);selected=Math.min(selected,data.questions.length-1);setDirty();render()}});
-  async function persistChanges(){
-    syncDerived();
-    if(!fileHandle){
-      if(!directoryHandle)throw new Error('Bitte zuerst das Stammverzeichnis wählen.');
-      fileHandle=await directoryHandle.getFileHandle(filename,{create:true});
-    }
-    if(fileHandle){
-      const writable=await fileHandle.createWritable();
-      await writable.write(JSON.stringify(data,null,2));
-      await writable.close();
-      await refreshCatalogs(filename);
-      toast('Änderungen gespeichert');
-    }else{
-      const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'}),a=document.createElement('a');
-      a.href=URL.createObjectURL(blob);a.download=filename.replace(/\.json$/i,'')+'_bearbeitet.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
-      toast('JSON als bearbeitete Datei heruntergeladen');
-    }
-    setDirty(false);rememberQuestion();
-  }
   async function saveCurrentQuestion(){
     if(!questionDirty)return true;
     try{await persistChanges();return true}catch(err){toast('Speichern fehlgeschlagen: '+err.message,true);return false}
@@ -111,46 +87,40 @@
     if(e.target.matches('#addAnswer,.remove,.up,.down'))queueMicrotask(()=>{if(data&&selected>=0)setQuestionDirty(JSON.stringify(data.questions[selected])!==JSON.stringify(savedQuestion))});
     if(e.target.id==='deleteQ')queueMicrotask(()=>rememberQuestion());
   },true);
-  $('#openBtn').onclick=async()=>{
-    if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;
-    try{
-      if('showOpenFilePicker'in window){
-        const [handle]=await showOpenFilePicker({types:[{description:'JSON-Datei',accept:{'application/json':['.json']}}],multiple:false});
-        const f=await handle.getFile();load(JSON.parse(await f.text()),f.name);fileHandle=handle;rememberQuestion();
-      }else $('#fileInput').click();
-    }catch(err){if(err.name!=='AbortError')toast('Fehler: '+err.message,true)}
-  };
-  $('#fileInput').addEventListener('change',async e=>{e.stopImmediatePropagation();const f=e.target.files[0];if(!f)return;try{fileHandle=null;load(JSON.parse(await f.text()),f.name);rememberQuestion()}catch(err){toast('Fehler: '+err.message,true)}e.target.value=''},true);
-  $('#newBtn').onclick=()=>{if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;fileHandle=null;load({schemaVersion:'2.0',title:'Neuer Fragenkatalog',language:'de',questions:[]},'neuer_fragenkatalog.json');rememberQuestion()};
   $('#addBtn').onclick=async()=>{if(questionDirty){await selectQuestion(selected);if(questionDirty)return}const n=data.questions.length+1,id='frage-'+String(n).padStart(3,'0');data.questions.push({id,type:'single_choice',question:'Neue Frage',answers:[{uid:id+'-A',sourceLetter:'A',sourceIndex:0,text:'Antwort',correct:true}],correctAnswerUids:[id+'-A'],category:''});selected=data.questions.length-1;setDirty();render();rememberQuestion()};
   $('#saveBtn').onclick=async()=>{sync();try{await persistChanges()}catch(err){toast('Speichern fehlgeschlagen: '+err.message,true)}};
+  async function api(action,options={}){
+    const response=await fetch(`php/api.php?action=${encodeURIComponent(action)}${options.file?`&file=${encodeURIComponent(options.file)}`:''}`,{
+      method:options.method||'GET',headers:options.body?{'Content-Type':'application/json'}:{},body:options.body?JSON.stringify(options.body):undefined,cache:'no-store'
+    });
+    let result;try{result=await response.json()}catch{throw new Error(`Serverantwort ist kein JSON (HTTP ${response.status}).`)}
+    if(!response.ok)throw new Error(result.error||`HTTP ${response.status}`);return result;
+  }
   async function refreshCatalogs(selectedName=''){
-    const select=$('#catalogSelect'),names=[];
-    for await(const [name,handle] of directoryHandle.entries())if(handle.kind==='file'&&name.toLowerCase().endsWith('.json'))names.push(name);
-    names.sort((a,b)=>a.localeCompare(b,'de'));
-    select.innerHTML='<option value="">JSON auswählen …</option>'+names.map(name=>`<option value="${esc(name)}">${esc(name)}</option>`).join('');
+    const result=await api('list'),select=$('#catalogSelect');
+    select.innerHTML='<option value="">JSON auswählen …</option>'+result.files.map(name=>`<option value="${esc(name)}">${esc(name)}</option>`).join('');
     select.disabled=false;select.value=selectedName;
   }
   async function openCatalog(name){
     if(!name)return;
     if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?')){$('#catalogSelect').value=filename;return}
-    try{fileHandle=await directoryHandle.getFileHandle(name);const file=await fileHandle.getFile();load(JSON.parse(await file.text()),file.name);rememberQuestion()}
-    catch(err){toast('Fehler: '+err.message,true)}
+    try{const result=await api('load',{file:name});load(result.data,result.file);rememberQuestion()}
+    catch(err){toast('Laden fehlgeschlagen: '+err.message,true)}
   }
-  $('#openBtn').onclick=async()=>{
-    if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;
-    if(!('showDirectoryPicker'in window))return toast('Dieser Browser unterstützt keinen sicheren Ordnerzugriff. Bitte Edge oder Chrome verwenden.',true);
-    try{directoryHandle=await showDirectoryPicker({mode:'readwrite'});fileHandle=null;data=null;selected=-1;savedQuestion=null;setDirty(false);setQuestionDirty(false);render();await refreshCatalogs();$('#newBtn').disabled=false;toast('Stammverzeichnis freigegeben')}
-    catch(err){if(err.name!=='AbortError')toast('Fehler: '+err.message,true)}
-  };
+  async function persistChanges(){
+    if(!data)throw new Error('Es ist kein Fragenkatalog geladen.');
+    syncDerived();await api('save',{method:'POST',body:{file:filename,data}});await refreshCatalogs(filename);setDirty(false);rememberQuestion();toast('Änderungen auf dem Webserver gespeichert');
+  }
+  $('#openBtn').onclick=async()=>{try{await refreshCatalogs(filename);toast('Katalogliste aktualisiert')}catch(err){toast('PHP-Backend nicht erreichbar: '+err.message,true)}};
   $('#catalogSelect').onchange=e=>openCatalog(e.target.value);
+  $('#newBtn').disabled=false;
   $('#newBtn').onclick=()=>{
-    if(!directoryHandle)return toast('Bitte zuerst das Stammverzeichnis wählen.',true);
     if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;
     const requested=prompt('Dateiname des neuen Katalogs:','neuer_fragenkatalog.json');if(!requested)return;
-    filename=(requested.toLowerCase().endsWith('.json')?requested:requested+'.json').replace(/[\\/:*?"<>|]/g,'_');fileHandle=null;
+    filename=(requested.toLowerCase().endsWith('.json')?requested:requested+'.json').replace(/[\\/:*?"<>|]/g,'_');
     load({schemaVersion:'2.0',title:'Neuer Fragenkatalog',language:'de',questions:[]},filename);rememberQuestion();$('#catalogSelect').value='';
   };
+  refreshCatalogs().catch(()=>toast('PHP-Backend nicht erreichbar. Editor über einen PHP-Webserver öffnen.',true));
   addEventListener('beforeunload',e=>{if(dirty||questionDirty){e.preventDefault();e.returnValue=''}});
 })();
 </script>
