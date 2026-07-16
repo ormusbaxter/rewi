@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fragenkatalog-Editor</title>
+  <style>
+    :root{--bg:#f4f6f8;--card:#fff;--ink:#182230;--muted:#667085;--line:#d8dee7;--blue:#245c91;--blue2:#17446f;--soft:#edf5fc;--red:#a22b2b;--green:#177245;--shadow:0 12px 34px #20304012}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.top{background:linear-gradient(135deg,#163c62,#2872aa);color:#fff;padding:22px max(20px,calc((100vw - 1400px)/2));box-shadow:var(--shadow)}.top h1{margin:0;font-size:clamp(1.45rem,2.4vw,2rem)}.top p{margin:5px 0 0;color:#dceafa}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.btn,.filebtn{border:1px solid #ffffff55;border-radius:9px;padding:9px 13px;background:#fff;color:#17446f;font-weight:650}.btn.secondary{background:transparent;color:#fff}.btn:disabled{opacity:.45;cursor:not-allowed}.filebtn input{display:none}.layout{display:grid;grid-template-columns:350px minmax(0,1fr);gap:18px;max-width:1400px;margin:20px auto;padding:0 20px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}.sidebar{height:calc(100vh - 175px);min-height:560px;display:flex;flex-direction:column;overflow:hidden}.sidehead{padding:15px;border-bottom:1px solid var(--line)}.sidehead input{width:100%}.stats{font-size:.85rem;color:var(--muted);margin-top:8px}.list{overflow:auto;flex:1;padding:7px}.qitem{width:100%;text-align:left;border:0;border-radius:9px;padding:10px;background:transparent;color:var(--ink);display:grid;grid-template-columns:34px 1fr;gap:5px}.qitem:hover{background:#f2f5f8}.qitem.active{background:var(--soft);color:var(--blue2)}.qnum{color:var(--muted);font-size:.83rem}.qtxt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.editor{padding:22px;min-height:560px}.empty{display:grid;place-items:center;text-align:center;color:var(--muted);min-height:500px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{margin-bottom:15px}.field label{display:block;font-weight:650;margin-bottom:6px}.field small{color:var(--muted)}input,select,textarea{width:100%;border:1px solid #cbd3df;border-radius:9px;padding:9px 11px;background:#fff;color:var(--ink)}textarea{resize:vertical;min-height:86px}.answers{display:grid;gap:10px}.answer{display:grid;grid-template-columns:42px 1fr auto;gap:9px;align-items:center;border:1px solid var(--line);border-radius:11px;padding:10px;background:#fafbfc}.answer .correct{width:20px;height:20px;margin:auto}.answer-actions{display:flex;gap:5px}.icon{border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 9px;color:var(--ink)}.icon.danger{color:var(--red)}.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 10px}.section-title h2{font-size:1.1rem;margin:0}.smallbtn{border:1px solid #a9bfd3;background:var(--soft);color:var(--blue2);border-radius:8px;padding:7px 10px;font-weight:650}.footer-actions{display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);margin-top:22px;padding-top:17px}.dangerbtn{border:1px solid #e1b4b4;background:#fff4f4;color:var(--red);border-radius:8px;padding:8px 11px}.status{position:fixed;right:18px;bottom:18px;padding:11px 15px;border-radius:10px;background:#172b3d;color:#fff;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none}.status.show{opacity:1;transform:none}.status.error{background:#8c2525}.dirty::after{content:" • geändert";color:#ffe09a;font-size:.9rem}.meta{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:.85rem}.pill{background:#eef1f5;border-radius:999px;padding:3px 8px}@media(max-width:800px){.layout{grid-template-columns:1fr}.sidebar{height:320px;min-height:0}.row{grid-template-columns:1fr}.editor{padding:16px}.answer{grid-template-columns:34px 1fr}.answer-actions{grid-column:2}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <h1 id="heading">Fragenkatalog-Editor</h1>
+    <p>JSON laden, Fragen und Antworten bearbeiten und als neue JSON-Datei speichern.</p>
+    <div class="toolbar">
+      <button class="filebtn" id="openBtn">JSON laden</button>
+      <input id="fileInput" type="file" accept="application/json,.json" hidden>
+      <button class="btn secondary" id="newBtn">Neuer Katalog</button>
+      <button class="btn secondary" id="addBtn" disabled>+ Frage</button>
+      <button class="btn" id="saveBtn" disabled>JSON herunterladen</button>
+    </div>
+  </header>
+  <main class="layout">
+    <aside class="card sidebar">
+      <div class="sidehead"><input id="search" type="search" placeholder="Fragen durchsuchen …" disabled><div class="stats" id="stats">Noch kein Katalog geladen</div></div>
+      <div class="list" id="list"></div>
+    </aside>
+    <section class="card editor" id="editor"><div class="empty"><div><h2>JSON-Datei auswählen</h2><p>Die Bearbeitung erfolgt vollständig lokal im Browser.</p></div></div></section>
+  </main>
+  <div class="status" id="status" role="status"></div>
+<script>
+(()=>{'use strict';
+  let data=null, selected=-1, filename='fragenkatalog.json', dirty=false, questionDirty=false, savedQuestion=null, fileHandle=null;
+  const $=s=>document.querySelector(s), list=$('#list'), editor=$('#editor'), search=$('#search');
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const uid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2);
+  function toast(msg,error=false){const e=$('#status');e.textContent=msg;e.className='status show'+(error?' error':'');clearTimeout(toast.t);toast.t=setTimeout(()=>e.className='status',2600)}
+  function setDirty(v=true){dirty=v;$('#heading').classList.toggle('dirty',dirty||questionDirty)}
+  function ensureQuestionSaveButton(){
+    const footer=editor.querySelector('.footer-actions');
+    if(!footer||$('#saveQuestion'))return;
+    const button=document.createElement('button');button.className='smallbtn';button.id='saveQuestion';button.textContent='Speichern';button.disabled=!questionDirty;footer.append(button);
+  }
+  function setQuestionDirty(v=true){questionDirty=v;$('#heading').classList.toggle('dirty',dirty||questionDirty);ensureQuestionSaveButton();const b=$('#saveQuestion');if(b)b.disabled=!v}
+  function rememberQuestion(){savedQuestion=selected>=0?structuredClone(data.questions[selected]):null;setQuestionDirty(false)}
+  function normalize(d){
+    if(Array.isArray(d)) d={schemaVersion:'2.0',title:'Fragenkatalog',language:'de',questions:d};
+    if(!d||!Array.isArray(d.questions)) throw new Error('Die Datei enthält kein Feld „questions“ als Array.');
+    d.questions.forEach((q,i)=>{q.id??='frage-'+String(i+1).padStart(3,'0');q.type??='single_choice';q.question??='';q.answers=Array.isArray(q.answers)?q.answers:[];q.answers.forEach((a,j)=>{a.uid??=q.id+'-'+String.fromCharCode(65+j);a.text??='';a.correct=Boolean(a.correct??q.correctAnswerUids?.includes(a.uid))})});return d;
+  }
+  function load(d,name){data=normalize(d);filename=name||filename;selected=data.questions.length?0:-1;search.disabled=false;$('#addBtn').disabled=$('#saveBtn').disabled=false;setDirty(false);render();toast(`${data.questions.length} Fragen geladen`)}
+  function render(){renderList();renderEditor();$('#stats').textContent=data?`${data.questions.length} Fragen · ${data.title||'Ohne Titel'}`:'Noch kein Katalog geladen'}
+  function renderList(){if(!data){list.innerHTML='';return}const term=search.value.trim().toLowerCase();list.innerHTML=data.questions.map((q,i)=>({q,i})).filter(x=>!term||`${x.q.id} ${x.q.question} ${x.q.category||''}`.toLowerCase().includes(term)).map(({q,i})=>`<button class="qitem ${i===selected?'active':''}" data-i="${i}"><span class="qnum">${i+1}.</span><span class="qtxt" title="${esc(q.question)}">${esc(q.question||'(ohne Fragentext)')}</span></button>`).join('')||'<p class="stats" style="padding:10px">Keine Treffer</p>'}
+  function renderEditor(){if(!data||selected<0){editor.innerHTML='<div class="empty"><div><h2>Keine Frage vorhanden</h2><p>Lege eine neue Frage an.</p></div></div>';return}const q=data.questions[selected];editor.innerHTML=`
+    <div class="meta"><span class="pill">Frage ${selected+1} von ${data.questions.length}</span><span>${esc(q.id)}</span></div>
+    <div class="field" style="margin-top:16px"><label for="question">Fragentext</label><textarea id="question">${esc(q.question)}</textarea></div>
+    <div class="row"><div class="field"><label for="qid">Fragen-ID</label><input id="qid" value="${esc(q.id)}"></div><div class="field"><label for="category">Kategorie</label><input id="category" value="${esc(q.category||'')}"></div></div>
+    <div class="row"><div class="field"><label for="type">Fragentyp</label><select id="type"><option value="single_choice" ${q.type==='single_choice'?'selected':''}>Einfachauswahl</option><option value="multiple_choice" ${q.type==='multiple_choice'?'selected':''}>Mehrfachauswahl</option></select></div><div class="field"><label for="basis">Antwortgrundlage</label><input id="basis" value="${esc(q.answerBasis||'')}"></div></div>
+    <div class="section-title"><h2>Antwortmöglichkeiten</h2><button class="smallbtn" id="addAnswer">+ Antwort</button></div>
+    <div class="answers">${q.answers.map((a,i)=>`<div class="answer" data-ai="${i}"><input class="correct" title="Richtige Antwort" type="${q.type==='single_choice'?'radio':'checkbox'}" name="correct" ${a.correct?'checked':''}><input class="answertext" value="${esc(a.text)}" aria-label="Antwort ${i+1}"><div class="answer-actions"><button class="icon up" title="Nach oben" ${i===0?'disabled':''}>↑</button><button class="icon down" title="Nach unten" ${i===q.answers.length-1?'disabled':''}>↓</button><button class="icon danger remove" title="Löschen">×</button></div></div>`).join('')}</div>
+    <div class="footer-actions"><button class="dangerbtn" id="deleteQ">Frage löschen</button><small>Änderungen werden beim Export übernommen.</small></div>`;
+  }
+  function sync(){if(!data||selected<0)return;const q=data.questions[selected];q.question=$('#question').value;q.id=$('#qid').value.trim()||q.id;q.category=$('#category').value.trim();q.type=$('#type').value;q.answerBasis=$('#basis').value;document.querySelectorAll('.answer').forEach((row,i)=>{q.answers[i].text=row.querySelector('.answertext').value;q.answers[i].correct=row.querySelector('.correct').checked});setQuestionDirty(JSON.stringify(q)!==JSON.stringify(savedQuestion));renderList()}
+  function syncDerived(){data.questionCount=data.questions.length;data.questions.forEach((q,qi)=>{q.id=q.id||`frage-${qi+1}`;q.answers.forEach((a,i)=>{a.sourceIndex=i;a.sourceLetter=String.fromCharCode(65+i);a.uid=a.uid||`${q.id}-${a.sourceLetter}`});q.correctAnswerUids=q.answers.filter(a=>a.correct).map(a=>a.uid)})}
+  $('#fileInput').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{load(JSON.parse(await f.text()),f.name)}catch(err){toast('Fehler: '+err.message,true)}e.target.value='' });
+  $('#newBtn').onclick=()=>{if(dirty&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;load({schemaVersion:'2.0',title:'Neuer Fragenkatalog',language:'de',questions:[]},'neuer_fragenkatalog.json')};
+  $('#addBtn').onclick=()=>{const n=data.questions.length+1,id='frage-'+String(n).padStart(3,'0');data.questions.push({id,type:'single_choice',question:'Neue Frage',answers:[{uid:id+'-A',sourceLetter:'A',sourceIndex:0,text:'Antwort',correct:true}],correctAnswerUids:[id+'-A'],category:''});selected=data.questions.length-1;setDirty();render()};
+  $('#saveBtn').onclick=()=>{sync();syncDerived();const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=filename.replace(/\.json$/i,'')+'_bearbeitet.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);setDirty(false);toast('JSON heruntergeladen')};
+  list.onclick=e=>{const b=e.target.closest('.qitem');if(!b)return;sync();selected=Number(b.dataset.i);render()};search.oninput=renderList;
+  editor.addEventListener('input',e=>{if(e.target.matches('input,textarea,select'))sync()});
+  editor.addEventListener('change',e=>{if(e.target.id==='type'){sync();renderEditor()}if(e.target.classList.contains('correct'))sync()});
+  editor.addEventListener('click',e=>{if(!data||selected<0)return;const q=data.questions[selected];if(e.target.id==='addAnswer'){sync();const i=q.answers.length;q.answers.push({uid:`${q.id}-${uid().slice(0,8)}`,sourceLetter:String.fromCharCode(65+i),sourceIndex:i,text:'Neue Antwort',correct:false});setDirty();renderEditor()}const row=e.target.closest('.answer');if(row){const i=Number(row.dataset.ai);if(e.target.classList.contains('remove')){if(q.answers.length<=1)return toast('Mindestens eine Antwort ist erforderlich.',true);sync();q.answers.splice(i,1);setDirty();renderEditor()}if(e.target.classList.contains('up')&&i>0){sync();[q.answers[i-1],q.answers[i]]=[q.answers[i],q.answers[i-1]];setDirty();renderEditor()}if(e.target.classList.contains('down')&&i<q.answers.length-1){sync();[q.answers[i+1],q.answers[i]]=[q.answers[i],q.answers[i+1]];setDirty();renderEditor()}}if(e.target.id==='deleteQ'&&confirm('Diese Frage wirklich löschen?')){data.questions.splice(selected,1);selected=Math.min(selected,data.questions.length-1);setDirty();render()}});
+  async function persistChanges(){
+    syncDerived();
+    if(fileHandle){
+      const writable=await fileHandle.createWritable();
+      await writable.write(JSON.stringify(data,null,2));
+      await writable.close();
+      toast('Änderungen gespeichert');
+    }else{
+      const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json;charset=utf-8'}),a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);a.download=filename.replace(/\.json$/i,'')+'_bearbeitet.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+      toast('JSON als bearbeitete Datei heruntergeladen');
+    }
+    setDirty(false);rememberQuestion();
+  }
+  async function saveCurrentQuestion(){
+    if(!questionDirty)return true;
+    try{await persistChanges();return true}catch(err){toast('Speichern fehlgeschlagen: '+err.message,true);return false}
+  }
+  async function selectQuestion(next){
+    if(questionDirty){
+      if(confirm('Die aktuelle Frage wurde geändert. Änderungen jetzt speichern?')){if(!await saveCurrentQuestion())return}
+      else if(!confirm('Änderungen wirklich verwerfen?'))return;
+      else data.questions[selected]=structuredClone(savedQuestion);
+    }
+    selected=next;render();rememberQuestion();
+  }
+  new MutationObserver(ensureQuestionSaveButton).observe(editor,{childList:true,subtree:true});
+  list.addEventListener('click',e=>{const b=e.target.closest('.qitem');if(!b||Number(b.dataset.i)===selected)return;e.preventDefault();e.stopImmediatePropagation();selectQuestion(Number(b.dataset.i))},true);
+  editor.addEventListener('click',e=>{
+    if(e.target.id==='saveQuestion'){e.preventDefault();e.stopImmediatePropagation();saveCurrentQuestion();return}
+    if(e.target.matches('#addAnswer,.remove,.up,.down'))queueMicrotask(()=>{if(data&&selected>=0)setQuestionDirty(JSON.stringify(data.questions[selected])!==JSON.stringify(savedQuestion))});
+    if(e.target.id==='deleteQ')queueMicrotask(()=>rememberQuestion());
+  },true);
+  $('#openBtn').onclick=async()=>{
+    if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;
+    try{
+      if('showOpenFilePicker'in window){
+        const [handle]=await showOpenFilePicker({types:[{description:'JSON-Datei',accept:{'application/json':['.json']}}],multiple:false});
+        const f=await handle.getFile();load(JSON.parse(await f.text()),f.name);fileHandle=handle;rememberQuestion();
+      }else $('#fileInput').click();
+    }catch(err){if(err.name!=='AbortError')toast('Fehler: '+err.message,true)}
+  };
+  $('#fileInput').addEventListener('change',async e=>{e.stopImmediatePropagation();const f=e.target.files[0];if(!f)return;try{fileHandle=null;load(JSON.parse(await f.text()),f.name);rememberQuestion()}catch(err){toast('Fehler: '+err.message,true)}e.target.value=''},true);
+  $('#newBtn').onclick=()=>{if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;fileHandle=null;load({schemaVersion:'2.0',title:'Neuer Fragenkatalog',language:'de',questions:[]},'neuer_fragenkatalog.json');rememberQuestion()};
+  $('#addBtn').onclick=async()=>{if(questionDirty){await selectQuestion(selected);if(questionDirty)return}const n=data.questions.length+1,id='frage-'+String(n).padStart(3,'0');data.questions.push({id,type:'single_choice',question:'Neue Frage',answers:[{uid:id+'-A',sourceLetter:'A',sourceIndex:0,text:'Antwort',correct:true}],correctAnswerUids:[id+'-A'],category:''});selected=data.questions.length-1;setDirty();render();rememberQuestion()};
+  $('#saveBtn').onclick=async()=>{sync();try{await persistChanges()}catch(err){toast('Speichern fehlgeschlagen: '+err.message,true)}};
+  addEventListener('beforeunload',e=>{if(dirty||questionDirty){e.preventDefault();e.returnValue=''}});
+})();
+</script>
+</body>
+</html>
