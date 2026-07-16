@@ -2499,16 +2499,25 @@
           "sourceIndex": 4,
           "text": "Alle Aussagen sind richtig",
           "correct": false
+        },
+        {
+          "uid": "recht-053-F",
+          "sourceLetter": "F",
+          "sourceIndex": 5,
+          "text": "Nur Aussage 2",
+          "correct": true
         }
       ],
-      "correctAnswerUids": [],
+      "correctAnswerUids": [
+        "recht-053-F"
+      ],
       "category": "Rechtfertigungsgrund",
       "source": {
         "document": "Allgemein Recht_111.docx"
       },
-      "answerBasis": "Keine vorhandene Antwortkombination ist bei exakter Fragestellung richtig. Rechtfertigender Notstand ist ein Rechtfertigungsgrund. Lebensgefahr allein rechtfertigt einen Heileingriff nicht automatisch. Die Einwilligung eines über 18-jährigen Patienten ist nur bei Einwilligungsfähigkeit, ausreichender Aufklärung, Freiwilligkeit und konkreter Einwilligung wirksam; Volljährigkeit allein genügt nicht. Die Einwilligung der Eltern eines 5-jährigen Kindes kann grundsätzlich rechtfertigen, aber ebenfalls nicht ausnahmslos.",
+      "answerBasis": "Richtig ist nur Aussage 2: Rechtfertigender Notstand ist ein Rechtfertigungsgrund. Lebensgefahr allein rechtfertigt einen Heileingriff nicht automatisch. Die Einwilligung eines über 18-jährigen Patienten ist nur bei Einwilligungsfähigkeit, ausreichender Aufklärung, Freiwilligkeit und konkreter Einwilligung wirksam; Volljährigkeit allein genügt nicht. Die Einwilligung der Eltern eines 5-jährigen Kindes kann grundsätzlich rechtfertigen, aber ebenfalls nicht ausnahmslos.",
       "precisionReview": {
-        "status": "Keine exakt richtige Antwortoption vorhanden.",
+        "status": "Exakte Antwortoption ergänzt.",
         "exactAnswer": "Richtig wäre nur Aussage 2, gegebenenfalls zusätzlich 3/4 nur unter weiteren Voraussetzungen; wegen „immer“ sind 3 und 4 nicht exakt richtig."
       }
     },
