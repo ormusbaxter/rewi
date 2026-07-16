@@ -55,7 +55,7 @@
     },
     {
       "id": "recht-002",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an.\nA. Formelles Recht\nB. Strafrecht\nC. Materielles Recht\n\n1. Garantenstellung\n2. Bürgerliches Gesetzbuch (BGB)\n3. Verfahrensrecht",
       "answers": [
         {
@@ -378,7 +378,7 @@
     },
     {
       "id": "recht-011",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Im Wege des Strafbefehlsverfahrens",
       "answers": [
         {
@@ -501,7 +501,7 @@
     },
     {
       "id": "recht-014",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Unter welcher Voraussetzung kann das Unterlassen oder Beenden einer medizinischen Behandlung rechtmäßig sein?",
       "answers": [
         {
@@ -544,7 +544,7 @@
     },
     {
       "id": "recht-015",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wann ist nach § 1829 Abs. 4 BGB keine Genehmigung des Betreuungsgerichts für eine ärztliche Maßnahme erforderlich?",
       "answers": [
         {
@@ -642,7 +642,7 @@
     },
     {
       "id": "recht-017",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Bevollmächtigte…",
       "answers": [
         {
@@ -685,7 +685,7 @@
     },
     {
       "id": "recht-018",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wer kann als Betreuer in Betracht kommen?",
       "answers": [
         {
@@ -728,7 +728,7 @@
     },
     {
       "id": "recht-019",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Position nimmt der Betreuer neben dem Betreuten ein?",
       "answers": [
         {
@@ -821,7 +821,7 @@
     },
     {
       "id": "recht-021",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Wirkung hat die Anordnung eines Einwilligungsvorbehalts nach § 1825 BGB?",
       "answers": [
         {
@@ -973,7 +973,7 @@
     },
     {
       "id": "recht-025",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wann liegt eine wirksame Willenserklärung des Patienten vor?",
       "answers": [
         {
@@ -1016,7 +1016,7 @@
     },
     {
       "id": "recht-026",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was geschieht, wenn der mutmaßliche Wille nicht ermittelt werden kann?",
       "answers": [
         {
@@ -1059,7 +1059,7 @@
     },
     {
       "id": "recht-027",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Tatbestandsmäßig liegt Freiheitsberaubung vor:",
       "answers": [
         {
@@ -1241,7 +1241,7 @@
     },
     {
       "id": "recht-032",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an:\nA. Freiheitsentziehung\nB. Freiheitsberaubung gemäß § 239 Abs. 3 StGB\nC. Betreuungsgerichtliche Genehmigung\n\n1. Ist wegen der Mindeststrafe von einem Jahr ein Verbrechen\n2. Kann bei länger dauernden oder regelmäßig wiederkehrenden Bettgittern trotz Einwilligung eines Vorsorgebevollmächtigten erforderlich sein\n3. Setzt grundsätzlich objektiv vorhandene Fortbewegungsfähigkeit voraus",
       "answers": [
         {
@@ -1291,7 +1291,7 @@
     },
     {
       "id": "recht-033",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Aussage zu freiheitsentziehenden Unterbringungen oder Maßnahmen durch einen Vorsorgebevollmächtigten ist richtig?",
       "answers": [
         {
@@ -1341,7 +1341,7 @@
     },
     {
       "id": "recht-034",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "In welchen Fällen kann eine mutmaßliche Einwilligung angenommen werden?",
       "answers": [
         {
@@ -1391,7 +1391,7 @@
     },
     {
       "id": "recht-035",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Straftatbestand kann erfüllt sein, wenn die Fixierungs-Dokumentation bewusst fehlerhaft ausgefüllt wird?",
       "answers": [
         {
@@ -1445,7 +1445,7 @@
     },
     {
       "id": "recht-036",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Durch welche Handlungen ist der Tatbestand der Freiheitsberaubung erfüllt?",
       "answers": [
         {
@@ -1481,7 +1481,7 @@
     },
     {
       "id": "recht-037",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Unter welchen Gesichtspunkten ist die Fixierung eines einsichtsfähigen Patienten erlaubt?",
       "answers": [
         {
@@ -1582,7 +1582,7 @@
     },
     {
       "id": "recht-039",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Tatbestandsmäßig liegt Freiheitsberaubung vor:",
       "answers": [
         {
@@ -1756,7 +1756,7 @@
     },
     {
       "id": "recht-043",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Garantenpflicht unterliegen die Pflegekräfte, wenn sie eine Maßnahme schuldhaft unterlassen und ein Patient hierdurch einen Schaden erleidet?",
       "answers": [
         {
@@ -1806,7 +1806,7 @@
     },
     {
       "id": "recht-044",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welches Recht schützt Artikel 2 Absatz 2 Satz 1, 2 Alt. GG?",
       "answers": [
         {
@@ -1849,7 +1849,7 @@
     },
     {
       "id": "recht-045",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Eine vorsätzliche Körperverletzung im Sinne des § 223 StGB am Patienten ist nicht gegeben,",
       "answers": [
         {
@@ -1899,7 +1899,7 @@
     },
     {
       "id": "recht-046",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ein geistesgestörter Patient schlägt auf einen anderen Patienten ein. Der andere Patient wird dabei verletzt. Die Pflegekraft steht in der Nähe und greift nicht ein, obwohl es ihr möglich und zumutbar gewesen wäre. Strafbarkeit der Pflegekraft?",
       "answers": [
         {
@@ -1949,7 +1949,7 @@
     },
     {
       "id": "recht-047",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ein ärztlicher Heileingriff kann den Tatbestand der Körperverletzung erfüllen. Unter welcher Voraussetzung kann er durch die Einwilligung des Patienten gerechtfertigt sein?",
       "answers": [
         {
@@ -1992,7 +1992,7 @@
     },
     {
       "id": "recht-048",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Anhaltspunkte sind bei der Erforschung des mutmaßlichen Willens zu berücksichtigen?",
       "answers": [
         {
@@ -2042,7 +2042,7 @@
     },
     {
       "id": "recht-049",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Voraussetzung gehört nicht zum rechtfertigenden Notstand?",
       "answers": [
         {
@@ -2131,7 +2131,7 @@
     },
     {
       "id": "recht-051",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welches der nachfolgend aufgeführten Dokumente kann bei einem apallischen Syndrom zur Erforschung des mutmaßlichen oder ausdrücklichen Willens herangezogen werden?",
       "answers": [
         {
@@ -2324,7 +2324,7 @@
     },
     {
       "id": "recht-056",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "In welchen Situationen ist eine Verpflichtung zum Schweigen gemäß § 203 StGB nicht mehr gegeben?",
       "answers": [
         {
@@ -2412,7 +2412,7 @@
     },
     {
       "id": "recht-058",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wie ist eine vorsätzliche Verletzung von Privatgeheimnissen nach § 203 Abs. 1 StGB strafrechtlich einzuordnen?",
       "answers": [
         {
@@ -2462,7 +2462,7 @@
     },
     {
       "id": "recht-059",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Unter welcher Voraussetzung wird eine Verletzung von Privatgeheimnissen nach § 203 StGB grundsätzlich strafrechtlich verfolgt?",
       "answers": [
         {
@@ -2512,7 +2512,7 @@
     },
     {
       "id": "recht-060",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Tötung eines Menschen unter verwerflichen Umständen oder Motiven.\nB. Inkaufnahme der Tötung durch Morphium, welches zur Schmerzlinderung verabreicht wird.\nC. Einstellen lebenserhaltender Maßnahmen, wenn der Sterbeprozess irreversibel und unmittelbar eingesetzt hat.\n\n1. Passive Sterbehilfe\n2. Mord\n3. Indirekte Sterbehilfe",
       "answers": [
         {
@@ -2593,7 +2593,7 @@
     },
     {
       "id": "recht-062",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die Formen der Sterbehilfe richtig zu:\nA. Aktive Sterbehilfe im Sinne einer gezielten Tötung\nB. Indirekte Sterbehilfe\nC. Passive Sterbehilfe beziehungsweise Behandlungsbegrenzung\n\n1. Unter bestimmten Voraussetzungen straffreies Unterlassen oder Beenden einer Behandlung entsprechend dem Patientenwillen.\n2. Medizinisch indizierte Schmerzlinderung unter Inkaufnahme einer möglichen Lebensverkürzung\n3. Gezielte Tötung eines anderen Menschen und grundsätzlich strafbar",
       "answers": [
         {
@@ -2643,7 +2643,7 @@
     },
     {
       "id": "recht-063",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Straftatbestand verbirgt sich hinter dem Beispiel:\nIst jemand durch das ausdrückliche und ernstliche Verlangen des Getöteten zur Tötung bestimmt worden, so ist auf Freiheitsstrafe von sechs Monaten bis zu fünf Jahren zu erkennen. Der Versuch ist strafbar.",
       "answers": [
         {
@@ -2686,7 +2686,7 @@
     },
     {
       "id": "recht-065",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Straftatbestand verbirgt sich hinter dem Beispiel:\nPflegekraft Erika Schubert verabreicht einem Krebspatienten ohne dessen Verlangen und Einwilligung eine tödliche Injektion",
       "answers": [
         {
@@ -2732,7 +2732,7 @@
     },
     {
       "id": "recht-066",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Straftatbestand kann in Betracht kommen, wenn eine Person mit Garantenstellung vorsätzlich und pflichtwidrig eine medizinisch indizierte lebenserhaltende Behandlung gegen den maßgeblichen Patientenwillen nicht beginnt und der Patient deshalb verstirbt?",
       "answers": [
         {
@@ -2775,7 +2775,7 @@
     },
     {
       "id": "recht-067",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Form der Sterbehilfe gibt es im deutschen Recht nicht?",
       "answers": [
         {
@@ -2818,7 +2818,7 @@
     },
     {
       "id": "recht-068",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welches Beispiel zählt zur passiven Sterbehilfe?",
       "answers": [
         {
@@ -2861,7 +2861,7 @@
     },
     {
       "id": "recht-069",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Straftatbestand verbirgt sich hinter dem Beispiel:\nEin Patient liegt im Sterben. Wegen unerträglicher Schmerzen bittet er um ein Schmerzmittel. Nachdem er nun schon länger Schmerzmittel bekommt, muss die wirksame Dosis stark erhöht werden. Damit steigen auch die Nebenwirkungen. Der Tod tritt aufgrund der Nebenwirkungen erheblich früher ein. Die Handlung war getragen von dem Wunsch, Schmerzen zu linden.",
       "answers": [
         {
@@ -2904,7 +2904,7 @@
     },
     {
       "id": "recht-070",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Aussage ist falsch?",
       "answers": [
         {
@@ -2951,7 +2951,7 @@
     },
     {
       "id": "recht-071",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welches Mordmerkmal nach § 211 StGB kann insbesondere vorliegen, wenn der Täter bei einer heimlichen Krankenhaustötung die Arg- und dadurch bedingte Wehrlosigkeit des Patienten bewusst zur Tötung ausnutzt?",
       "answers": [
         {
@@ -2994,7 +2994,7 @@
     },
     {
       "id": "recht-072",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Historische Rechtslage 2015–2020: Welche Personen waren nach § 217 Abs. 2 StGB in der später für nichtig erklärten Fassung unter den dort genannten Voraussetzungen von der Strafbarkeit ausgenommen?",
       "answers": [
         {
@@ -3037,7 +3037,7 @@
     },
     {
       "id": "recht-073",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Historische Rechtslage 2015–2020: Welche Strafe sah § 217 Abs. 1 StGB in seiner später für nichtig erklärten Fassung für die geschäftsmäßige Förderung der Selbsttötung vor?",
       "answers": [
         {
@@ -3080,7 +3080,7 @@
     },
     {
       "id": "recht-074",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Die Strafmündigkeit beginnt...",
       "answers": [
         {
@@ -3130,7 +3130,7 @@
     },
     {
       "id": "recht-075",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an:\nA. Schuld\nB. Rechtswidrigkeit\nC. Tatbestandsmäßigkeit\n\n1. Einwilligung\n2. Vorsatz\n3. Unrechtbewusstsein",
       "answers": [
         {
@@ -3180,7 +3180,7 @@
     },
     {
       "id": "recht-076",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Die Rechtswidrigkeit einer Tat ist nicht gegeben, wenn der Täter...",
       "answers": [
         {
@@ -3230,7 +3230,7 @@
     },
     {
       "id": "recht-077",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wann liegt ein Totschlag im strafrechtlichen Sinne vor?",
       "answers": [
         {
@@ -3317,7 +3317,7 @@
     },
     {
       "id": "recht-079",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wann handelt es sich bei einem Strafdelikt um ein Verbrechen?",
       "answers": [
         {
@@ -3367,7 +3367,7 @@
     },
     {
       "id": "recht-080",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wann handelt es sich bei einer Straftat um ein Vergehen?",
       "answers": [
         {
@@ -3417,7 +3417,7 @@
     },
     {
       "id": "recht-081",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu und kreuzen Sie die richtige Kombination an:\nA. Art. 103 Abs. 2 GG, § 1 StGB\nB. Vorsatz\nC. Fahrlässigkeit\n\n1. Handeln mit Wissen und Wollen der Tatbestandsverwirklichung.\n2. Keine Strafe ohne Gesetz.\n3. Handeln unter Außerachtlassung der im Verkehr erforderlichen Sorgfalt.",
       "answers": [
         {
@@ -3467,7 +3467,7 @@
     },
     {
       "id": "recht-082",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Notwehr\nB. Notstand\nC. Misshandlung\n\n1. Körperverletzung\n2. Angriff\n3. Gefahr",
       "answers": [
         {
@@ -3517,7 +3517,7 @@
     },
     {
       "id": "recht-083",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe und Definitionen einander zu und kreuzen Sie die richtige Kombination an:\nA. Sachverhalt\nB. Tatbestand\nC. Subsumtion\n\n1. Beschreibung der Vorgänge, die einer juristischen Prüfung unterzogen werden.\n2. Prüfung, ob ein Sachverhalt unter die Merkmale einer gesetzlichen Regelung fällt.\n3. Gesetzlich beschriebene Voraussetzungen, die vorliegen müssen, damit eine bestimmte Rechtsfolge eintritt.",
       "answers": [
         {
@@ -3567,7 +3567,7 @@
     },
     {
       "id": "recht-084",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ordnen Sie die aufgeführten Begriffe der beiden Listen einander zu, und kreuzen Sie die richtige Kombination an:\nA. Mord\nB. Körperverletzung\nC. Tötung auf Verlangen\n\n1. Antragsdelikt\n2. Ausdrückliches und ernstliches Bestimmen\n3. Heimtücke",
       "answers": [
         {
@@ -3645,7 +3645,7 @@
     },
     {
       "id": "recht-086",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Aus welchen beiden Grundbestandteilen besteht eine vollständige Strafnorm typischerweise?",
       "answers": [
         {
@@ -3688,7 +3688,7 @@
     },
     {
       "id": "recht-087",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was bedeutet ärztliche Anordnungsverantwortung bei der Delegation einer medizinischen Maßnahme?",
       "answers": [
         {
@@ -3731,7 +3731,7 @@
     },
     {
       "id": "recht-088",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was bedeutet Durchführungsverantwortung bei einer wirksam delegierten medizinischen Maßnahme?",
       "answers": [
         {
@@ -3774,7 +3774,7 @@
     },
     {
       "id": "recht-089",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wann liegt ein Übernahmeverschulden nahe?",
       "answers": [
         {
@@ -3817,7 +3817,7 @@
     },
     {
       "id": "recht-090",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was bedeutet Remonstration bei einer erkennbar bedenklichen dienstlichen oder fachlichen Anordnung?",
       "answers": [
         {
@@ -3860,7 +3860,7 @@
     },
     {
       "id": "recht-091",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Vorgehensweise ist bei einer ausnahmsweise telefonisch übermittelten ärztlichen Anordnung besonders sachgerecht?",
       "answers": [
         {
@@ -3903,7 +3903,7 @@
     },
     {
       "id": "recht-092",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung der Täterformen nach § 25 StGB ist richtig?",
       "answers": [
         {
@@ -3946,7 +3946,7 @@
     },
     {
       "id": "recht-093",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Aussage zur Beihilfe ist richtig?",
       "answers": [
         {
@@ -3989,7 +3989,7 @@
     },
     {
       "id": "recht-094",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung strafrechtlicher Rechtsfolgen ist richtig?",
       "answers": [
         {
@@ -4032,7 +4032,7 @@
     },
     {
       "id": "recht-095",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Umstände können das Notwehrrecht aus sozialethischen Gründen einschränken?",
       "answers": [
         {
@@ -4075,7 +4075,7 @@
     },
     {
       "id": "recht-096",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Rechtsfolge sieht § 33 StGB für den sogenannten asthenischen Notwehrexzess vor?",
       "answers": [
         {
@@ -4118,7 +4118,7 @@
     },
     {
       "id": "recht-097",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung der Vorsatzformen ist richtig?",
       "answers": [
         {
@@ -4161,7 +4161,7 @@
     },
     {
       "id": "recht-098",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Gesichtspunkte gehören zur Prüfung eines fahrlässigen Erfolgsdelikts?",
       "answers": [
         {
@@ -4204,7 +4204,7 @@
     },
     {
       "id": "recht-099",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Aussage zu Begehungs- und Unterlassungsdelikten ist richtig?",
       "answers": [
         {
@@ -4247,7 +4247,7 @@
     },
     {
       "id": "recht-100",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Verantwortungsgrundsatz gilt bei arbeitsteiligen Behandlungsprozessen grundsätzlich?",
       "answers": [
         {
@@ -4409,7 +4409,7 @@
     },
     {
       "id": "recht-104",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Nach welchen Vorschriften bestimmt sich die Art und der Umfang einer Schadensersatzleistung grundsätzlich?",
       "answers": [
         {
@@ -4620,7 +4620,7 @@
     },
     {
       "id": "recht-148",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Vertrag ist ein einseitig verpflichtender Vertrag?",
       "answers": [
         {
@@ -4702,7 +4702,7 @@
     },
     {
       "id": "recht-150",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welchen Anspruch kann ein Patient wegen einer fehlerhaften pflegerischen Maßnahme geltend machen, die seine Gesundheit schuldhaft und rechtswidrig geschädigt hat?",
       "answers": [
         {
@@ -4753,7 +4753,7 @@
     },
     {
       "id": "recht-151",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung typischer Leistungsstörungen zu ihren Anspruchsgrundlagen ist richtig?\nA. Schadensersatz statt der Leistung bei nachträglicher Unmöglichkeit\nB. Schadensersatz wegen Verzögerung der Leistung\nC. Einfacher Schadensersatz wegen einer sonstigen Pflichtverletzung\n\n1. § 280 Abs. 1 BGB\n2. § 280 Abs. 1 und 3 in Verbindung mit § 283 BGB\n3. § 280 Abs. 1 und 2 in Verbindung mit § 286 BGB",
       "answers": [
         {
@@ -4804,7 +4804,7 @@
     },
     {
       "id": "recht-152",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Rechtswirkung knüpft unmittelbar an die Vollendung der Geburt eines Kindes an?",
       "answers": [
         {
@@ -4889,7 +4889,7 @@
     },
     {
       "id": "recht-154",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung von Vertragstypen und typischen Anwendungsfällen ist richtig?\nA. Werkvertrag\nB. Kaufvertrag beziehungsweise Vertrag, auf den Kaufrecht anzuwenden ist\nC. Arbeitsvertrag als besonderer Dienstvertrag\nD. Wohn- und Betreuungsvertrag\n\n1. Herstellung eines Bauwerks\n2. Erwerb eines Arzneimittels oder Lieferung einer eigens herzustellenden beweglichen Sache\n3. Aufnahme in eine Pflegeeinrichtung mit Wohnraum und Pflege- oder Betreuungsleistungen\n4. Begründung eines Arbeitsverhältnisses",
       "answers": [
         {
@@ -4978,7 +4978,7 @@
     },
     {
       "id": "recht-156",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Haftet ein zehnjähriges Kind für einen Schaden, den es einem Dritten zufügt?",
       "answers": [
         {
@@ -5029,7 +5029,7 @@
     },
     {
       "id": "recht-157",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Aussage über immaterielle Schäden ist richtig?",
       "answers": [
         {
@@ -5158,7 +5158,7 @@
     },
     {
       "id": "recht-160",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung der rechtlichen Fähigkeiten beziehungsweise Verantwortlichkeiten zum maßgeblichen Alter ist richtig?\nA. Volle Deliktsfähigkeit nach dem BGB\nB. Beginn der Strafmündigkeit\nC. Rechtsfähigkeit des Menschen\n\n1. Ab 14 Jahren, bei Jugendlichen unter der zusätzlichen Reifevoraussetzung des § 3 JGG\n2. Grundsätzlich ab 18 Jahren\n3. Mit Vollendung der Geburt",
       "answers": [
         {
@@ -5209,7 +5209,7 @@
     },
     {
       "id": "recht-161",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Erklärung ist eine einseitige empfangsbedürftige Willenserklärung?",
       "answers": [
         {
@@ -5260,7 +5260,7 @@
     },
     {
       "id": "recht-162",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was ist unabhängig von besonderen gesetzlichen Formvorschriften eine zwingende Voraussetzung für das Zustandekommen eines wirksamen Kaufvertrags?",
       "answers": [
         {
@@ -5342,7 +5342,7 @@
     },
     {
       "id": "recht-164",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Regel bildet eine unmittelbare Wirksamkeitsgrenze der privatrechtlichen Abschlussfreiheit?",
       "answers": [
         {
@@ -5393,7 +5393,7 @@
     },
     {
       "id": "recht-165",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was besagt das Abstraktionsprinzip im deutschen Zivilrecht?",
       "answers": [
         {
@@ -5444,7 +5444,7 @@
     },
     {
       "id": "recht-166",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Was bedeutet Rechtsfähigkeit?",
       "answers": [
         {
@@ -5495,7 +5495,7 @@
     },
     {
       "id": "recht-167",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ab welchem Zeitpunkt ist ein Minderjähriger grundsätzlich beschränkt geschäftsfähig?",
       "answers": [
         {
@@ -5546,7 +5546,7 @@
     },
     {
       "id": "recht-168",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Ab welchem Zeitpunkt kann eine natürliche Person nach den allgemeinen Regeln des § 828 BGB beschränkt deliktsfähig sein?",
       "answers": [
         {
@@ -5597,7 +5597,7 @@
     },
     {
       "id": "recht-169",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Worin liegt der zentrale Unterschied zwischen Dienstvertrag und Werkvertrag?",
       "answers": [
         {
@@ -5648,7 +5648,7 @@
     },
     {
       "id": "recht-170",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wie lang ist die regelmäßige Verjährungsfrist für zivilrechtliche Ansprüche?",
       "answers": [
         {
@@ -5699,7 +5699,7 @@
     },
     {
       "id": "recht-171",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Auf welcher Ebene der Haftungsprüfung kann die Nichtbeachtung eines einschlägigen pflegerischen Expertenstandards Bedeutung erlangen?",
       "answers": [
         {
@@ -5743,7 +5743,7 @@
     },
     {
       "id": "recht-172",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Wem kann ein Organisationsverschulden wegen eines betrieblichen Strukturmangels typischerweise nicht allein aufgrund seiner normalen ausführenden Tätigkeit zugerechnet werden?",
       "answers": [
         {
@@ -5794,7 +5794,7 @@
     },
     {
       "id": "recht-173",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welcher Unterschied zwischen der deliktischen Haftung nach § 823 Abs. 1 BGB und der vertraglichen Haftung nach § 280 Abs. 1 BGB ist richtig?",
       "answers": [
         {
@@ -5845,7 +5845,7 @@
     },
     {
       "id": "recht-175",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Rechtsfolge hat die wirksame Anfechtung eines Rechtsgeschäfts wegen arglistiger Täuschung?",
       "answers": [
         {
@@ -5896,7 +5896,7 @@
     },
     {
       "id": "recht-176",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Aussage beschreibt die grundlegenden Anforderungen an die Delegation einer delegierbaren ärztlichen Tätigkeit zutreffend?",
       "answers": [
         {
@@ -5986,7 +5986,7 @@
     },
     {
       "id": "recht-178",
-      "type": "single_choice",
+      "type": "multiple_choice",
       "question": "Welche Zuordnung ist richtig?\nA. Erfüllungsgehilfe\nB. Verrichtungsgehilfe\nC. Fehlende Dokumentation einer medizinisch gebotenen wesentlichen Maßnahme\n\n1. Zurechnung nach § 278 BGB\n2. Vermutungswirkung nach § 630h Abs. 3 BGB\n3. Haftung des Geschäftsherrn nach § 831 BGB mit Entlastungsmöglichkeit",
       "answers": [
         {

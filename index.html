@@ -986,15 +986,16 @@
   function renderQuestion() {
     const q = state.questions[state.index];
     const correctCount = q.answers.filter(a => a.correct).length;
-    const inputType = correctCount === 1 ? "radio" : "checkbox";
+    const inputType = q.type === "multiple_choice" ? "checkbox" : "radio";
 
     els.progressText.textContent = `Frage ${state.index + 1} von ${state.questions.length}`;
     els.progressBar.style.width = `${((state.index + 1) / state.questions.length) * 100}%`;
     els.questionType.textContent = q.type === "statement_combination"
       ? "Aussagenkombination: Genau eine Kombination ist richtig."
-      : correctCount === 1
-        ? "Single Choice: genau eine Antwort ist richtig."
-        : `Multiple Choice: ${correctCount} Antworten sind richtig.`;
+      : q.type === "multiple_choice"
+        ? `Multiple Choice: ${correctCount} ${correctCount === 1 ? "Antwort ist" : "Antworten sind"} richtig.`
+        : "Single Choice: genau eine Antwort ist richtig.";
+    els.questionType.classList.toggle("hidden", state.mode === "exam");
 
     const sourceParts = [];
     const page = formatMetaValue(q.page);

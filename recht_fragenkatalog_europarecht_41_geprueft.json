@@ -1,4 +1,4 @@
-﻿{
+{
     "schemaVersion":  "2.0",
     "title":  "Recht – Europarecht",
     "language":  "de",
@@ -13,7 +13,7 @@
     "questions":  [
                       {
                           "id":  "recht-009",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welches Rechtsmittel ist bei einer nicht oder nicht fristgerecht umgesetzten Richtlinie heranzuziehen?",
                           "answers":  [
                                           {
@@ -56,7 +56,7 @@
                       },
                       {
                           "id":  "recht-109",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Die Abgeordneten des Europäischen Parlaments sind …",
                           "answers":  [
                                           {
@@ -107,7 +107,7 @@
                       },
                       {
                           "id":  "recht-110",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Obergrenze bestimmt Art. 14 Abs. 2 EUV für die Zusammensetzung des Europäischen Parlaments?",
                           "answers":  [
                                           {
@@ -151,7 +151,7 @@
                       },
                       {
                           "id":  "recht-111",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aufgabe hat der Präsident des Europäischen Rates nach Art. 15 Abs. 6 EUV?",
                           "answers":  [
                                           {
@@ -202,7 +202,7 @@
                       },
                       {
                           "id":  "recht-112",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wie setzt sich der Europäische Rat nach Art. 15 Abs. 2 EUV zusammen?",
                           "answers":  [
                                           {
@@ -246,7 +246,7 @@
                       },
                       {
                           "id":  "recht-113",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wo hat der Gerichtshof der Europäischen Union seinen Sitz?",
                           "answers":  [
                                           {
@@ -297,7 +297,7 @@
                       },
                       {
                           "id":  "recht-114",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage zur Wirkung von Entscheidungen des Gerichtshofs der Europäischen Union trifft zu?",
                           "answers":  [
                                           {
@@ -348,7 +348,7 @@
                       },
                       {
                           "id":  "recht-115",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage zum Europäischen Rechnungshof ist richtig?",
                           "answers":  [
                                           {
@@ -402,7 +402,7 @@
                       },
                       {
                           "id":  "recht-116",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wo hat die Europäische Zentralbank ihren Sitz?",
                           "answers":  [
                                           {
@@ -439,7 +439,7 @@
                       },
                       {
                           "id":  "recht-117",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche der folgenden Freiheiten zählt nicht zu den vier Grundfreiheiten des EU-Binnenmarkts?",
                           "answers":  [
                                           {
@@ -490,7 +490,7 @@
                       },
                       {
                           "id":  "recht-118",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welches erste europäische Rahmenabkommen schlossen die europäischen Sozialpartner 1995 erfolgreich?",
                           "answers":  [
                                           {
@@ -541,7 +541,7 @@
                       },
                       {
                           "id":  "recht-119",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aufzählung enthält vollständig die sieben Organe der Europäischen Union nach Art. 13 Abs. 1 EUV?",
                           "answers":  [
                                           {
@@ -578,7 +578,7 @@
                       },
                       {
                           "id":  "recht-120",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche beiden Einrichtungen unterstützen Parlament, Rat und Kommission nach Art. 13 Abs. 4 EUV in beratender Funktion?",
                           "answers":  [
                                           {
@@ -615,7 +615,7 @@
                       },
                       {
                           "id":  "recht-121",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Organe üben im ordentlichen Gesetzgebungsverfahren der Europäischen Union gemeinsam die Gesetzgebungsfunktion aus?",
                           "answers":  [
                                           {
@@ -652,7 +652,7 @@
                       },
                       {
                           "id":  "recht-122",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welches Organ wird im institutionellen Gefüge der Europäischen Union typischerweise als zentrales Exekutivorgan bezeichnet?",
                           "answers":  [
                                           {
@@ -689,7 +689,7 @@
                       },
                       {
                           "id":  "recht-123",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "An welche Stelle kann man sich bei einem Verdacht auf Betrug oder schwere Unregelmäßigkeiten mit möglichen negativen Auswirkungen auf EU-Mittel wenden?",
                           "answers":  [
                                           {
@@ -726,7 +726,7 @@
                       },
                       {
                           "id":  "recht-124",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welches Organ bestimmt die allgemeinen politischen Zielvorstellungen und Prioritäten der Gemeinsamen Außen- und Sicherheitspolitik der EU?",
                           "answers":  [
                                           {
@@ -763,7 +763,7 @@
                       },
                       {
                           "id":  "recht-125",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Kann ein Mitgliedstaat aus der Europäischen Union austreten?",
                           "answers":  [
                                           {
@@ -800,7 +800,7 @@
                       },
                       {
                           "id":  "recht-126",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wie viele Mitgliedstaaten gehören seit dem 1. Januar 2026 zur Eurozone?",
                           "answers":  [
                                           {
@@ -844,7 +844,7 @@
                       },
                       {
                           "id":  "recht-127",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche drei Texte bilden seit dem Vertrag von Lissabon die zentralen schriftlichen Grundlagen des Primärrechts der Europäischen Union?",
                           "answers":  [
                                           {
@@ -881,7 +881,7 @@
                       },
                       {
                           "id":  "recht-128",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wie werden die politischen und wirtschaftlichen Voraussetzungen bezeichnet, die ein beitrittswilliger Staat für eine Mitgliedschaft in der EU erfüllen muss?",
                           "answers":  [
                                           {
@@ -925,7 +925,7 @@
                       },
                       {
                           "id":  "recht-129",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welcher Mitgliedstaat führt vom 1. Juli bis 31. Dezember 2026 den Vorsitz im Rat der Europäischen Union?",
                           "answers":  [
                                           {
@@ -969,7 +969,7 @@
                       },
                       {
                           "id":  "recht-130",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wie werden die Ressorts beziehungsweise Portfolios der Mitglieder der Europäischen Kommission zugeteilt?",
                           "answers":  [
                                           {
@@ -1020,7 +1020,7 @@
                       },
                       {
                           "id":  "recht-131",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage zu den regelmäßigen Sitzungen des Kollegiums der Kommissionsmitglieder ist richtig?",
                           "answers":  [
                                           {
@@ -1071,7 +1071,7 @@
                       },
                       {
                           "id":  "recht-132",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage zur Hohen Vertreterin beziehungsweise zum Hohen Vertreter der Union für Außen- und Sicherheitspolitik ist richtig?",
                           "answers":  [
                                           {
@@ -1122,7 +1122,7 @@
                       },
                       {
                           "id":  "recht-133",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Innerhalb welcher Grenzen darf die Europäische Kommission tätig werden?",
                           "answers":  [
                                           {
@@ -1173,7 +1173,7 @@
                       },
                       {
                           "id":  "recht-134",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wie wird die Präsidentin beziehungsweise der Präsident der Europäischen Kommission bestimmt?",
                           "answers":  [
                                           {
@@ -1224,7 +1224,7 @@
                       },
                       {
                           "id":  "recht-135",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Aus wie vielen Mitgliedern besteht das Kollegium der Europäischen Kommission in der Amtsperiode 2024–2029?",
                           "answers":  [
                                           {
@@ -1268,7 +1268,7 @@
                       },
                       {
                           "id":  "recht-136",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage zu den Kabinetten der Mitglieder der Europäischen Kommission ist richtig?",
                           "answers":  [
                                           {
@@ -1312,7 +1312,7 @@
                       },
                       {
                           "id":  "recht-137",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Sind die Mitglieder der Europäischen Kommission bei der Wahrnehmung ihrer Aufgaben an Weisungen gebunden?",
                           "answers":  [
                                           {
@@ -1349,7 +1349,7 @@
                       },
                       {
                           "id":  "recht-138",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Seit wann werden die Mitglieder des Europäischen Parlaments unmittelbar von den Bürgerinnen und Bürgern gewählt?",
                           "answers":  [
                                           {
@@ -1393,7 +1393,7 @@
                       },
                       {
                           "id":  "recht-139",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche zentralen Motive standen am Beginn der europäischen Einigung nach dem Zweiten Weltkrieg im Vordergrund?",
                           "answers":  [
                                           {
@@ -1444,7 +1444,7 @@
                       },
                       {
                           "id":  "recht-140",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Auf welchen drei Gründungsverträgen beruhten die ursprünglichen Europäischen Gemeinschaften?",
                           "answers":  [
                                           {
@@ -1495,7 +1495,7 @@
                       },
                       {
                           "id":  "recht-141",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Wie setzt sich der Europäische Wirtschafts- und Sozialausschuss zusammen?",
                           "answers":  [
                                           {
@@ -1546,7 +1546,7 @@
                       },
                       {
                           "id":  "recht-142",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Was versteht man unter dem Dreiervorsitz beziehungsweise dem Trio der Präsidentschaften des Rates der Europäischen Union?",
                           "answers":  [
                                           {
@@ -1597,7 +1597,7 @@
                       },
                       {
                           "id":  "recht-143",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Organe beschließen EU-Gesetzgebungsakte im ordentlichen Gesetzgebungsverfahren gemeinsam?",
                           "answers":  [
                                           {
@@ -1648,7 +1648,7 @@
                       },
                       {
                           "id":  "recht-144",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Gruppe enthält typische Instrumente des sogenannten Soft Law der Europäischen Union?",
                           "answers":  [
                                           {
@@ -1699,7 +1699,7 @@
                       },
                       {
                           "id":  "recht-145",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage zu den Zuständigkeiten der Europäischen Union im Gesundheitsbereich trifft zu?",
                           "answers":  [
                                           {
@@ -1750,7 +1750,7 @@
                       },
                       {
                           "id":  "recht-146",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welche Aussage beschreibt das Verhältnis zwischen dem Europarat und der Europäischen Union richtig?",
                           "answers":  [
                                           {
@@ -1801,7 +1801,7 @@
                       },
                       {
                           "id":  "recht-147",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welches EU-Organ wird wegen seines Initiativrechts und seiner integrationsfördernden Rolle häufig als „Motor der Europäischen Union“ bezeichnet?",
                           "answers":  [
                                           {
@@ -1852,7 +1852,7 @@
                       },
                       {
                           "id":  "recht-174",
-                          "type":  "single_choice",
+                          "type": "multiple_choice",
                           "question":  "Welches unionsrechtliche Verfahren kommt in Betracht, wenn ein Mitgliedstaat eine EU-Richtlinie nicht oder nicht fristgerecht umsetzt?",
                           "answers":  [
                                           {
