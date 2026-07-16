@@ -379,7 +379,7 @@
         <select id="bankSelect">
           <option value="">Bitte eine Datenbank auswählen</option>
         </select>
-        <p class="help">Alle JSON-Dateien aus dem Stammverzeichnis des Webservers werden automatisch angezeigt.</p>
+        <p class="help">Die mitgelieferten JSON-Fragenkataloge können direkt ausgewählt werden.</p>
       </div>
 
       <div id="bankStatus" class="bank-status">
@@ -429,7 +429,7 @@
       </div>
 
       <p class="footer-note">
-        Die Fragenbank wird vom lokalen Webserver geladen; Lernfortschritt und Fehlerfragen bleiben im Browser gespeichert.
+        Die Fragenbank wird direkt als JSON-Datei geladen; Lernfortschritt und Fehlerfragen bleiben im Browser gespeichert.
       </p>
     </section>
 
@@ -498,6 +498,11 @@
   const STORAGE_BANK = "rechtQuiz.questionBank.v1";
   const STORAGE_STATS = "rechtQuiz.stats.v1";
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+  const BUNDLED_BANKS = [
+    "fragenkatalog_allgemein_136_bearbeitet.json",
+    "fragenkatalog_allgemein_136_exakt_geprueft.json",
+    "recht_fragenkatalog_europarecht_41_geprueft.json"
+  ];
 
   let questionBank = [];
   let state = null;
@@ -697,41 +702,32 @@
     els.questionCount.appendChild(all);
   }
 
-  async function api(action, file = "") {
-    const query = new URLSearchParams({ action });
-    if (file) query.set("file", file);
-    const response = await fetch(`php/api.php?${query}`, { cache: "no-store" });
-    let result;
-    try {
-      result = await response.json();
-    } catch {
-      throw new Error(`Serverantwort ist kein JSON (HTTP ${response.status}).`);
-    }
-    if (!response.ok) throw new Error(result.error || `HTTP-Fehler ${response.status}`);
-    return result;
-  }
-
-  async function refreshBankList(selectedName = "") {
-    const result = await api("list");
+  function refreshBankList(selectedName = "") {
     els.bankSelect.innerHTML = '<option value="">Bitte eine Datenbank auswählen</option>';
-    result.files.forEach(filename => {
+    BUNDLED_BANKS.forEach(filename => {
       const option = document.createElement("option");
       option.value = filename;
       option.textContent = filename;
       els.bankSelect.appendChild(option);
     });
-    els.bankSelect.value = result.files.includes(selectedName) ? selectedName : "";
+    els.bankSelect.value = BUNDLED_BANKS.includes(selectedName) ? selectedName : "";
   }
 
   async function loadBundledBank(filename) {
     if (!filename) return;
+    if (!BUNDLED_BANKS.includes(filename)) {
+      updateBankUI("Unbekannter Fragenkatalog.", false);
+      return;
+    }
 
     els.bankSelect.disabled = true;
     updateBankUI(`Fragenbank „${filename}“ wird geladen …`, false);
 
     try {
-      const result = await api("load", filename);
-      questionBank = normalizeBank(result.data);
+      const response = await fetch(filename, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP-Fehler ${response.status}`);
+      const data = await response.json();
+      questionBank = normalizeBank(data);
       saveBank();
       updateBankUI(`Fragenbank „${filename}“ geladen: ${questionBank.length} Fragen.`, true);
     } catch (error) {
@@ -1218,14 +1214,6 @@
   }
 
   els.bankSelect.addEventListener("change", event => loadBundledBank(event.target.value));
-  els.bankSelect.addEventListener("focus", async event => {
-    const selected = event.target.value;
-    try {
-      await refreshBankList(selected);
-    } catch (error) {
-      updateBankUI(`Katalogliste konnte nicht geladen werden: ${error.message}`, false);
-    }
-  });
 
   els.startBtn.addEventListener("click", () => startQuiz());
   els.exportBtn.addEventListener("click", exportBank);
@@ -1255,9 +1243,7 @@
   });
 
   loadSavedBank();
-  refreshBankList().catch(error => {
-    updateBankUI(`PHP-Backend nicht erreichbar: ${error.message}`, false);
-  });
+  refreshBankList();
 })();
 </script>
 </body>
