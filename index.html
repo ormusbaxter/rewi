@@ -204,6 +204,15 @@
       margin: 0 0 18px;
     }
 
+    .statement-list {
+      margin: -6px 0 20px;
+      padding-left: 2rem;
+      display: grid;
+      gap: 7px;
+    }
+
+    .statement-list li { padding-left: 4px; }
+
     .answers {
       display: grid;
       gap: 10px;
@@ -437,6 +446,7 @@
 
       <div id="sourceHint" class="question-meta"></div>
       <p id="questionText" class="question-text"></p>
+      <ol id="statements" class="statement-list hidden"></ol>
       <div id="answers" class="answers"></div>
       <div id="feedback" class="feedback hidden"></div>
 
@@ -487,7 +497,7 @@
 
   const STORAGE_BANK = "rechtQuiz.questionBank.v1";
   const STORAGE_STATS = "rechtQuiz.stats.v1";
-  const letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+  const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
   let questionBank = [];
   let state = null;
@@ -530,9 +540,6 @@
       if (!q || typeof q.question !== "string" || !q.question.trim()) {
         throw new Error(`Frage ${index + 1}: Fragetext fehlt.`);
       }
-      if (!Array.isArray(q.answers) || q.answers.length < 2) {
-        throw new Error(`Frage ${index + 1}: Mindestens zwei Antworten erforderlich.`);
-      }
 
       const id = q.id ?? index + 1;
       const normalizedId = String(id);
@@ -541,12 +548,80 @@
       }
       ids.add(normalizedId);
 
+      const type = q.type === "statement_combination"
+        ? "statement_combination"
+        : q.type || "single_choice";
+      const baseQuestion = {
+        ...q,
+        id: normalizedId,
+        type,
+        question: q.question.trim(),
+        explanation: typeof q.explanation === "string" ? q.explanation.trim() : "",
+        page: q.page ?? null,
+        source: q.source ?? null
+      };
+
+      if (type === "statement_combination") {
+        if (!Array.isArray(q.statements) || q.statements.length < 2 || q.statements.length > 12) {
+          throw new Error(`Frage ${index + 1}: Zwei bis zwölf Aussagen erforderlich.`);
+        }
+
+        const statementIds = new Set();
+        const statements = q.statements.map((statement, statementIndex) => {
+          if (!statement || typeof statement.text !== "string" || !statement.text.trim()) {
+            throw new Error(`Frage ${index + 1}, Aussage ${statementIndex + 1}: Text fehlt.`);
+          }
+          const statementId = String(statement.id ?? statementIndex + 1);
+          if (statementIds.has(statementId)) {
+            throw new Error(`Frage ${index + 1}: Doppelte Aussagen-ID ${statementId}.`);
+          }
+          statementIds.add(statementId);
+          return { ...statement, id: statementId, text: statement.text.trim() };
+        });
+
+        if (!Array.isArray(q.correctStatementIds)) {
+          throw new Error(`Frage ${index + 1}: correctStatementIds fehlt.`);
+        }
+        const correctStatementIds = q.correctStatementIds.map(String);
+        if (new Set(correctStatementIds).size !== correctStatementIds.length) {
+          throw new Error(`Frage ${index + 1}: Doppelte richtige Aussagen-ID.`);
+        }
+        const unknownCorrectId = correctStatementIds.find(value => !statementIds.has(value));
+        if (unknownCorrectId !== undefined) {
+          throw new Error(`Frage ${index + 1}: Unbekannte richtige Aussagen-ID ${unknownCorrectId}.`);
+        }
+
+        const generatedOptionCount = Number(q.generatedOptionCount ?? 5);
+        const maximumOptions = Math.min(10, 2 ** statements.length);
+        if (!Number.isInteger(generatedOptionCount) || generatedOptionCount < 2 || generatedOptionCount > maximumOptions) {
+          throw new Error(`Frage ${index + 1}: generatedOptionCount muss zwischen 2 und ${maximumOptions} liegen.`);
+        }
+
+        const { answers, correctAnswerUids, ...combinationQuestion } = baseQuestion;
+        return {
+          ...combinationQuestion,
+          statements,
+          correctStatementIds,
+          generatedOptionCount
+        };
+      }
+
+      if (!Array.isArray(q.answers) || q.answers.length < 2) {
+        throw new Error(`Frage ${index + 1}: Mindestens zwei Antworten erforderlich.`);
+      }
+
+      const answerIds = new Set();
       const answers = q.answers.map((a, answerIndex) => {
         if (!a || typeof a.text !== "string" || !a.text.trim()) {
           throw new Error(`Frage ${index + 1}, Antwort ${answerIndex + 1}: Text fehlt.`);
         }
+        const answerId = String(a.uid ?? `q${normalizedId}_${answerIndex + 1}`);
+        if (answerIds.has(answerId)) {
+          throw new Error(`Frage ${index + 1}: Doppelte Antwort-ID ${answerId}.`);
+        }
+        answerIds.add(answerId);
         return {
-          uid: String(a.uid ?? `q${normalizedId}_${answerIndex + 1}`),
+          uid: answerId,
           sourceLetter: a.sourceLetter ?? null,
           text: a.text.trim(),
           correct: Boolean(a.correct)
@@ -557,14 +632,7 @@
         throw new Error(`Frage ${index + 1}: Keine richtige Antwort markiert.`);
       }
 
-      return {
-        id: normalizedId,
-        question: q.question.trim(),
-        answers,
-        explanation: typeof q.explanation === "string" ? q.explanation.trim() : "",
-        page: q.page ?? null,
-        source: q.source ?? null
-      };
+      return { ...baseQuestion, answers };
     });
   }
 
@@ -703,10 +771,64 @@
     return document.querySelector(`input[name="${name}"]:checked`)?.value;
   }
 
+  function formatStatementCombination(mask, statementCount) {
+    const allMask = (1 << statementCount) - 1;
+    if (mask === 0) return "Keine Aussage ist richtig";
+    if (mask === allMask) return "Alle Aussagen sind richtig";
+
+    const selectedNumbers = [];
+    for (let index = 0; index < statementCount; index += 1) {
+      if ((mask & (1 << index)) !== 0) selectedNumbers.push(index + 1);
+    }
+    return selectedNumbers.join(" + ");
+  }
+
+  function generateStatementCombinationAnswers(q) {
+    const correctIds = new Set(q.correctStatementIds.map(String));
+    let correctMask = 0;
+    q.statements.forEach((statement, index) => {
+      if (correctIds.has(String(statement.id))) correctMask |= 1 << index;
+    });
+
+    const allMask = (1 << q.statements.length) - 1;
+    const selectedMasks = [correctMask];
+    const usedMasks = new Set(selectedMasks);
+
+    const nearMisses = shuffle(
+      q.statements
+        .map((_, index) => correctMask ^ (1 << index))
+        .filter(mask => !usedMasks.has(mask))
+    );
+    for (const mask of nearMisses) {
+      if (selectedMasks.length >= q.generatedOptionCount) break;
+      selectedMasks.push(mask);
+      usedMasks.add(mask);
+    }
+
+    const remainingMasks = [];
+    for (let mask = 0; mask <= allMask; mask += 1) {
+      if (!usedMasks.has(mask)) remainingMasks.push(mask);
+    }
+    for (const mask of shuffle(remainingMasks)) {
+      if (selectedMasks.length >= q.generatedOptionCount) break;
+      selectedMasks.push(mask);
+    }
+
+    return selectedMasks.map(mask => ({
+      uid: `${q.id}_combination_${mask.toString(36)}`,
+      sourceLetter: null,
+      text: formatStatementCombination(mask, q.statements.length),
+      correct: mask === correctMask
+    }));
+  }
+
   function prepareQuestion(q) {
+    const answers = q.type === "statement_combination"
+      ? generateStatementCombinationAnswers(q)
+      : q.answers.map(a => ({ ...a }));
     return {
       ...q,
-      answers: shuffle(q.answers.map(a => ({ ...a }))),
+      answers: shuffle(answers),
       selected: [],
       checked: false
     };
@@ -868,9 +990,11 @@
 
     els.progressText.textContent = `Frage ${state.index + 1} von ${state.questions.length}`;
     els.progressBar.style.width = `${((state.index + 1) / state.questions.length) * 100}%`;
-    els.questionType.textContent = correctCount === 1
-      ? "Single Choice: genau eine Antwort ist richtig."
-      : `Multiple Choice: ${correctCount} Antworten sind richtig.`;
+    els.questionType.textContent = q.type === "statement_combination"
+      ? "Aussagenkombination: Genau eine Kombination ist richtig."
+      : correctCount === 1
+        ? "Single Choice: genau eine Antwort ist richtig."
+        : `Multiple Choice: ${correctCount} Antworten sind richtig.`;
 
     const sourceParts = [];
     const page = formatMetaValue(q.page);
@@ -880,6 +1004,15 @@
     els.sourceHint.textContent = sourceParts.join(" · ");
 
     els.questionText.textContent = q.question;
+    els.statements.innerHTML = "";
+    els.statements.classList.toggle("hidden", q.type !== "statement_combination");
+    if (q.type === "statement_combination") {
+      q.statements.forEach(statement => {
+        const item = document.createElement("li");
+        item.textContent = statement.text;
+        els.statements.appendChild(item);
+      });
+    }
     els.answers.innerHTML = "";
     els.feedback.className = "feedback hidden";
     els.feedback.textContent = "";
@@ -1048,7 +1181,10 @@
 
       const title = document.createElement("div");
       title.className = "review-title";
-      title.textContent = `${index + 1}. ${q.question}`;
+      const statementText = q.type === "statement_combination"
+        ? `\n${q.statements.map((statement, statementIndex) => `${statementIndex + 1}. ${statement.text}`).join("\n")}`
+        : "";
+      title.textContent = `${index + 1}. ${q.question}${statementText}`;
 
       const selectedTexts = q.answers
         .filter(a => q.selected.includes(a.uid))

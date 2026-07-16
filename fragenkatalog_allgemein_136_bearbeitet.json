@@ -13,48 +13,40 @@
     "questions": [
         {
             "id": "recht-001",
-            "type": "single_choice",
-            "question": "Bei gröbster Aufteilung gliedert man das deutsche Recht in\n1. Nationales Recht\n2. Strafrecht\n3. Öffentliches Recht\n4. Grundrechte\n5. Strafprozessrecht\n6. Zivilrecht",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Bei gröbster Aufteilung gliedert man das deutsche Recht in",
+            "statements": [
                 {
-                    "uid": "recht-001-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 6",
-                    "correct": false
+                    "id": "1",
+                    "text": "Nationales Recht"
                 },
                 {
-                    "uid": "recht-001-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Strafrecht"
                 },
                 {
-                    "uid": "recht-001-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 4 + 6",
-                    "correct": false
+                    "id": "3",
+                    "text": "Öffentliches Recht"
                 },
                 {
-                    "uid": "recht-001-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4 + 6",
-                    "correct": false
+                    "id": "4",
+                    "text": "Grundrechte"
                 },
                 {
-                    "uid": "recht-001-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2+ 3 + 6",
-                    "correct": true
+                    "id": "5",
+                    "text": "Strafprozessrecht"
+                },
+                {
+                    "id": "6",
+                    "text": "Zivilrecht"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-001-E"
+            "correctStatementIds": [
+                "2",
+                "3",
+                "6"
             ],
+            "generatedOptionCount": 5,
             "category": "Allgemeines Recht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -113,48 +105,31 @@
         },
         {
             "id": "recht-003",
-            "type": "single_choice",
-            "question": "Zu den Zwangsmitteln der Strafprozessordnung zählen\n1. Das Offizialprinzip\n2. Die Untersuchungshaft\n3. Durchsuchungen durch den Gerichtsvollzieher\n4. Das Abnehmen von Blutproben",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Zu den Zwangsmitteln der Strafprozessordnung zählen",
+            "statements": [
                 {
-                    "uid": "recht-003-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2",
-                    "correct": false
+                    "id": "1",
+                    "text": "Das Offizialprinzip"
                 },
                 {
-                    "uid": "recht-003-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Die Untersuchungshaft"
                 },
                 {
-                    "uid": "recht-003-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 4",
-                    "correct": true
+                    "id": "3",
+                    "text": "Durchsuchungen durch den Gerichtsvollzieher"
                 },
                 {
-                    "uid": "recht-003-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "3 + 4",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-003-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "4",
+                    "text": "Das Abnehmen von Blutproben"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-003-C"
+            "correctStatementIds": [
+                "2",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Strafprozessrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -163,98 +138,77 @@
         },
         {
             "id": "recht-004",
-            "type": "single_choice",
-            "question": "Zu den Prozessmaximen der StPO zählen:\n1. Grundsatz der Schweigepflicht durch die Polizei\n2. Grundsatz der Öffentlichkeit von Strafprozessen\n3. Grundsatz der Mündlichkeit in allen Strafprozessen\n4. Grundsatz der Pflichtverteidigung in allen Strafprozessen\n5. Grundsatz der vorläufigen Festnahme vor Strafprozessen",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Zu den Prozessmaximen der StPO zählen:",
+            "statements": [
                 {
-                    "uid": "recht-004-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 4",
-                    "correct": false
+                    "id": "1",
+                    "text": "Grundsatz der Schweigepflicht durch die Polizei"
                 },
                 {
-                    "uid": "recht-004-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3 + 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Grundsatz der Öffentlichkeit von Strafprozessen"
                 },
                 {
-                    "uid": "recht-004-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3",
-                    "correct": true
+                    "id": "3",
+                    "text": "Grundsatz der Mündlichkeit in allen Strafprozessen"
                 },
                 {
-                    "uid": "recht-004-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "4",
+                    "text": "Grundsatz der Pflichtverteidigung in allen Strafprozessen"
                 },
                 {
-                    "uid": "recht-004-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine der Aussagen A bis C beschreibt eine konkludente Einwilligung",
-                    "correct": false
+                    "id": "5",
+                    "text": "Grundsatz der vorläufigen Festnahme vor Strafprozessen"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-004-C"
+            "correctStatementIds": [
+                "2",
+                "3"
             ],
-            "category": "Schweigepflicht",
+            "generatedOptionCount": 5,
+            "category": "Strafprozessrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
-            "answerBasis": "Kennzeichnung in der Quelle; einzelne offensichtliche Strukturfehler wurden bereinigt."
+            "answerBasis": "Die richtige Kombination wird aus den als richtig markierten Aussagen 2 und 3 erzeugt. Die früher enthaltene themenfremde Antwort zur konkludenten Einwilligung wurde entfernt."
         },
         {
             "id": "recht-005",
-            "type": "single_choice",
-            "question": "Das Strafverfahren gliedert sich in\n1. Das Vorverfahren\n2. Das Nebenverfahren\n3. Das Zwischenverfahren\n4. Das Vermittlungsverfahren\n5. Das Hauptverfahren\n6. Das Abschlussverfahren",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Das Strafverfahren gliedert sich in",
+            "statements": [
                 {
-                    "uid": "recht-005-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 3 + 5",
-                    "correct": true
+                    "id": "1",
+                    "text": "Das Vorverfahren"
                 },
                 {
-                    "uid": "recht-005-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Das Nebenverfahren"
                 },
                 {
-                    "uid": "recht-005-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 3 + 4 + 6",
-                    "correct": false
+                    "id": "3",
+                    "text": "Das Zwischenverfahren"
                 },
                 {
-                    "uid": "recht-005-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 3 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Das Vermittlungsverfahren"
                 },
                 {
-                    "uid": "recht-005-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 3 + 5 + 6",
-                    "correct": false
+                    "id": "5",
+                    "text": "Das Hauptverfahren"
+                },
+                {
+                    "id": "6",
+                    "text": "Das Abschlussverfahren"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-005-A"
+            "correctStatementIds": [
+                "1",
+                "3",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Strafprozessrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -263,48 +217,36 @@
         },
         {
             "id": "recht-006",
-            "type": "single_choice",
-            "question": "Notwendige Schritte zur Prüfung eines strafrechtlichen Begehungsdelikts können sein:\n1. Das Vorliegen tatbestandlichen Handelns\n2. Die Prüfung der Deliktsfähigkeit der Beschuldigten\n3. Die Prüfung der Strafmündigkeit des Beschuldigten\n4. Das Überprüfen des Vorliegens einer gesetzlichen Betreuung\n5. Das Überprüfen von Einsichtsfähigkeit",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Notwendige Schritte zur Prüfung eines strafrechtlichen Begehungsdelikts können sein:",
+            "statements": [
                 {
-                    "uid": "recht-006-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 3 + 5",
-                    "correct": true
+                    "id": "1",
+                    "text": "Das Vorliegen tatbestandlichen Handelns"
                 },
                 {
-                    "uid": "recht-006-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Die Prüfung der Deliktsfähigkeit der Beschuldigten"
                 },
                 {
-                    "uid": "recht-006-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "3",
+                    "text": "Die Prüfung der Strafmündigkeit des Beschuldigten"
                 },
                 {
-                    "uid": "recht-006-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Das Überprüfen des Vorliegens einer gesetzlichen Betreuung"
                 },
                 {
-                    "uid": "recht-006-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "3 + 4 + 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "Das Überprüfen von Einsichtsfähigkeit"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-006-A"
+            "correctStatementIds": [
+                "1",
+                "3",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -313,48 +255,39 @@
         },
         {
             "id": "recht-007",
-            "type": "single_choice",
-            "question": "Unter Beachtung des Grundsatzes der Öffentlichkeit...\n1. Müssen alle Gerichtsverfahren öffentlich verhandelt werden\n2. Dürfen Jugendstrafverfahren dennoch nicht öffentlich verhandelt werden.\n3. Kann in allen Bagatellverfahren auf Antrag des Angeklagten mangels öffentlichen Interesses die Öffentlichkeit ausgeschlossen werden.\n4. Kann in Fällen von Schwerkriminalität zum Datenschutz auf Antrag des Angeklagten die Öffentlichkeit ausgeschlossen werden.\n5. Dürfen Jugendschutzverfahren dennoch nicht öffentlich verhandelt werden.\n6. Kann wegen der Genugtuungsfunktion auf Antrag des Geschädigten Jugendlichen auch in Jugendschutzsachen die Öffentlichkeit zugelassen werden",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Unter Beachtung des Grundsatzes der Öffentlichkeit...",
+            "statements": [
                 {
-                    "uid": "recht-007-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1",
-                    "correct": false
+                    "id": "1",
+                    "text": "Müssen alle Gerichtsverfahren öffentlich verhandelt werden"
                 },
                 {
-                    "uid": "recht-007-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3 + 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Dürfen Jugendstrafverfahren dennoch nicht öffentlich verhandelt werden."
                 },
                 {
-                    "uid": "recht-007-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Kann in allen Bagatellverfahren auf Antrag des Angeklagten mangels öffentlichen Interesses die Öffentlichkeit ausgeschlossen werden."
                 },
                 {
-                    "uid": "recht-007-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4 + 6",
-                    "correct": false
+                    "id": "4",
+                    "text": "Kann in Fällen von Schwerkriminalität zum Datenschutz auf Antrag des Angeklagten die Öffentlichkeit ausgeschlossen werden."
                 },
                 {
-                    "uid": "recht-007-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 5",
-                    "correct": true
+                    "id": "5",
+                    "text": "Dürfen Jugendschutzverfahren dennoch nicht öffentlich verhandelt werden."
+                },
+                {
+                    "id": "6",
+                    "text": "Kann wegen der Genugtuungsfunktion auf Antrag des Geschädigten Jugendlichen auch in Jugendschutzsachen die Öffentlichkeit zugelassen werden"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-007-E"
+            "correctStatementIds": [
+                "2",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Strafprozessrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -363,48 +296,39 @@
         },
         {
             "id": "recht-008",
-            "type": "single_choice",
-            "question": "In einem Strafverfahren können:\n1. Nur Staatsanwälte und Richter Anträge stellen\n2. Immer auch die Geschädigten Anträge stellen\n3. Bei bestimmten Delikten auch Verletzte als Nebenkläger auftreten\n4. Bei bestimmten Delikten Verletzte selbst Privatklage erheben\n5. In Jugendschutzsachen auch die Jugendämter Strafanträge erheben\n6. Bei Beamtenbestechung auch die Dienstbehörden selbst Strafanklage erheben",
-            "answers": [
+            "type": "statement_combination",
+            "question": "In einem Strafverfahren können:",
+            "statements": [
                 {
-                    "uid": "recht-008-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1",
-                    "correct": false
+                    "id": "1",
+                    "text": "Nur Staatsanwälte und Richter Anträge stellen"
                 },
                 {
-                    "uid": "recht-008-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "3 + 4",
-                    "correct": true
+                    "id": "2",
+                    "text": "Immer auch die Geschädigten Anträge stellen"
                 },
                 {
-                    "uid": "recht-008-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 4",
-                    "correct": false
+                    "id": "3",
+                    "text": "Bei bestimmten Delikten auch Verletzte als Nebenkläger auftreten"
                 },
                 {
-                    "uid": "recht-008-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Bei bestimmten Delikten Verletzte selbst Privatklage erheben"
                 },
                 {
-                    "uid": "recht-008-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 4 + 5 + 6",
-                    "correct": false
+                    "id": "5",
+                    "text": "In Jugendschutzsachen auch die Jugendämter Strafanträge erheben"
+                },
+                {
+                    "id": "6",
+                    "text": "Bei Beamtenbestechung auch die Dienstbehörden selbst Strafanklage erheben"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-008-B"
+            "correctStatementIds": [
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Strafprozessrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -413,48 +337,39 @@
         },
         {
             "id": "recht-010",
-            "type": "single_choice",
-            "question": "Der Versuch einer Straftat\n1. wird noch nicht bestraft\n2. ist bei einem Verbrechen stets strafbar\n3. ist nur strafbar, wenn die Versuchsstrafbarkeit im Tatbestand des Gesetzes angegeben ist\n4. ist in Jugendschutzsachen immer strafbar\n5. ist in Staatsschutzdelikten immer strafbar\n6. kann milder bestraft werden als die vollendete Tat",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Der Versuch einer Straftat",
+            "statements": [
                 {
-                    "uid": "recht-010-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1",
-                    "correct": false
+                    "id": "1",
+                    "text": "wird noch nicht bestraft"
                 },
                 {
-                    "uid": "recht-010-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 6",
-                    "correct": true
+                    "id": "2",
+                    "text": "ist bei einem Verbrechen stets strafbar"
                 },
                 {
-                    "uid": "recht-010-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "3 + 6",
-                    "correct": false
+                    "id": "3",
+                    "text": "ist nur strafbar, wenn die Versuchsstrafbarkeit im Tatbestand des Gesetzes angegeben ist"
                 },
                 {
-                    "uid": "recht-010-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "ist in Jugendschutzsachen immer strafbar"
                 },
                 {
-                    "uid": "recht-010-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 5 + 6",
-                    "correct": false
+                    "id": "5",
+                    "text": "ist in Staatsschutzdelikten immer strafbar"
+                },
+                {
+                    "id": "6",
+                    "text": "kann milder bestraft werden als die vollendete Tat"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-010-B"
+            "correctStatementIds": [
+                "2",
+                "6"
             ],
+            "generatedOptionCount": 5,
             "category": "Allgemeines Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -513,48 +428,36 @@
         },
         {
             "id": "recht-012",
-            "type": "single_choice",
-            "question": "Im deutschen Recht zählt:\n1. Vergehen zählen zum sogenannten Nebenstrafrecht\n2. Verbrechen sind Strafdelikte mit Tötungserfolg im Tatbestand\n3. Gefährdungsdelikte sind Strafdelikte mit Strafrahmen von unter 1 Jahr Freiheitsstrafe\n4. Verbrechen sind Strafdelikte mit Mindeststrafrahmen von 5 Jahren Freiheitsstrafe\n5. Echte Unterlassungsdelikte sind stets Verbrechen\n6. Unechte Unterlassungsdelikte sind nicht strafbar",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Im deutschen Recht zählt:",
+            "statements": [
                 {
-                    "uid": "recht-012-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 3 + 5",
-                    "correct": false
+                    "id": "1",
+                    "text": "Vergehen zählen zum sogenannten Nebenstrafrecht"
                 },
                 {
-                    "uid": "recht-012-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Verbrechen sind Strafdelikte mit Tötungserfolg im Tatbestand"
                 },
                 {
-                    "uid": "recht-012-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "3 + 4 + 6",
-                    "correct": false
+                    "id": "3",
+                    "text": "Gefährdungsdelikte sind Strafdelikte mit Strafrahmen von unter 1 Jahr Freiheitsstrafe"
                 },
                 {
-                    "uid": "recht-012-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "4",
+                    "text": "Verbrechen sind Strafdelikte mit Mindeststrafrahmen von 5 Jahren Freiheitsstrafe"
                 },
                 {
-                    "uid": "recht-012-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": true
+                    "id": "5",
+                    "text": "Echte Unterlassungsdelikte sind stets Verbrechen"
+                },
+                {
+                    "id": "6",
+                    "text": "Unechte Unterlassungsdelikte sind nicht strafbar"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-012-E"
-            ],
+            "correctStatementIds": [],
+            "generatedOptionCount": 5,
             "category": "Tötungsdelikte und Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -563,48 +466,33 @@
         },
         {
             "id": "recht-013",
-            "type": "single_choice",
-            "question": "Welche Folge tritt ein, wenn der Patient nur unzureichend aufgeklärt worden ist und der Arzt dennoch eine Behandlung vornimmt?\n1. Es liegt keine Einwilligung des Patienten vor\n2. Der Arzt begeht eine Körperverletzung\n3. Der Patient hat die Möglichkeit Strafanzeige zu erstatten\n4. Es liegt keine Rechtfertigung des Heileingriffs vor",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Folge tritt ein, wenn der Patient nur unzureichend aufgeklärt worden ist und der Arzt dennoch eine Behandlung vornimmt?",
+            "statements": [
                 {
-                    "uid": "recht-013-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Es liegt keine Einwilligung des Patienten vor"
                 },
                 {
-                    "uid": "recht-013-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Der Arzt begeht eine Körperverletzung"
                 },
                 {
-                    "uid": "recht-013-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 3 + 4",
-                    "correct": false
+                    "id": "3",
+                    "text": "Der Patient hat die Möglichkeit Strafanzeige zu erstatten"
                 },
                 {
-                    "uid": "recht-013-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-013-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": true
+                    "id": "4",
+                    "text": "Es liegt keine Rechtfertigung des Heileingriffs vor"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-013-E"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Aufklärung",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -975,48 +863,37 @@
         },
         {
             "id": "recht-022",
-            "type": "single_choice",
-            "question": "Eine rechtswirksame Einwilligung des Patienten in einen operativen Eingriff\n1. kann nur schriftlich erfolgen\n2. kann auch mündlich erfolgen\n3. ist nur wirksam nach ausreichender Aufklärung über die Risiken\n4. braucht bei Lebensgefahr und gleichzeitig nicht einwilligungsfähigen Patienten nicht eingeholt werden\n5. setzt die Einsichtsfähigkeit des Patienten voraus",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Eine rechtswirksame Einwilligung des Patienten in einen operativen Eingriff",
+            "statements": [
                 {
-                    "uid": "recht-022-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 4 + 5",
-                    "correct": false
+                    "id": "1",
+                    "text": "kann nur schriftlich erfolgen"
                 },
                 {
-                    "uid": "recht-022-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3 + 4 + 5",
-                    "correct": true
+                    "id": "2",
+                    "text": "kann auch mündlich erfolgen"
                 },
                 {
-                    "uid": "recht-022-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 4 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "ist nur wirksam nach ausreichender Aufklärung über die Risiken"
                 },
                 {
-                    "uid": "recht-022-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "3 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "braucht bei Lebensgefahr und gleichzeitig nicht einwilligungsfähigen Patienten nicht eingeholt werden"
                 },
                 {
-                    "uid": "recht-022-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "1 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "setzt die Einsichtsfähigkeit des Patienten voraus"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-022-B"
+            "correctStatementIds": [
+                "2",
+                "3",
+                "4",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Einwilligung",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -1025,48 +902,35 @@
         },
         {
             "id": "recht-023",
-            "type": "single_choice",
-            "question": "Welche Voraussetzungen sind für eine wirksame Einwilligung eines Patienten grundsätzlich erforderlich?\n1. Das 18. Lebensjahr\n2. Eine ordnungsgemäße Aufklärung\n3. Einwilligungsfähigkeit\n4. Geschäftsfähigkeit\n5. Handlungsfähigkeit",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Voraussetzungen sind für eine wirksame Einwilligung eines Patienten grundsätzlich erforderlich?",
+            "statements": [
                 {
-                    "uid": "recht-023-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Das 18. Lebensjahr"
                 },
                 {
-                    "uid": "recht-023-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2",
-                    "correct": false
+                    "id": "2",
+                    "text": "Eine ordnungsgemäße Aufklärung"
                 },
                 {
-                    "uid": "recht-023-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "3 + 4",
-                    "correct": false
+                    "id": "3",
+                    "text": "Einwilligungsfähigkeit"
                 },
                 {
-                    "uid": "recht-023-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 3",
-                    "correct": true
+                    "id": "4",
+                    "text": "Geschäftsfähigkeit"
                 },
                 {
-                    "uid": "recht-023-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Handlungsfähigkeit"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-023-D"
+            "correctStatementIds": [
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Einwilligung und Patientenwille",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -1075,48 +939,24 @@
         },
         {
             "id": "recht-024",
-            "type": "single_choice",
+            "type": "statement_combination",
             "question": "Wann handelt es sich um eine konkludente Einwilligung?",
-            "answers": [
+            "statements": [
                 {
-                    "uid": "recht-024-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Wenn der Patient ausdrücklich der Heilbehandlung zustimmt",
-                    "correct": false
+                    "id": "1",
+                    "text": "Wenn der Patient ausdrücklich der Heilbehandlung zustimmt"
                 },
                 {
-                    "uid": "recht-024-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Wenn der Patient nicht im Vollbesitz seiner geistigen Kräfte ist",
-                    "correct": false
+                    "id": "2",
+                    "text": "Wenn der Patient nicht im Vollbesitz seiner geistigen Kräfte ist"
                 },
                 {
-                    "uid": "recht-024-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Wenn der Patient bewusstlos in ein Krankenhaus eingeliefert wurde",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-024-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Die Aussagen A bis C sind richtig",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-024-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": true
+                    "id": "3",
+                    "text": "Wenn der Patient bewusstlos in ein Krankenhaus eingeliefert wurde"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-024-E"
-            ],
+            "correctStatementIds": [],
+            "generatedOptionCount": 5,
             "category": "Einwilligung und Patientenwille",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -1254,48 +1094,33 @@
         },
         {
             "id": "recht-028",
-            "type": "single_choice",
-            "question": "Freiheitsentziehungen können rechtlich zulässig sein\n1. wenn ein bewusstloser Patient aus dem Bett zu fallen droht\n2. wenn ein Betreuer mit Genehmigung des Vormundschaftsgericht einwilligt\n3. wenn Untersuchungshaft vollzogen werden soll\n4. wenn ein fremder Dieb auf der Flucht durch Mitarbeiter am Entwischen gehindert wird",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Freiheitsentziehungen können rechtlich zulässig sein",
+            "statements": [
                 {
-                    "uid": "recht-028-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2",
-                    "correct": false
+                    "id": "1",
+                    "text": "wenn ein bewusstloser Patient aus dem Bett zu fallen droht"
                 },
                 {
-                    "uid": "recht-028-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "wenn ein Betreuer mit Genehmigung des Vormundschaftsgericht einwilligt"
                 },
                 {
-                    "uid": "recht-028-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 2 + 4",
-                    "correct": false
+                    "id": "3",
+                    "text": "wenn Untersuchungshaft vollzogen werden soll"
                 },
                 {
-                    "uid": "recht-028-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 3",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-028-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": true
+                    "id": "4",
+                    "text": "wenn ein fremder Dieb auf der Flucht durch Mitarbeiter am Entwischen gehindert wird"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-028-E"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Freiheitsentziehende Maßnahmen",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -1304,48 +1129,28 @@
         },
         {
             "id": "recht-029",
-            "type": "single_choice",
+            "type": "statement_combination",
             "question": "Wann liegt kein Fall der tatbestandsmäßigen Freiheitsberaubung vor?",
-            "answers": [
+            "statements": [
                 {
-                    "uid": "recht-029-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Wenn der Täter mit Einwilligung des Opfers handelt",
-                    "correct": false
+                    "id": "1",
+                    "text": "Wenn der Täter mit Einwilligung des Opfers handelt"
                 },
                 {
-                    "uid": "recht-029-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Wenn ein Tatbestandsirrtum zu Gunsten des Täters greift",
-                    "correct": false
+                    "id": "2",
+                    "text": "Wenn ein Tatbestandsirrtum zu Gunsten des Täters greift"
                 },
                 {
-                    "uid": "recht-029-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Wenn der Täter nicht vorsätzlich handelt",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-029-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Die Aussagen A bis C sind richtig",
-                    "correct": true
-                },
-                {
-                    "uid": "recht-029-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": false
+                    "id": "3",
+                    "text": "Wenn der Täter nicht vorsätzlich handelt"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-029-D"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Freiheitsentziehende Maßnahmen",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -1399,48 +1204,27 @@
         },
         {
             "id": "recht-031",
-            "type": "single_choice",
+            "type": "statement_combination",
             "question": "Freiheitsberaubung gemäß § 239 StGB ist möglich:",
-            "answers": [
+            "statements": [
                 {
-                    "uid": "recht-031-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Durch sturzbewahrende Bettgitter in geschlossenen psychiatrischen Landeskrankenhäusern",
-                    "correct": false
+                    "id": "1",
+                    "text": "Durch sturzbewahrende Bettgitter in geschlossenen psychiatrischen Landeskrankenhäusern"
                 },
                 {
-                    "uid": "recht-031-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Bei ausschließlich nachts angebrachten Bettgittern im Pflegeheim",
-                    "correct": false
+                    "id": "2",
+                    "text": "Bei ausschließlich nachts angebrachten Bettgittern im Pflegeheim"
                 },
                 {
-                    "uid": "recht-031-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Durch Gurte am Rollstuhl des Wachkomapatienten",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-031-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Die Aussagen A und B sind richtig",
-                    "correct": true
-                },
-                {
-                    "uid": "recht-031-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Die Aussagen A und C sind richtig",
-                    "correct": false
+                    "id": "3",
+                    "text": "Durch Gurte am Rollstuhl des Wachkomapatienten"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-031-D"
+            "correctStatementIds": [
+                "1",
+                "2"
             ],
+            "generatedOptionCount": 5,
             "category": "Freiheitsentziehende Maßnahmen",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2293,48 +2077,37 @@
         },
         {
             "id": "recht-050",
-            "type": "single_choice",
-            "question": "Die Voraussetzungen der Notwehr sind?\n1. Angriff gegen ein geschütztes Rechtsgut eines Menschen\n2. Gegenwärtigkeit des Angriffs\n3. Der Angriff muss sich als rechtswidrig darstellen\n4. Erforderlichkeit der Verteidigungshandlung\n5. Vorliegen einer Gefahr",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Die Voraussetzungen der Notwehr sind?",
+            "statements": [
                 {
-                    "uid": "recht-050-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3 + 4",
-                    "correct": true
+                    "id": "1",
+                    "text": "Angriff gegen ein geschütztes Rechtsgut eines Menschen"
                 },
                 {
-                    "uid": "recht-050-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Gegenwärtigkeit des Angriffs"
                 },
                 {
-                    "uid": "recht-050-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Der Angriff muss sich als rechtswidrig darstellen"
                 },
                 {
-                    "uid": "recht-050-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Erforderlichkeit der Verteidigungshandlung"
                 },
                 {
-                    "uid": "recht-050-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Vorliegen einer Gefahr"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-050-A"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Notwehr",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2386,55 +2159,37 @@
         },
         {
             "id": "recht-052",
-            "type": "single_choice",
-            "question": "Welche Antworten sind richtig?\n\n1. Wenn in einer Patientenverfügung Festlegungen für ärztliche Maßnahmen in bestimmten Situationen enthalten sind, sind sie verbindlich und vom Arzt unbedingt zu beachten, wenn durch diese Festlegungen der Wille für eine konkrete Behandlungssituation eindeutig und sicher festgestellt werden kann.\n\n2. Eine Patientenverfügung muss schriftlich fixiert werden.\n\n3. Die Verfügung muss ausdrücken, welche Maßnahmen konkret gewünscht werden mit möglichst ausführlicher Begründung.\n\n4. Bei vagen und unklaren Formulierungen, wenn nicht deutlich ist, was der Patient in einer konkreten Situation wirklich wünscht, entscheidet der Chefarzt, ob Maßnahmen der Lebenserhaltung abgebrochen werden oder nicht.\n\n5. Empfehlenswert ist die Bestätigung, dass der Verfasser einsichts- und urteilsfähig ist, z. B. durch zusätzliche Unterschrift eines oder mehrerer Zeugen.",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Antworten sind richtig?",
+            "statements": [
                 {
-                    "uid": "recht-052-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Wenn in einer Patientenverfügung Festlegungen für ärztliche Maßnahmen in bestimmten Situationen enthalten sind, sind sie verbindlich und vom Arzt unbedingt zu beachten, wenn durch diese Festlegungen der Wille für eine konkrete Behandlungssituation eindeutig und sicher festgestellt werden kann."
                 },
                 {
-                    "uid": "recht-052-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2",
-                    "correct": false
+                    "id": "2",
+                    "text": "Eine Patientenverfügung muss schriftlich fixiert werden."
                 },
                 {
-                    "uid": "recht-052-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 2 + 3 + 4",
-                    "correct": false
+                    "id": "3",
+                    "text": "Die Verfügung muss ausdrücken, welche Maßnahmen konkret gewünscht werden mit möglichst ausführlicher Begründung."
                 },
                 {
-                    "uid": "recht-052-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Bei vagen und unklaren Formulierungen, wenn nicht deutlich ist, was der Patient in einer konkreten Situation wirklich wünscht, entscheidet der Chefarzt, ob Maßnahmen der Lebenserhaltung abgebrochen werden oder nicht."
                 },
                 {
-                    "uid": "recht-052-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "1 + 2 + 3 + 5",
-                    "correct": true
-                },
-                {
-                    "uid": "recht-052-F",
-                    "sourceLetter": "F",
-                    "sourceIndex": 5,
-                    "text": "alle Antworten sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Empfehlenswert ist die Bestätigung, dass der Verfasser einsichts- und urteilsfähig ist, z. B. durch zusätzliche Unterschrift eines oder mehrerer Zeugen."
                 }
             ],
-            "correctAnswerUids": [
-                "recht-052-E"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "5"
             ],
+            "generatedOptionCount": 6,
             "category": "Allgemeines Recht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2443,48 +2198,32 @@
         },
         {
             "id": "recht-053",
-            "type": "single_choice",
-            "question": "Welche Umstände stellen immer einen Rechtfertigungsgrund für einen ärztlichen Heileingriff dar?\n1. Lebensgefahr für den Patienten\n2. Vorliegen rechtfertigenden Notstandes\n3. Einwilligung durch einen über 18-jährigen Patienten\n4. Einwilligung der Eltern des 5-jährigen Patienten",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Umstände stellen immer einen Rechtfertigungsgrund für einen ärztlichen Heileingriff dar?",
+            "statements": [
                 {
-                    "uid": "recht-053-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Lebensgefahr für den Patienten"
                 },
                 {
-                    "uid": "recht-053-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Vorliegen rechtfertigenden Notstandes"
                 },
                 {
-                    "uid": "recht-053-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3 + 4",
-                    "correct": true
+                    "id": "3",
+                    "text": "Einwilligung durch einen über 18-jährigen Patienten"
                 },
                 {
-                    "uid": "recht-053-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-053-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "4",
+                    "text": "Einwilligung der Eltern des 5-jährigen Patienten"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-053-C"
+            "correctStatementIds": [
+                "2",
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Rechtfertigungsgrund",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2493,48 +2232,32 @@
         },
         {
             "id": "recht-054",
-            "type": "single_choice",
-            "question": "Unter die Schweigepflicht nach Strafgesetzbuch fallen\n1. Der Name des Patienten\n2. Die Diagnose bei Bagatellerkrankungen\n3. Die Tatsachen, dass der Patient überhaupt in Behandlung ist\n4. Allgemein bekannte Tatsachen",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Unter die Schweigepflicht nach Strafgesetzbuch fallen",
+            "statements": [
                 {
-                    "uid": "recht-054-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 3 + 4",
-                    "correct": false
+                    "id": "1",
+                    "text": "Der Name des Patienten"
                 },
                 {
-                    "uid": "recht-054-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Die Diagnose bei Bagatellerkrankungen"
                 },
                 {
-                    "uid": "recht-054-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 2 + 3",
-                    "correct": true
+                    "id": "3",
+                    "text": "Die Tatsachen, dass der Patient überhaupt in Behandlung ist"
                 },
                 {
-                    "uid": "recht-054-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-054-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": false
+                    "id": "4",
+                    "text": "Allgemein bekannte Tatsachen"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-054-C"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Schweigepflicht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2543,48 +2266,31 @@
         },
         {
             "id": "recht-055",
-            "type": "single_choice",
-            "question": "Die Schweigepflicht (§ 203 StGB)\n1. erlischt mit dem Tod des Geheimgeschützten\n2. gilt nicht bei Informationen an Ehepartner des Patienten\n3. stellt das Vertrauensverhältnis zwischen Patienten und Pflegeperson unter besonderen Schutz\n4. gilt nicht innerhalb des „therapeutischen Teams“",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Die Schweigepflicht (§ 203 StGB)",
+            "statements": [
                 {
-                    "uid": "recht-055-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "erlischt mit dem Tod des Geheimgeschützten"
                 },
                 {
-                    "uid": "recht-055-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 3 + 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "gilt nicht bei Informationen an Ehepartner des Patienten"
                 },
                 {
-                    "uid": "recht-055-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3",
-                    "correct": false
+                    "id": "3",
+                    "text": "stellt das Vertrauensverhältnis zwischen Patienten und Pflegeperson unter besonderen Schutz"
                 },
                 {
-                    "uid": "recht-055-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "3 + 4",
-                    "correct": true
-                },
-                {
-                    "uid": "recht-055-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "4",
+                    "text": "gilt nicht innerhalb des „therapeutischen Teams“"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-055-D"
+            "correctStatementIds": [
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Schweigepflicht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2643,48 +2349,36 @@
         },
         {
             "id": "recht-057",
-            "type": "single_choice",
-            "question": "Welche Aussagen zu § 203 StGB und zur beruflichen Schweigepflicht sind richtig?\n1. § 203 ist eine Bestimmung des BGB\n2. Ein Geheimnis darf unter keinen Umständen offenbart werden\n3. § 203 ist eine Bestimmung des StGB\n4. Die Vorschrift schützt Privatgeheimnisse\n5. Eine Verletzung kann straf-, zivil- und arbeitsrechtliche Konsequenzen nach sich ziehen",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Aussagen zu § 203 StGB und zur beruflichen Schweigepflicht sind richtig?",
+            "statements": [
                 {
-                    "uid": "recht-057-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "§ 203 ist eine Bestimmung des BGB"
                 },
                 {
-                    "uid": "recht-057-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Ein Geheimnis darf unter keinen Umständen offenbart werden"
                 },
                 {
-                    "uid": "recht-057-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "3 + 4 + 5",
-                    "correct": true
+                    "id": "3",
+                    "text": "§ 203 ist eine Bestimmung des StGB"
                 },
                 {
-                    "uid": "recht-057-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "3 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "Die Vorschrift schützt Privatgeheimnisse"
                 },
                 {
-                    "uid": "recht-057-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "3 + 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "Eine Verletzung kann straf-, zivil- und arbeitsrechtliche Konsequenzen nach sich ziehen"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-057-C"
+            "correctStatementIds": [
+                "3",
+                "4",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Schweigepflicht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -2843,48 +2537,24 @@
         },
         {
             "id": "recht-061",
-            "type": "single_choice",
+            "type": "statement_combination",
             "question": "Strafbefreiende passive Sterbehilfe liegt vor?",
-            "answers": [
+            "statements": [
                 {
-                    "uid": "recht-061-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Wenn aufgrund mutmaßlicher Einwilligung des Patienten diesem ein totbringendes Medikament verabreicht wird",
-                    "correct": false
+                    "id": "1",
+                    "text": "Wenn aufgrund mutmaßlicher Einwilligung des Patienten diesem ein totbringendes Medikament verabreicht wird"
                 },
                 {
-                    "uid": "recht-061-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Wenn aufgrund ausdrücklicher und ernstlicher Einwilligung des Patienten diesem ein totbringendes Medikament verabreicht wird",
-                    "correct": false
+                    "id": "2",
+                    "text": "Wenn aufgrund ausdrücklicher und ernstlicher Einwilligung des Patienten diesem ein totbringendes Medikament verabreicht wird"
                 },
                 {
-                    "uid": "recht-061-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Wenn aufgrund mutmaßlicher Einwilligung des Patienten diesem notwendige Medikamente nicht verabreicht werden",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-061-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Die Aussagen A und B sind richtig",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-061-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": true
+                    "id": "3",
+                    "text": "Wenn aufgrund mutmaßlicher Einwilligung des Patienten diesem notwendige Medikamente nicht verabreicht werden"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-061-E"
-            ],
+            "correctStatementIds": [],
+            "generatedOptionCount": 5,
             "category": "Tötungsdelikte und Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -3573,48 +3243,35 @@
         },
         {
             "id": "recht-078",
-            "type": "single_choice",
-            "question": "Welche strafrechtlichen Folgen können bei einer Verurteilung wegen fahrlässiger Tötung eintreten?\n1. Freiheitsstrafe oder Geldstrafe\n2. Schadensersatz\n3. Berufsverbot\n4. Entzug der Approbation\n5. Schmerzensgeld",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche strafrechtlichen Folgen können bei einer Verurteilung wegen fahrlässiger Tötung eintreten?",
+            "statements": [
                 {
-                    "uid": "recht-078-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Freiheitsstrafe oder Geldstrafe"
                 },
                 {
-                    "uid": "recht-078-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Schadensersatz"
                 },
                 {
-                    "uid": "recht-078-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 3",
-                    "correct": true
+                    "id": "3",
+                    "text": "Berufsverbot"
                 },
                 {
-                    "uid": "recht-078-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1 + 2 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "Entzug der Approbation"
                 },
                 {
-                    "uid": "recht-078-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Schmerzensgeld"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-078-C"
+            "correctStatementIds": [
+                "1",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Tötungsdelikte und Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
@@ -3923,48 +3580,26 @@
         },
         {
             "id": "recht-085",
-            "type": "single_choice",
+            "type": "statement_combination",
             "question": "Welche Art von Delikt ist § 239 StGB?",
-            "answers": [
+            "statements": [
                 {
-                    "uid": "recht-085-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Antragsdelikt",
-                    "correct": false
+                    "id": "1",
+                    "text": "Antragsdelikt"
                 },
                 {
-                    "uid": "recht-085-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Privatklagedelikt",
-                    "correct": false
+                    "id": "2",
+                    "text": "Privatklagedelikt"
                 },
                 {
-                    "uid": "recht-085-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Offizialdelikt",
-                    "correct": true
-                },
-                {
-                    "uid": "recht-085-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-085-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Die Aussagen A bis C sind richtig",
-                    "correct": false
+                    "id": "3",
+                    "text": "Offizialdelikt"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-085-C"
+            "correctStatementIds": [
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Freiheitsberaubung",
             "source": {
                 "document": "MC_Recht.docx"
@@ -4618,48 +4253,36 @@
         },
         {
             "id": "recht-101",
-            "type": "single_choice",
-            "question": "Zu den fünf Büchern des BGB zählen:\n1. Sachenrecht\n2. Erbrecht\n3. Arbeitsrecht\n4. Sozialrecht\n5. Familienrecht",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Zu den fünf Büchern des BGB zählen:",
+            "statements": [
                 {
-                    "uid": "recht-101-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Sachenrecht"
                 },
                 {
-                    "uid": "recht-101-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3 + 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Erbrecht"
                 },
                 {
-                    "uid": "recht-101-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 2 + 5",
-                    "correct": true
+                    "id": "3",
+                    "text": "Arbeitsrecht"
                 },
                 {
-                    "uid": "recht-101-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "3 + 4 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Sozialrecht"
                 },
                 {
-                    "uid": "recht-101-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 3 + 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "Familienrecht"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-101-C"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Bürgerliches Recht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -4669,48 +4292,38 @@
         },
         {
             "id": "recht-102",
-            "type": "single_choice",
-            "question": "Welche Beweismittel sieht die Zivilprozessordnung vor?\n1. Augenscheinsbeweis\n2. Zeugenbeweis\n3. Urkundenbeweis\n4. Sachverständigenbeweis\n5. Parteivernehmung",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Beweismittel sieht die Zivilprozessordnung vor?",
+            "statements": [
                 {
-                    "uid": "recht-102-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2 + 3 + 4",
-                    "correct": false
+                    "id": "1",
+                    "text": "Augenscheinsbeweis"
                 },
                 {
-                    "uid": "recht-102-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3 + 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Zeugenbeweis"
                 },
                 {
-                    "uid": "recht-102-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Urkundenbeweis"
                 },
                 {
-                    "uid": "recht-102-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1 + 3 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Sachverständigenbeweis"
                 },
                 {
-                    "uid": "recht-102-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": true
+                    "id": "5",
+                    "text": "Parteivernehmung"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-102-E"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Zivilprozessrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -4720,48 +4333,36 @@
         },
         {
             "id": "recht-103",
-            "type": "single_choice",
-            "question": "Welche Aussagen zum Verrichtungsgehilfen treffen zu?\n1. Der Verrichtungsgehilfe ist Hilfsperson im Rahmen der vertraglichen Haftung.\n2. Hinsichtlich des Fehlverhaltens des Verrichtungsgehilfen kann sich der Geschäftsherr gegenüber dem geschädigten Dritten exkulpieren.\n3. Der Verrichtungsgehilfe ist Hilfsperson im Rahmen der deliktischen Haftung.\n4. Beim Verrichtungsgehilfen besteht keine Exkulpationsmöglichkeit.\n5. Eine Exkulpation des Geschäftsherrn ist beim Verrichtungsgehilfen möglich, wenn dieser bei Auswahl und Überwachung die im Verkehr erforderliche Sorgfalt beachtet hat oder der Schaden auch bei Anwendung dieser Sorgfalt entstanden wäre.",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Aussagen zum Verrichtungsgehilfen treffen zu?",
+            "statements": [
                 {
-                    "uid": "recht-103-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 3 + 4",
-                    "correct": false
+                    "id": "1",
+                    "text": "Der Verrichtungsgehilfe ist Hilfsperson im Rahmen der vertraglichen Haftung."
                 },
                 {
-                    "uid": "recht-103-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "2 + 3 + 5",
-                    "correct": true
+                    "id": "2",
+                    "text": "Hinsichtlich des Fehlverhaltens des Verrichtungsgehilfen kann sich der Geschäftsherr gegenüber dem geschädigten Dritten exkulpieren."
                 },
                 {
-                    "uid": "recht-103-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3",
-                    "correct": false
+                    "id": "3",
+                    "text": "Der Verrichtungsgehilfe ist Hilfsperson im Rahmen der deliktischen Haftung."
                 },
                 {
-                    "uid": "recht-103-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "Beim Verrichtungsgehilfen besteht keine Exkulpationsmöglichkeit."
                 },
                 {
-                    "uid": "recht-103-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "Eine Exkulpation des Geschäftsherrn ist beim Verrichtungsgehilfen möglich, wenn dieser bei Auswahl und Überwachung die im Verkehr erforderliche Sorgfalt beachtet hat oder der Schaden auch bei Anwendung dieser Sorgfalt entstanden wäre."
                 }
             ],
-            "correctAnswerUids": [
-                "recht-103-B"
+            "correctStatementIds": [
+                "2",
+                "3",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Deliktsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -4822,48 +4423,38 @@
         },
         {
             "id": "recht-105",
-            "type": "single_choice",
-            "question": "Welche Schäden können im Rahmen der deliktischen Haftung bei Vorliegen aller Anspruchsvoraussetzungen grundsätzlich verlangt werden?\n1. Erforderliche Behandlungskosten\n2. Verdienstausfall\n3. Schmerzensgeld\n4. Erforderliche Kosten eines wegen der fehlerhaften Behandlung benötigten Treppenlifts\n5. Erforderliche Kosten notwendiger Rehabilitationsmaßnahmen",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Schäden können im Rahmen der deliktischen Haftung bei Vorliegen aller Anspruchsvoraussetzungen grundsätzlich verlangt werden?",
+            "statements": [
                 {
-                    "uid": "recht-105-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2",
-                    "correct": false
+                    "id": "1",
+                    "text": "Erforderliche Behandlungskosten"
                 },
                 {
-                    "uid": "recht-105-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Verdienstausfall"
                 },
                 {
-                    "uid": "recht-105-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "3 + 4 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Schmerzensgeld"
                 },
                 {
-                    "uid": "recht-105-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "4 + 5",
-                    "correct": false
+                    "id": "4",
+                    "text": "Erforderliche Kosten eines wegen der fehlerhaften Behandlung benötigten Treppenlifts"
                 },
                 {
-                    "uid": "recht-105-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": true
+                    "id": "5",
+                    "text": "Erforderliche Kosten notwendiger Rehabilitationsmaßnahmen"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-105-E"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Delikts- und Schadensrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -4873,48 +4464,36 @@
         },
         {
             "id": "recht-106",
-            "type": "single_choice",
-            "question": "In welchen Fällen kann ein Organisationsverschulden vorliegen?\n1. Unzureichende Übergabe auf einer Station oder Wohngruppe\n2. Fehlerhafte Diagnose des behandelnden Arztes als solche\n3. Einsatz fehlerhafter Geräte\n4. Organisationsbedingt unzureichende Personalbesetzung\n5. Eine Pflegekraft lässt den Patienten bei einer Transportmaßnahme entgegen ihren Pflichten allein",
-            "answers": [
+            "type": "statement_combination",
+            "question": "In welchen Fällen kann ein Organisationsverschulden vorliegen?",
+            "statements": [
                 {
-                    "uid": "recht-106-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 3 + 4",
-                    "correct": true
+                    "id": "1",
+                    "text": "Unzureichende Übergabe auf einer Station oder Wohngruppe"
                 },
                 {
-                    "uid": "recht-106-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2 + 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Fehlerhafte Diagnose des behandelnden Arztes als solche"
                 },
                 {
-                    "uid": "recht-106-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Einsatz fehlerhafter Geräte"
                 },
                 {
-                    "uid": "recht-106-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1 + 2 + 3 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "Organisationsbedingt unzureichende Personalbesetzung"
                 },
                 {
-                    "uid": "recht-106-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Eine Pflegekraft lässt den Patienten bei einer Transportmaßnahme entgegen ihren Pflichten allein"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-106-A"
+            "correctStatementIds": [
+                "1",
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Organisationshaftung",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -4924,48 +4503,37 @@
         },
         {
             "id": "recht-107",
-            "type": "single_choice",
-            "question": "Welche Voraussetzungen gehören grundsätzlich zu einem vertraglichen Schadensersatzanspruch nach § 280 Abs. 1 BGB?\n1. Bestehen eines Schuldverhältnisses\n2. Verletzung einer Pflicht durch Handeln oder Unterlassen\n3. Vertretenmüssen der Pflichtverletzung, das nach § 280 Abs. 1 Satz 2 BGB vermutet wird\n4. Erfüllung eines Straftatbestands durch die Pflichtverletzung\n5. Eintritt eines zurechenbaren Schadens und Kausalität der Pflichtverletzung für diesen Schaden",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Voraussetzungen gehören grundsätzlich zu einem vertraglichen Schadensersatzanspruch nach § 280 Abs. 1 BGB?",
+            "statements": [
                 {
-                    "uid": "recht-107-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "2 + 3 + 5",
-                    "correct": false
+                    "id": "1",
+                    "text": "Bestehen eines Schuldverhältnisses"
                 },
                 {
-                    "uid": "recht-107-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 2 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Verletzung einer Pflicht durch Handeln oder Unterlassen"
                 },
                 {
-                    "uid": "recht-107-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 + 3 + 4 + 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Vertretenmüssen der Pflichtverletzung, das nach § 280 Abs. 1 Satz 2 BGB vermutet wird"
                 },
                 {
-                    "uid": "recht-107-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1 + 2 + 3 + 5",
-                    "correct": true
+                    "id": "4",
+                    "text": "Erfüllung eines Straftatbestands durch die Pflichtverletzung"
                 },
                 {
-                    "uid": "recht-107-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Eintritt eines zurechenbaren Schadens und Kausalität der Pflichtverletzung für diesen Schaden"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-107-D"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Vertragliche Haftung",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -4975,48 +4543,37 @@
         },
         {
             "id": "recht-108",
-            "type": "single_choice",
-            "question": "In welchen Fällen kommen im Arzthaftungsprozess Beweiserleichterungen oder eine Umkehr der Beweislast zugunsten des Patienten in Betracht?\n1. Bei Vorliegen der Voraussetzungen eines Anscheinsbeweises\n2. Bei einem groben Behandlungsfehler, der grundsätzlich geeignet ist, den eingetretenen Schaden zu verursachen\n3. Allein wegen Vorlage einer Urkunde\n4. Bei fehlender Befähigung des Behandelnden für die vorgenommene Behandlung\n5. Bei einem groben Pflegefehler, der grundsätzlich geeignet ist, den eingetretenen Schaden zu verursachen",
-            "answers": [
+            "type": "statement_combination",
+            "question": "In welchen Fällen kommen im Arzthaftungsprozess Beweiserleichterungen oder eine Umkehr der Beweislast zugunsten des Patienten in Betracht?",
+            "statements": [
                 {
-                    "uid": "recht-108-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1 + 2",
-                    "correct": false
+                    "id": "1",
+                    "text": "Bei Vorliegen der Voraussetzungen eines Anscheinsbeweises"
                 },
                 {
-                    "uid": "recht-108-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 + 3",
-                    "correct": false
+                    "id": "2",
+                    "text": "Bei einem groben Behandlungsfehler, der grundsätzlich geeignet ist, den eingetretenen Schaden zu verursachen"
                 },
                 {
-                    "uid": "recht-108-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "1 + 2 + 4 + 5",
-                    "correct": true
+                    "id": "3",
+                    "text": "Allein wegen Vorlage einer Urkunde"
                 },
                 {
-                    "uid": "recht-108-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2 + 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "Bei fehlender Befähigung des Behandelnden für die vorgenommene Behandlung"
                 },
                 {
-                    "uid": "recht-108-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 + 4 + 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "Bei einem groben Pflegefehler, der grundsätzlich geeignet ist, den eingetretenen Schaden zu verursachen"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-108-C"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "4",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Arzthaftungsrecht und Beweislast",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -5077,48 +4634,28 @@
         },
         {
             "id": "recht-149",
-            "type": "single_choice",
-            "question": "Bei welchen Verträgen stehen Hauptleistung und Gegenleistung in einem Gegenseitigkeitsverhältnis (Synallagma)?\n1. Werkvertrag\n2. Arbeitsvertrag\n3. Entgeltlicher Krankenhausaufnahmevertrag",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Bei welchen Verträgen stehen Hauptleistung und Gegenleistung in einem Gegenseitigkeitsverhältnis (Synallagma)?",
+            "statements": [
                 {
-                    "uid": "recht-149-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Nur 1",
-                    "correct": false
+                    "id": "1",
+                    "text": "Werkvertrag"
                 },
                 {
-                    "uid": "recht-149-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Nur 2",
-                    "correct": false
+                    "id": "2",
+                    "text": "Arbeitsvertrag"
                 },
                 {
-                    "uid": "recht-149-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Nur 3",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-149-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Keine der Aussagen",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-149-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "1, 2 und 3",
-                    "correct": true
+                    "id": "3",
+                    "text": "Entgeltlicher Krankenhausaufnahmevertrag"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-149-E"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Zivilrecht: Gegenseitige Verträge",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -5281,48 +4818,31 @@
         },
         {
             "id": "recht-153",
-            "type": "single_choice",
-            "question": "Welche Rechtsgeschäfte bedürfen grundsätzlich der notariellen Beurkundung?\n1. Kaufvertrag über eine bewegliche Sache im Wert von mehr als 50.000 Euro\n2. Grundstückskaufvertrag\n3. Noch nicht vollzogenes Schenkungsversprechen\n4. Patientenverfügung",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Rechtsgeschäfte bedürfen grundsätzlich der notariellen Beurkundung?",
+            "statements": [
                 {
-                    "uid": "recht-153-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Nur 1",
-                    "correct": false
+                    "id": "1",
+                    "text": "Kaufvertrag über eine bewegliche Sache im Wert von mehr als 50.000 Euro"
                 },
                 {
-                    "uid": "recht-153-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Nur 2",
-                    "correct": false
+                    "id": "2",
+                    "text": "Grundstückskaufvertrag"
                 },
                 {
-                    "uid": "recht-153-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Nur 3",
-                    "correct": false
+                    "id": "3",
+                    "text": "Noch nicht vollzogenes Schenkungsversprechen"
                 },
                 {
-                    "uid": "recht-153-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "Nur 4",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-153-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "2 und 3",
-                    "correct": true
+                    "id": "4",
+                    "text": "Patientenverfügung"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-153-E"
+            "correctStatementIds": [
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Zivilrecht: Formvorschriften",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -5383,48 +4903,35 @@
         },
         {
             "id": "recht-155",
-            "type": "single_choice",
-            "question": "Welche Aussagen über das Bürgerliche Gesetzbuch (BGB) sind richtig?\n1. Es enthält hauptsächlich Prozessrecht\n2. Es trat am 1. Januar 1900 in Kraft\n3. Die Schuldrechtsmodernisierung trat am 1. August 2003 in Kraft\n4. Es enthält Regelungen zum Vertragsrecht\n5. Bei Vertragsverletzungen werden staatliche Strafen ausgesprochen",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Aussagen über das Bürgerliche Gesetzbuch (BGB) sind richtig?",
+            "statements": [
                 {
-                    "uid": "recht-155-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "4 und 5",
-                    "correct": false
+                    "id": "1",
+                    "text": "Es enthält hauptsächlich Prozessrecht"
                 },
                 {
-                    "uid": "recht-155-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 und 2",
-                    "correct": false
+                    "id": "2",
+                    "text": "Es trat am 1. Januar 1900 in Kraft"
                 },
                 {
-                    "uid": "recht-155-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2 und 4",
-                    "correct": true
+                    "id": "3",
+                    "text": "Die Schuldrechtsmodernisierung trat am 1. August 2003 in Kraft"
                 },
                 {
-                    "uid": "recht-155-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1 und 3",
-                    "correct": false
+                    "id": "4",
+                    "text": "Es enthält Regelungen zum Vertragsrecht"
                 },
                 {
-                    "uid": "recht-155-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "3 und 4",
-                    "correct": false
+                    "id": "5",
+                    "text": "Bei Vertragsverletzungen werden staatliche Strafen ausgesprochen"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-155-C"
+            "correctStatementIds": [
+                "2",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Zivilrecht: Bürgerliches Gesetzbuch",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -5536,48 +5043,36 @@
         },
         {
             "id": "recht-158",
-            "type": "single_choice",
-            "question": "Welche der folgenden Gesetze sind dem Privatrecht zuzuordnen?\n1. Bürgerliches Gesetzbuch (BGB)\n2. Psychisch-Kranken-Gesetz eines Landes (PsychKG)\n3. Handelsgesetzbuch (HGB)\n4. Strafgesetzbuch (StGB)\n5. Aktiengesetz (AktG)",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche der folgenden Gesetze sind dem Privatrecht zuzuordnen?",
+            "statements": [
                 {
-                    "uid": "recht-158-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1, 2 und 3",
-                    "correct": false
+                    "id": "1",
+                    "text": "Bürgerliches Gesetzbuch (BGB)"
                 },
                 {
-                    "uid": "recht-158-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1, 3 und 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Psychisch-Kranken-Gesetz eines Landes (PsychKG)"
                 },
                 {
-                    "uid": "recht-158-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2, 3 und 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Handelsgesetzbuch (HGB)"
                 },
                 {
-                    "uid": "recht-158-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1, 3 und 5",
-                    "correct": true
+                    "id": "4",
+                    "text": "Strafgesetzbuch (StGB)"
                 },
                 {
-                    "uid": "recht-158-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "1, 2 und 5",
-                    "correct": false
+                    "id": "5",
+                    "text": "Aktiengesetz (AktG)"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-158-D"
+            "correctStatementIds": [
+                "1",
+                "3",
+                "5"
             ],
+            "generatedOptionCount": 5,
             "category": "Rechtssystem: Privat- und öffentliches Recht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -5587,48 +5082,36 @@
         },
         {
             "id": "recht-159",
-            "type": "single_choice",
-            "question": "Welche Rechtssubjekte beziehungsweise Gesellschaftsformen sind dem Privatrecht zuzuordnen?\n1. Stiftung des öffentlichen Rechts\n2. Aktiengesellschaft\n3. Gesellschaft mit beschränkter Haftung\n4. Kommanditgesellschaft\n5. Anstalt des öffentlichen Rechts",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Rechtssubjekte beziehungsweise Gesellschaftsformen sind dem Privatrecht zuzuordnen?",
+            "statements": [
                 {
-                    "uid": "recht-159-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1, 2, 3 und 4",
-                    "correct": false
+                    "id": "1",
+                    "text": "Stiftung des öffentlichen Rechts"
                 },
                 {
-                    "uid": "recht-159-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1 und 5",
-                    "correct": false
+                    "id": "2",
+                    "text": "Aktiengesellschaft"
                 },
                 {
-                    "uid": "recht-159-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "2, 3 und 5",
-                    "correct": false
+                    "id": "3",
+                    "text": "Gesellschaft mit beschränkter Haftung"
                 },
                 {
-                    "uid": "recht-159-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2, 3 und 4",
-                    "correct": true
+                    "id": "4",
+                    "text": "Kommanditgesellschaft"
                 },
                 {
-                    "uid": "recht-159-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Anstalt des öffentlichen Rechts"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-159-D"
+            "correctStatementIds": [
+                "2",
+                "3",
+                "4"
             ],
+            "generatedOptionCount": 5,
             "category": "Rechtssystem: Privatrechtliche Rechtssubjekte",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -5791,48 +5274,28 @@
         },
         {
             "id": "recht-163",
-            "type": "single_choice",
-            "question": "In welchen Fällen kann ein von einem 16-jährigen Minderjährigen abgeschlossenes Rechtsgeschäft wirksam sein?\n1. Das Rechtsgeschäft bringt ihm lediglich einen rechtlichen Vorteil\n2. Er bewirkt die vertragsmäßige Leistung vollständig mit Mitteln, die ihm zu diesem Zweck oder zur freien Verfügung überlassen wurden\n3. Sein gesetzlicher Vertreter stimmt dem Rechtsgeschäft zu",
-            "answers": [
+            "type": "statement_combination",
+            "question": "In welchen Fällen kann ein von einem 16-jährigen Minderjährigen abgeschlossenes Rechtsgeschäft wirksam sein?",
+            "statements": [
                 {
-                    "uid": "recht-163-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "Nur 1",
-                    "correct": false
+                    "id": "1",
+                    "text": "Das Rechtsgeschäft bringt ihm lediglich einen rechtlichen Vorteil"
                 },
                 {
-                    "uid": "recht-163-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "Nur 2",
-                    "correct": false
+                    "id": "2",
+                    "text": "Er bewirkt die vertragsmäßige Leistung vollständig mit Mitteln, die ihm zu diesem Zweck oder zur freien Verfügung überlassen wurden"
                 },
                 {
-                    "uid": "recht-163-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Nur 3",
-                    "correct": false
-                },
-                {
-                    "uid": "recht-163-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "1, 2 und 3",
-                    "correct": true
-                },
-                {
-                    "uid": "recht-163-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Keine Aussage ist richtig",
-                    "correct": false
+                    "id": "3",
+                    "text": "Sein gesetzlicher Vertreter stimmt dem Rechtsgeschäft zu"
                 }
             ],
-            "correctAnswerUids": [
-                "recht-163-D"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Zivilrecht: Beschränkte Geschäftsfähigkeit",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
@@ -6447,48 +5910,36 @@
         },
         {
             "id": "recht-177",
-            "type": "single_choice",
-            "question": "Welche Aussagen zur Behandlungsdokumentation sind richtig?\n1. Die Behandlungsakte ist in unmittelbarem zeitlichen Zusammenhang mit der Behandlung zu führen.\n2. Berichtigungen müssen den ursprünglichen Inhalt und den Zeitpunkt der Änderung erkennen lassen.\n3. Fehlt die Aufzeichnung einer medizinisch gebotenen wesentlichen Maßnahme oder ihres Ergebnisses, wird grundsätzlich vermutet, dass die Maßnahme nicht getroffen wurde.\n4. Jede noch so geringe Dokumentationslücke führt automatisch zu einer vollständigen Beweislastumkehr für sämtliche Haftungsvoraussetzungen.\n5. Nachträgliche Änderungen dürfen den ursprünglichen Eintrag spurlos ersetzen.",
-            "answers": [
+            "type": "statement_combination",
+            "question": "Welche Aussagen zur Behandlungsdokumentation sind richtig?",
+            "statements": [
                 {
-                    "uid": "recht-177-A",
-                    "sourceLetter": "A",
-                    "sourceIndex": 0,
-                    "text": "1, 2 und 3",
-                    "correct": true
+                    "id": "1",
+                    "text": "Die Behandlungsakte ist in unmittelbarem zeitlichen Zusammenhang mit der Behandlung zu führen."
                 },
                 {
-                    "uid": "recht-177-B",
-                    "sourceLetter": "B",
-                    "sourceIndex": 1,
-                    "text": "1, 2, 3 und 4",
-                    "correct": false
+                    "id": "2",
+                    "text": "Berichtigungen müssen den ursprünglichen Inhalt und den Zeitpunkt der Änderung erkennen lassen."
                 },
                 {
-                    "uid": "recht-177-C",
-                    "sourceLetter": "C",
-                    "sourceIndex": 2,
-                    "text": "Nur 1",
-                    "correct": false
+                    "id": "3",
+                    "text": "Fehlt die Aufzeichnung einer medizinisch gebotenen wesentlichen Maßnahme oder ihres Ergebnisses, wird grundsätzlich vermutet, dass die Maßnahme nicht getroffen wurde."
                 },
                 {
-                    "uid": "recht-177-D",
-                    "sourceLetter": "D",
-                    "sourceIndex": 3,
-                    "text": "2, 3 und 4",
-                    "correct": false
+                    "id": "4",
+                    "text": "Jede noch so geringe Dokumentationslücke führt automatisch zu einer vollständigen Beweislastumkehr für sämtliche Haftungsvoraussetzungen."
                 },
                 {
-                    "uid": "recht-177-E",
-                    "sourceLetter": "E",
-                    "sourceIndex": 4,
-                    "text": "Alle Aussagen sind richtig",
-                    "correct": false
+                    "id": "5",
+                    "text": "Nachträgliche Änderungen dürfen den ursprünglichen Eintrag spurlos ersetzen."
                 }
             ],
-            "correctAnswerUids": [
-                "recht-177-A"
+            "correctStatementIds": [
+                "1",
+                "2",
+                "3"
             ],
+            "generatedOptionCount": 5,
             "category": "Medizinrecht: Behandlungsdokumentation",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
