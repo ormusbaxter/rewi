@@ -99,7 +99,8 @@
   async function refreshCatalogs(selectedName=''){
     const result=await api('list'),select=$('#catalogSelect');
     select.innerHTML='<option value="">JSON auswählen …</option>'+result.files.map(name=>`<option value="${esc(name)}">${esc(name)}</option>`).join('');
-    select.disabled=false;select.value=selectedName;
+    select.disabled=false;
+    select.value=result.files.includes(selectedName)?selectedName:'';
   }
   async function openCatalog(name){
     if(!name)return;
@@ -113,6 +114,7 @@
   }
   $('#openBtn').onclick=async()=>{try{await refreshCatalogs(filename);toast('Katalogliste aktualisiert')}catch(err){toast('PHP-Backend nicht erreichbar: '+err.message,true)}};
   $('#catalogSelect').onchange=e=>openCatalog(e.target.value);
+  $('#catalogSelect').addEventListener('focus',async e=>{const selected=e.target.value;try{await refreshCatalogs(selected)}catch(err){toast('Katalogliste konnte nicht aktualisiert werden: '+err.message,true)}});
   $('#newBtn').disabled=false;
   $('#newBtn').onclick=()=>{
     if((dirty||questionDirty)&&!confirm('Ungespeicherte Änderungen verwerfen?'))return;
