@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-theme="blue">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Recht – Klausurquiz</title>
   <style>
     :root {
+      color-scheme: light;
       --bg: #f3f5f8;
       --panel: #ffffff;
       --text: #172033;
@@ -20,8 +21,99 @@
       --danger-bg: #fbecec;
       --warning: #825d00;
       --warning-bg: #fff7df;
+      --header-start: #17365d;
+      --header-end: #2b5f96;
+      --control-bg: #ffffff;
+      --neutral-bg: #eef1f5;
+      --progress-track: #e7ebf1;
+      --timer-bg: #eef3f9;
+      --answer-hover-border: #9fadc1;
+      --letter-bg: #edf1f6;
+      --neutral-soft: #f5f7fa;
+      --score-bg: #fafbfc;
+      --success-border: #bddfc9;
+      --danger-border: #efcaca;
+      --warning-border: #efd99e;
+      --correct-border: #74b489;
+      --incorrect-border: #d98a8a;
+      --review-success: #4f9b68;
+      --review-danger: #c34d4d;
       --shadow: 0 10px 30px rgba(22, 34, 51, .08);
       --radius: 16px;
+    }
+
+    :root[data-theme="forest"] {
+      --bg: #f1f6f2;
+      --text: #183127;
+      --muted: #5e7168;
+      --border: #d3dfd7;
+      --primary: #286749;
+      --primary-dark: #194a34;
+      --primary-soft: #e7f3ec;
+      --header-start: #174333;
+      --header-end: #34775a;
+    }
+
+    :root[data-theme="plum"] {
+      --bg: #f6f2f8;
+      --text: #302438;
+      --muted: #716579;
+      --border: #ded5e3;
+      --primary: #704783;
+      --primary-dark: #50305f;
+      --primary-soft: #f1e8f5;
+      --header-start: #43264f;
+      --header-end: #815795;
+    }
+
+    :root[data-theme="sepia"] {
+      --bg: #f7f1e6;
+      --panel: #fffdf8;
+      --text: #3b3024;
+      --muted: #746657;
+      --border: #e2d5c2;
+      --primary: #8a5727;
+      --primary-dark: #633c1b;
+      --primary-soft: #f7ead9;
+      --header-start: #57371f;
+      --header-end: #99683b;
+      --shadow: 0 10px 30px rgba(72, 49, 29, .09);
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #111827;
+      --panel: #1f2937;
+      --text: #f3f4f6;
+      --muted: #bdc6d2;
+      --border: #465266;
+      --primary: #3f6faf;
+      --primary-dark: #315887;
+      --primary-soft: #293c57;
+      --success: #9de5b4;
+      --success-bg: #183b27;
+      --danger: #ffb4b4;
+      --danger-bg: #462328;
+      --warning: #f2d17d;
+      --warning-bg: #3a321f;
+      --header-start: #0d1b2e;
+      --header-end: #274d78;
+      --control-bg: #182230;
+      --neutral-bg: #303b4b;
+      --progress-track: #374151;
+      --timer-bg: #29394d;
+      --answer-hover-border: #8392a8;
+      --letter-bg: #344154;
+      --neutral-soft: #293444;
+      --score-bg: #263242;
+      --success-border: #477b59;
+      --danger-border: #96565d;
+      --warning-border: #887245;
+      --correct-border: #5b9b70;
+      --incorrect-border: #b8676d;
+      --review-success: #69b881;
+      --review-danger: #d27878;
+      --shadow: 0 12px 34px rgba(0, 0, 0, .32);
     }
 
     * { box-sizing: border-box; }
@@ -34,6 +126,7 @@
     }
 
     button, select, input { font: inherit; }
+    input { accent-color: var(--primary); }
     button { cursor: pointer; }
     button:disabled { cursor: not-allowed; opacity: .55; }
 
@@ -43,12 +136,18 @@
     }
 
     .header {
-      background: linear-gradient(135deg, #17365d, #2b5f96);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: linear-gradient(135deg, var(--header-start), var(--header-end));
       color: white;
       border-radius: var(--radius);
       padding: 24px 26px;
       box-shadow: var(--shadow);
     }
+
+    .header-copy { min-width: 0; }
 
     .header h1 {
       margin: 0;
@@ -59,6 +158,29 @@
     .header p {
       margin: 8px 0 0;
       color: rgba(255,255,255,.84);
+    }
+
+    .theme-picker {
+      display: grid;
+      gap: 5px;
+      flex: 0 0 190px;
+      font-size: .86rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.88);
+    }
+
+    .theme-picker select {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 9px;
+      padding: 8px 10px;
+      background: rgba(255,255,255,.14);
+      color: white;
+    }
+
+    .theme-picker option {
+      background: var(--control-bg);
+      color: var(--text);
     }
 
     .panel {
@@ -105,7 +227,7 @@
       border: 1px solid var(--border);
       border-radius: 9px;
       padding: 10px 11px;
-      background: white;
+      background: var(--control-bg);
       color: var(--text);
     }
 
@@ -134,15 +256,15 @@
       border-radius: 10px;
       padding: 10px 15px;
       font-weight: 700;
-      background: #eef1f5;
+      background: var(--neutral-bg);
       color: var(--text);
     }
 
     .btn:hover:not(:disabled) { filter: brightness(.97); }
     .btn-primary { background: var(--primary); color: white; }
     .btn-primary:hover:not(:disabled) { background: var(--primary-dark); }
-    .btn-outline { background: white; border-color: var(--border); }
-    .btn-danger { background: var(--danger-bg); color: var(--danger); border-color: #efcaca; }
+    .btn-outline { background: var(--control-bg); border-color: var(--border); }
+    .btn-danger { background: var(--danger-bg); color: var(--danger); border-color: var(--danger-border); }
 
     .bank-status {
       margin-top: 16px;
@@ -150,14 +272,25 @@
       border-radius: 10px;
       background: var(--warning-bg);
       color: var(--warning);
-      border: 1px solid #efd99e;
+      border: 1px solid var(--warning-border);
     }
 
     .bank-status.ok {
       background: var(--success-bg);
       color: var(--success);
-      border-color: #bddfc9;
+      border-color: var(--success-border);
     }
+
+    .resume-card {
+      margin-top: 16px;
+      padding: 14px;
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      background: var(--primary-soft);
+    }
+
+    .resume-card p { margin: 5px 0 0; color: var(--muted); }
+    .resume-card .button-row { margin-top: 12px; }
 
     .quiz-topline {
       display: flex;
@@ -169,7 +302,7 @@
 
     .progress-shell {
       height: 10px;
-      background: #e7ebf1;
+      background: var(--progress-track);
       border-radius: 999px;
       overflow: hidden;
       margin-bottom: 20px;
@@ -187,8 +320,61 @@
       font-weight: 800;
       border-radius: 9px;
       padding: 7px 10px;
-      background: #eef3f9;
+      background: var(--timer-bg);
       color: var(--primary-dark);
+    }
+
+    .question-navigator-panel {
+      margin-bottom: 20px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--neutral-soft);
+    }
+
+    .navigator-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .navigator-summary {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .question-navigator {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+      gap: 7px;
+      max-height: 220px;
+      overflow: auto;
+      padding: 3px;
+    }
+
+    .nav-question {
+      position: relative;
+      min-height: 38px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--control-bg);
+      color: var(--text);
+      font-weight: 750;
+    }
+
+    .nav-question:hover { border-color: var(--answer-hover-border); }
+    .nav-question.answered { background: var(--primary-soft); border-color: var(--primary); }
+    .nav-question.flagged { box-shadow: inset 0 -4px 0 var(--warning); }
+    .nav-question.current { outline: 3px solid var(--primary); outline-offset: 1px; }
+
+    .btn.flagged {
+      background: var(--warning-bg);
+      border-color: var(--warning-border);
+      color: var(--warning);
     }
 
     .question-meta {
@@ -227,11 +413,11 @@
       border-radius: 12px;
       padding: 12px;
       cursor: pointer;
-      background: white;
+      background: var(--control-bg);
       transition: border-color .15s ease, background .15s ease, transform .08s ease;
     }
 
-    .answer:hover { border-color: #9fadc1; }
+    .answer:hover { border-color: var(--answer-hover-border); }
     .answer:active { transform: scale(.998); }
     .answer input { margin: 0; }
 
@@ -248,7 +434,7 @@
       display: grid;
       place-items: center;
       border-radius: 8px;
-      background: #edf1f6;
+      background: var(--letter-bg);
       font-weight: 800;
     }
 
@@ -258,12 +444,12 @@
     }
 
     .answer.correct {
-      border-color: #74b489;
+      border-color: var(--correct-border);
       background: var(--success-bg);
     }
 
     .answer.incorrect {
-      border-color: #d98a8a;
+      border-color: var(--incorrect-border);
       background: var(--danger-bg);
     }
 
@@ -277,18 +463,18 @@
 
     .feedback.success {
       background: var(--success-bg);
-      border-color: #bddfc9;
+      border-color: var(--success-border);
       color: var(--success);
     }
 
     .feedback.error {
       background: var(--danger-bg);
-      border-color: #efcaca;
+      border-color: var(--danger-border);
       color: var(--danger);
     }
 
     .feedback.neutral {
-      background: #f5f7fa;
+      background: var(--neutral-soft);
       color: var(--muted);
     }
 
@@ -304,7 +490,7 @@
       border-radius: 12px;
       padding: 14px;
       text-align: center;
-      background: #fafbfc;
+      background: var(--score-bg);
     }
 
     .score-value {
@@ -331,8 +517,8 @@
       padding: 14px;
     }
 
-    .review-item.correct-review { border-left: 5px solid #4f9b68; }
-    .review-item.incorrect-review { border-left: 5px solid #c34d4d; }
+    .review-item.correct-review { border-left: 5px solid var(--review-success); }
+    .review-item.incorrect-review { border-left: 5px solid var(--review-danger); }
 
     .review-title {
       font-weight: 800;
@@ -346,6 +532,86 @@
       white-space: pre-line;
     }
 
+    .learning-stats {
+      margin-top: 22px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .stats-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .stats-heading h3 { margin: 0; }
+
+    .stats-summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .stat-card {
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--score-bg);
+      text-align: center;
+    }
+
+    .stat-card strong { display: block; font-size: 1.25rem; color: var(--primary-dark); }
+    .stat-card span { color: var(--muted); font-size: .82rem; }
+
+    .stats-block { margin-top: 16px; }
+    .stats-block h4 { margin: 0 0 8px; font-size: .98rem; }
+
+    .stats-table-wrap {
+      max-height: 280px;
+      overflow: auto;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+
+    .stats-table th,
+    .stats-table td {
+      padding: 9px 11px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .stats-table th { position: sticky; top: 0; background: var(--neutral-bg); }
+    .stats-table tr:last-child td { border-bottom: 0; }
+    .stats-table td:last-child,
+    .stats-table th:last-child { text-align: right; }
+
+    .stats-history {
+      display: grid;
+      gap: 7px;
+    }
+
+    .history-entry {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--score-bg);
+    }
+
+    .history-entry small { display: block; color: var(--muted); }
+    .stats-empty { margin: 0; color: var(--muted); }
+
     .footer-note {
       margin-top: 14px;
       color: var(--muted);
@@ -353,9 +619,12 @@
     }
 
     @media (max-width: 720px) {
-      .grid, .result-score { grid-template-columns: 1fr; }
+      .header { align-items: stretch; flex-direction: column; gap: 16px; }
+      .theme-picker { flex-basis: auto; max-width: 260px; }
+      .grid, .result-score, .stats-summary { grid-template-columns: 1fr; }
       .panel { padding: 17px; }
       .quiz-topline { align-items: flex-start; }
+      .navigator-header { align-items: stretch; flex-direction: column; }
       .answer {
         grid-template-columns: 18px 30px minmax(0, 1fr);
         gap: 8px;
@@ -367,8 +636,20 @@
 <body>
   <main class="app">
     <header class="header">
-      <h1>Recht – Klausurquiz</h1>
-      <p>Single- und Multiple-Choice · zufällige Fragen- und Antwortreihenfolge</p>
+      <div class="header-copy">
+        <h1>Recht – Klausurquiz</h1>
+        <p>Single- und Multiple-Choice · zufällige Fragen- und Antwortreihenfolge</p>
+      </div>
+      <label class="theme-picker" for="themeSelect">
+        <span>Farbtheme</span>
+        <select id="themeSelect">
+          <option value="blue">Klassisch Blau</option>
+          <option value="forest">Waldgrün</option>
+          <option value="plum">Violett</option>
+          <option value="sepia">Sepia</option>
+          <option value="dark">Dark Mode</option>
+        </select>
+      </label>
     </header>
 
     <section id="setupPanel" class="panel">
@@ -386,7 +667,24 @@
         Noch keine Fragenbank geladen.
       </div>
 
+      <div id="resumePanel" class="resume-card hidden">
+        <strong id="resumeTitle">Unterbrochenes Quiz</strong>
+        <p id="resumeDetails"></p>
+        <div class="button-row">
+          <button id="resumeBtn" class="btn btn-primary">Quiz fortsetzen</button>
+          <button id="discardSessionBtn" class="btn btn-outline">Verwerfen</button>
+        </div>
+      </div>
+
       <div class="grid" style="margin-top:16px">
+        <div class="field">
+          <label class="field-label" for="categoryFilter">Kategorie/Thema</label>
+          <select id="categoryFilter" disabled>
+            <option value="">Alle Kategorien</option>
+          </select>
+          <p id="categoryHelp" class="help">Alle Themen der gewählten Fragenbank.</p>
+        </div>
+
         <div class="field">
           <span class="field-label">Fragenumfang</span>
           <select id="questionCount" disabled>
@@ -431,6 +729,27 @@
       <p class="footer-note">
         Die Fragenbank wird direkt als JSON-Datei geladen; Lernfortschritt und Fehlerfragen bleiben im Browser gespeichert.
       </p>
+
+      <section class="learning-stats" aria-labelledby="statsTitle">
+        <div class="stats-heading">
+          <h3 id="statsTitle">Lernstatistik</h3>
+          <button id="resetStatsBtn" class="btn btn-outline">Statistik zurücksetzen</button>
+        </div>
+        <div class="stats-summary">
+          <div class="stat-card"><strong id="statAttempts">0</strong><span>Durchläufe</span></div>
+          <div class="stat-card"><strong id="statQuestions">0</strong><span>Fragen bearbeitet</span></div>
+          <div class="stat-card"><strong id="statAccuracy">–</strong><span>Gesamtquote</span></div>
+          <div class="stat-card"><strong id="statErrors">0</strong><span>offene Fehlerfragen</span></div>
+        </div>
+        <div class="stats-block">
+          <h4>Nach Kategorie</h4>
+          <div id="statsCategories"></div>
+        </div>
+        <div class="stats-block">
+          <h4>Letzte Durchläufe</h4>
+          <div id="statsHistory" class="stats-history"></div>
+        </div>
+      </section>
     </section>
 
     <section id="quizPanel" class="panel hidden">
@@ -443,6 +762,17 @@
       </div>
 
       <div class="progress-shell"><div id="progressBar" class="progress-bar"></div></div>
+
+      <div id="questionNavigatorPanel" class="question-navigator-panel hidden">
+        <div class="navigator-header">
+          <div>
+            <strong>Prüfungsübersicht</strong>
+            <span id="navigatorSummary" class="navigator-summary"></span>
+          </div>
+          <button id="flagBtn" class="btn btn-outline">Zur Kontrolle markieren</button>
+        </div>
+        <div id="questionNavigator" class="question-navigator"></div>
+      </div>
 
       <div id="sourceHint" class="question-meta"></div>
       <p id="questionText" class="question-text"></p>
@@ -496,7 +826,12 @@
   "use strict";
 
   const STORAGE_BANK = "rechtQuiz.questionBank.v1";
+  const STORAGE_BANK_NAME = "rechtQuiz.questionBankName.v1";
   const STORAGE_STATS = "rechtQuiz.stats.v1";
+  const STORAGE_SESSION = "rechtQuiz.session.v1";
+  const STORAGE_THEME = "rechtQuiz.theme.v1";
+  const STATS_HISTORY_LIMIT = 20;
+  const THEMES = new Set(["blue", "forest", "plum", "sepia", "dark"]);
   const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
   const BUNDLED_BANKS = [
     "fragenkatalog_allgemein_136_bearbeitet.json",
@@ -505,12 +840,36 @@
   ];
 
   let questionBank = [];
+  let currentBankName = "";
   let state = null;
+  let pendingSession = null;
   let timerHandle = null;
 
   const els = Object.fromEntries(
     [...document.querySelectorAll("[id]")].map(el => [el.id, el])
   );
+
+  function applyTheme(theme, persist = true) {
+    const selectedTheme = THEMES.has(theme) ? theme : "blue";
+    document.documentElement.dataset.theme = selectedTheme;
+    els.themeSelect.value = selectedTheme;
+    if (persist) {
+      try {
+        localStorage.setItem(STORAGE_THEME, selectedTheme);
+      } catch (error) {
+        console.warn("Farbtheme konnte nicht gespeichert werden.", error);
+      }
+    }
+  }
+
+  function loadTheme() {
+    try {
+      applyTheme(localStorage.getItem(STORAGE_THEME) || "blue", false);
+    } catch (error) {
+      console.warn("Gespeichertes Farbtheme konnte nicht geladen werden.", error);
+      applyTheme("blue", false);
+    }
+  }
 
   function secureRandomInt(maxExclusive) {
     if (maxExclusive <= 0) return 0;
@@ -643,6 +1002,7 @@
 
   function saveBank() {
     localStorage.setItem(STORAGE_BANK, JSON.stringify(questionBank));
+    if (currentBankName) localStorage.setItem(STORAGE_BANK_NAME, currentBankName);
   }
 
   function loadSavedBank() {
@@ -650,56 +1010,225 @@
       const saved = localStorage.getItem(STORAGE_BANK);
       if (!saved) return;
       questionBank = normalizeBank(JSON.parse(saved));
+      currentBankName = localStorage.getItem(STORAGE_BANK_NAME) || "Gespeicherte Fragenbank";
       updateBankUI(`Gespeicherte Fragenbank geladen: ${questionBank.length} Fragen.`, true);
     } catch (error) {
       console.error(error);
       localStorage.removeItem(STORAGE_BANK);
+      localStorage.removeItem(STORAGE_BANK_NAME);
       updateBankUI("Die gespeicherte Fragenbank war beschädigt und wurde entfernt.", false);
     }
   }
 
+  function normalizeStats(raw = {}) {
+    const categories = {};
+    if (raw.categories && typeof raw.categories === "object" && !Array.isArray(raw.categories)) {
+      Object.entries(raw.categories).forEach(([name, values]) => {
+        if (!values || typeof values !== "object") return;
+        categories[name] = {
+          total: Math.max(0, Number(values.total) || 0),
+          correct: Math.max(0, Number(values.correct) || 0)
+        };
+      });
+    }
+
+    const history = Array.isArray(raw.history)
+      ? raw.history.slice(0, STATS_HISTORY_LIMIT).map(entry => ({
+          completedAt: typeof entry.completedAt === "string" ? entry.completedAt : "",
+          total: Math.max(0, Number(entry.total) || 0),
+          correct: Math.max(0, Number(entry.correct) || 0),
+          percent: Math.max(0, Math.min(100, Number(entry.percent) || 0)),
+          durationSeconds: Math.max(0, Number(entry.durationSeconds) || 0),
+          mode: entry.mode === "exam" ? "exam" : "learn",
+          category: typeof entry.category === "string" ? entry.category : "",
+          bankName: typeof entry.bankName === "string" ? entry.bankName : ""
+        }))
+      : [];
+
+    return {
+      errorIds: Array.isArray(raw.errorIds) ? [...new Set(raw.errorIds.map(String))] : [],
+      attempts: Math.max(0, Number(raw.attempts) || 0),
+      totalQuestions: Math.max(0, Number(raw.totalQuestions) || 0),
+      totalCorrect: Math.max(0, Number(raw.totalCorrect) || 0),
+      categories,
+      history
+    };
+  }
+
   function loadStats() {
     try {
-      const stats = JSON.parse(localStorage.getItem(STORAGE_STATS) || "{}");
-      return {
-        errorIds: Array.isArray(stats.errorIds) ? stats.errorIds.map(String) : [],
-        attempts: Number(stats.attempts) || 0
-      };
+      return normalizeStats(JSON.parse(localStorage.getItem(STORAGE_STATS) || "{}"));
     } catch {
-      return { errorIds: [], attempts: 0 };
+      return normalizeStats();
     }
   }
 
   function saveStats(stats) {
-    localStorage.setItem(STORAGE_STATS, JSON.stringify(stats));
+    localStorage.setItem(STORAGE_STATS, JSON.stringify(normalizeStats(stats)));
+  }
+
+  function getQuestionCategory(question) {
+    return typeof question?.category === "string" && question.category.trim()
+      ? question.category.trim()
+      : "Ohne Kategorie";
+  }
+
+  function renderStats() {
+    const stats = loadStats();
+    const accuracy = stats.totalQuestions > 0
+      ? Math.round((stats.totalCorrect / stats.totalQuestions) * 100)
+      : null;
+
+    els.statAttempts.textContent = String(stats.attempts);
+    els.statQuestions.textContent = String(stats.totalQuestions);
+    els.statAccuracy.textContent = accuracy === null ? "–" : `${accuracy} %`;
+    els.statErrors.textContent = String(stats.errorIds.length);
+    els.resetStatsBtn.disabled = stats.attempts === 0 && stats.errorIds.length === 0;
+
+    els.statsCategories.innerHTML = "";
+    const categoryEntries = Object.entries(stats.categories)
+      .filter(([, values]) => values.total > 0)
+      .sort(([first], [second]) => first.localeCompare(second, "de"));
+
+    if (categoryEntries.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "stats-empty";
+      empty.textContent = "Noch keine Kategorieauswertung vorhanden.";
+      els.statsCategories.appendChild(empty);
+    } else {
+      const wrap = document.createElement("div");
+      wrap.className = "stats-table-wrap";
+      const table = document.createElement("table");
+      table.className = "stats-table";
+      table.innerHTML = "<thead><tr><th>Kategorie</th><th>Richtig</th><th>Quote</th></tr></thead>";
+      const body = document.createElement("tbody");
+      categoryEntries.forEach(([name, values]) => {
+        const row = document.createElement("tr");
+        const nameCell = document.createElement("td");
+        const resultCell = document.createElement("td");
+        const rateCell = document.createElement("td");
+        nameCell.textContent = name;
+        resultCell.textContent = `${values.correct} / ${values.total}`;
+        rateCell.textContent = `${Math.round((values.correct / values.total) * 100)} %`;
+        row.append(nameCell, resultCell, rateCell);
+        body.appendChild(row);
+      });
+      table.appendChild(body);
+      wrap.appendChild(table);
+      els.statsCategories.appendChild(wrap);
+    }
+
+    els.statsHistory.innerHTML = "";
+    if (stats.history.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "stats-empty";
+      empty.textContent = "Noch kein Quiz abgeschlossen.";
+      els.statsHistory.appendChild(empty);
+    } else {
+      stats.history.slice(0, 8).forEach(entry => {
+        const item = document.createElement("div");
+        item.className = "history-entry";
+        const description = document.createElement("div");
+        const title = document.createElement("strong");
+        const meta = document.createElement("small");
+        const date = new Date(entry.completedAt);
+        const dateText = Number.isNaN(date.getTime())
+          ? "Unbekannter Zeitpunkt"
+          : date.toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" });
+        title.textContent = entry.category || "Alle Kategorien";
+        const metaParts = [
+          dateText,
+          entry.mode === "exam" ? "Prüfungsmodus" : "Lernmodus"
+        ];
+        if (entry.bankName) metaParts.push(entry.bankName);
+        if (entry.durationSeconds > 0) metaParts.push(formatSeconds(entry.durationSeconds));
+        meta.textContent = metaParts.join(" · ");
+        description.append(title, meta);
+        const result = document.createElement("strong");
+        result.textContent = `${entry.correct}/${entry.total} · ${entry.percent} %`;
+        item.append(description, result);
+        els.statsHistory.appendChild(item);
+      });
+    }
+  }
+
+  function resetStats() {
+    if (!window.confirm("Lernstatistik und gespeicherte Fehlerfragen wirklich zurücksetzen?")) return;
+    localStorage.removeItem(STORAGE_STATS);
+    renderStats();
+    rebuildQuestionCountOptions();
+  }
+
+  function getCategoryQuestions() {
+    const selectedCategory = els.categoryFilter.value;
+    return selectedCategory
+      ? questionBank.filter(question => getQuestionCategory(question) === selectedCategory)
+      : questionBank;
+  }
+
+  function getQuizCandidates(poolMode = getSelectedRadio("pool") || "all") {
+    const categoryQuestions = getCategoryQuestions();
+    if (poolMode !== "errors") return categoryQuestions;
+    const errorIds = new Set(loadStats().errorIds);
+    return categoryQuestions.filter(question => errorIds.has(String(question.id)));
+  }
+
+  function rebuildCategoryOptions(selectedCategory = els.categoryFilter.value) {
+    const counts = new Map();
+    questionBank.forEach(question => {
+      const category = getQuestionCategory(question);
+      counts.set(category, (counts.get(category) || 0) + 1);
+    });
+
+    els.categoryFilter.innerHTML = '<option value="">Alle Kategorien</option>';
+    [...counts.entries()]
+      .sort(([first], [second]) => first.localeCompare(second, "de"))
+      .forEach(([category, count]) => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = `${category} (${count})`;
+        els.categoryFilter.appendChild(option);
+      });
+
+    els.categoryFilter.value = counts.has(selectedCategory) ? selectedCategory : "";
+    els.categoryFilter.disabled = questionBank.length === 0;
   }
 
   function updateBankUI(message, ok) {
     els.bankStatus.textContent = message;
     els.bankStatus.classList.toggle("ok", ok);
     const ready = questionBank.length > 0;
-    els.startBtn.disabled = !ready;
     els.exportBtn.disabled = !ready;
     els.clearBankBtn.disabled = !ready;
-    els.questionCount.disabled = !ready;
+    rebuildCategoryOptions();
     rebuildQuestionCountOptions();
   }
 
   function rebuildQuestionCountOptions() {
-    const total = questionBank.length;
+    const previousValue = els.questionCount.value;
+    const categoryTotal = getCategoryQuestions().length;
+    const candidates = getQuizCandidates();
+    const total = candidates.length;
     els.questionCount.innerHTML = "";
-    const values = [10, 20, 30, 40, 50].filter(n => n < total);
-    values.forEach(n => {
+    const values = [10, 20, 30, 40, 50].filter(number => number < total);
+    values.forEach(number => {
       const option = document.createElement("option");
-      option.value = String(n);
-      option.textContent = `${n} Fragen`;
+      option.value = String(number);
+      option.textContent = `${number} Fragen`;
       els.questionCount.appendChild(option);
     });
     const all = document.createElement("option");
     all.value = "all";
-    all.textContent = total ? `Alle ${total} Fragen` : "Alle Fragen";
-    all.selected = true;
+    all.textContent = total ? `Alle ${total} Fragen` : "Keine passenden Fragen";
     els.questionCount.appendChild(all);
+    els.questionCount.value = [...els.questionCount.options].some(option => option.value === previousValue)
+      ? previousValue
+      : "all";
+    els.questionCount.disabled = total === 0;
+    els.startBtn.disabled = total === 0;
+    els.categoryHelp.textContent = els.categoryFilter.value
+      ? `${categoryTotal} Frage${categoryTotal === 1 ? "" : "n"} in dieser Kategorie.`
+      : `${questionBank.length} Fragen aus allen Kategorien.`;
   }
 
   function refreshBankList(selectedName = "") {
@@ -728,6 +1257,7 @@
       if (!response.ok) throw new Error(`HTTP-Fehler ${response.status}`);
       const data = await response.json();
       questionBank = normalizeBank(data);
+      currentBankName = filename;
       saveBank();
       updateBankUI(`Fragenbank „${filename}“ geladen: ${questionBank.length} Fragen.`, true);
     } catch (error) {
@@ -754,17 +1284,150 @@
 
   function clearBank() {
     const confirmed = window.confirm(
-      "Gespeicherte Fragenbank und Fehlerstatistik aus diesem Browser löschen?"
+      "Gespeicherte Fragenbank, Quizstand und Lernstatistik aus diesem Browser löschen?"
     );
     if (!confirmed) return;
     questionBank = [];
+    currentBankName = "";
     localStorage.removeItem(STORAGE_BANK);
+    localStorage.removeItem(STORAGE_BANK_NAME);
     localStorage.removeItem(STORAGE_STATS);
+    clearSession();
+    renderStats();
     updateBankUI("Noch keine Fragenbank geladen.", false);
   }
 
   function getSelectedRadio(name) {
     return document.querySelector(`input[name="${name}"]:checked`)?.value;
+  }
+
+  function normalizeSavedSession(raw) {
+    if (!raw || raw.version !== 1 || !raw.state || typeof raw.state !== "object") return null;
+    const savedState = raw.state;
+    if (!Array.isArray(savedState.questions) || savedState.questions.length === 0 || savedState.finished) return null;
+
+    const questions = savedState.questions.map(question => {
+      if (!question || typeof question.question !== "string" || !Array.isArray(question.answers)) {
+        throw new Error("Ungültige Sitzungsfrage.");
+      }
+      const answerIds = new Set(question.answers.map(answer => String(answer.uid)));
+      const selected = Array.isArray(question.selected)
+        ? question.selected.map(String).filter(answerId => answerIds.has(answerId))
+        : [];
+      return {
+        ...question,
+        selected: [...new Set(selected)],
+        checked: Boolean(question.checked),
+        flagged: Boolean(question.flagged)
+      };
+    });
+
+    const index = Math.max(0, Math.min(Number(savedState.index) || 0, questions.length - 1));
+    const timerEndAt = savedState.timerEndAt !== null && savedState.timerEndAt !== undefined && Number.isFinite(Number(savedState.timerEndAt))
+      ? Number(savedState.timerEndAt)
+      : null;
+    const initialSeconds = savedState.initialSeconds !== null && savedState.initialSeconds !== undefined && Number.isFinite(Number(savedState.initialSeconds))
+      ? Math.max(0, Number(savedState.initialSeconds))
+      : null;
+
+    return {
+      version: 1,
+      savedAt: Number(raw.savedAt) || Date.now(),
+      state: {
+        ...savedState,
+        questions,
+        index,
+        mode: savedState.mode === "exam" ? "exam" : "learn",
+        poolMode: savedState.poolMode === "errors" ? "errors" : "all",
+        startedAt: Number(savedState.startedAt) || Date.now(),
+        remainingSeconds: timerEndAt === null
+          ? null
+          : Math.max(0, Math.ceil((timerEndAt - Date.now()) / 1000)),
+        timerEndAt,
+        initialSeconds,
+        categoryFilter: typeof savedState.categoryFilter === "string" ? savedState.categoryFilter : "",
+        bankName: typeof savedState.bankName === "string" ? savedState.bankName : "",
+        finished: false
+      }
+    };
+  }
+
+  function renderResumePanel() {
+    const available = Boolean(pendingSession?.state && !pendingSession.state.finished);
+    els.resumePanel.classList.toggle("hidden", !available);
+    if (!available) return;
+
+    const savedState = pendingSession.state;
+    const savedAt = new Date(pendingSession.savedAt);
+    const savedText = Number.isNaN(savedAt.getTime())
+      ? ""
+      : ` · gespeichert ${savedAt.toLocaleString("de-DE", { dateStyle: "short", timeStyle: "short" })}`;
+    const timerText = savedState.timerEndAt === null
+      ? "ohne Timer"
+      : savedState.remainingSeconds > 0
+        ? `${formatSeconds(savedState.remainingSeconds)} verbleibend`
+        : "Zeit abgelaufen";
+    els.resumeTitle.textContent = `Unterbrochenes Quiz: Frage ${savedState.index + 1} von ${savedState.questions.length}`;
+    els.resumeDetails.textContent = `${savedState.mode === "exam" ? "Prüfungsmodus" : "Lernmodus"} · ${timerText}${savedText}`;
+  }
+
+  function saveSession() {
+    if (!state || state.finished) return;
+    try {
+      const session = { version: 1, savedAt: Date.now(), state };
+      localStorage.setItem(STORAGE_SESSION, JSON.stringify(session));
+      pendingSession = normalizeSavedSession(session);
+      renderResumePanel();
+    } catch (error) {
+      console.warn("Der aktuelle Quizstand konnte nicht gespeichert werden.", error);
+    }
+  }
+
+  function clearSession() {
+    localStorage.removeItem(STORAGE_SESSION);
+    pendingSession = null;
+    renderResumePanel();
+  }
+
+  function loadPendingSession() {
+    try {
+      const saved = localStorage.getItem(STORAGE_SESSION);
+      pendingSession = saved ? normalizeSavedSession(JSON.parse(saved)) : null;
+      if (saved && !pendingSession) localStorage.removeItem(STORAGE_SESSION);
+    } catch (error) {
+      console.warn("Der gespeicherte Quizstand war ungültig und wurde entfernt.", error);
+      localStorage.removeItem(STORAGE_SESSION);
+      pendingSession = null;
+    }
+    renderResumePanel();
+  }
+
+  function resumeQuiz() {
+    if (!pendingSession?.state) return;
+    stopTimer();
+    state = JSON.parse(JSON.stringify(pendingSession.state));
+    if (state.timerEndAt !== null) {
+      state.remainingSeconds = Math.max(0, Math.ceil((state.timerEndAt - Date.now()) / 1000));
+    }
+
+    els.setupPanel.classList.add("hidden");
+    els.resultPanel.classList.add("hidden");
+    els.quizPanel.classList.remove("hidden");
+    els.timerDisplay.classList.toggle("hidden", state.remainingSeconds === null);
+    renderQuestion();
+    if (state.remainingSeconds !== null) {
+      if (state.remainingSeconds <= 0) {
+        window.setTimeout(() => finishQuiz(true), 0);
+      } else {
+        startTimer();
+      }
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function discardPendingSession() {
+    if (!window.confirm("Den gespeicherten Quizstand wirklich verwerfen?")) return;
+    clearSession();
   }
 
   function formatStatementCombination(mask, statementCount) {
@@ -826,22 +1489,24 @@
       ...q,
       answers: shuffle(answers),
       selected: [],
-      checked: false
+      checked: false,
+      flagged: false
     };
   }
 
   function startQuiz(forcedPool = null) {
     stopTimer();
-    const stats = loadStats();
+    if (pendingSession && !forcedPool) {
+      const confirmed = window.confirm("Ein gespeicherter Quizstand ist vorhanden. Mit einem neuen Quiz überschreiben?");
+      if (!confirmed) return;
+    }
     const poolMode = forcedPool || getSelectedRadio("pool") || "all";
-    let candidates = questionBank;
-
-    if (poolMode === "errors") {
-      candidates = questionBank.filter(q => stats.errorIds.includes(String(q.id)));
-      if (candidates.length === 0) {
-        alert("Es sind keine Fehlerfragen gespeichert.");
-        return;
-      }
+    const candidates = getQuizCandidates(poolMode);
+    if (candidates.length === 0) {
+      alert(poolMode === "errors"
+        ? "Für diese Auswahl sind keine Fehlerfragen gespeichert."
+        : "Für diese Auswahl sind keine Fragen vorhanden.");
+      return;
     }
 
     const requested = els.questionCount.value === "all"
@@ -851,20 +1516,25 @@
     const selectedQuestions = shuffle(candidates)
       .slice(0, requested)
       .map(prepareQuestion);
+    const timerSeconds = els.timerEnabled.checked
+      ? Math.max(1, Number(els.timerMinutes.value) || 60) * 60
+      : null;
+    const startedAt = Date.now();
 
     state = {
       questions: selectedQuestions,
       index: 0,
       mode: getSelectedRadio("mode") || "learn",
       poolMode,
-      startedAt: Date.now(),
-      remainingSeconds: els.timerEnabled.checked
-        ? Math.max(1, Number(els.timerMinutes.value) || 60) * 60
-        : null,
-      initialSeconds: null,
+      categoryFilter: els.categoryFilter.value,
+      bankName: currentBankName,
+      startedAt,
+      remainingSeconds: timerSeconds,
+      initialSeconds: timerSeconds,
+      timerEndAt: timerSeconds === null ? null : startedAt + timerSeconds * 1000,
       finished: false
     };
-    state.initialSeconds = state.remainingSeconds;
+    clearSession();
 
     els.setupPanel.classList.add("hidden");
     els.resultPanel.classList.add("hidden");
@@ -873,20 +1543,28 @@
 
     if (state.remainingSeconds !== null) startTimer();
     renderQuestion();
+    saveSession();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function startTimer() {
+    stopTimer();
+    updateRemainingTime();
     renderTimer();
     timerHandle = window.setInterval(() => {
       if (!state || state.finished || state.remainingSeconds === null) return;
-      state.remainingSeconds -= 1;
+      updateRemainingTime();
       renderTimer();
       if (state.remainingSeconds <= 0) {
         stopTimer();
         finishQuiz(true);
       }
-    }, 1000);
+    }, 500);
+  }
+
+  function updateRemainingTime() {
+    if (!state || state.timerEndAt === null) return;
+    state.remainingSeconds = Math.max(0, Math.ceil((state.timerEndAt - Date.now()) / 1000));
   }
 
   function stopTimer() {
@@ -979,6 +1657,59 @@
     );
   }
 
+  function renderQuestionNavigator() {
+    const isExamMode = state?.mode === "exam";
+    els.questionNavigatorPanel.classList.toggle("hidden", !isExamMode);
+    if (!isExamMode) {
+      els.questionNavigator.innerHTML = "";
+      return;
+    }
+
+    const answered = state.questions.filter(question => question.selected.length > 0).length;
+    const flagged = state.questions.filter(question => question.flagged).length;
+    els.navigatorSummary.textContent = `${answered} von ${state.questions.length} beantwortet · ${flagged} markiert`;
+
+    const currentQuestion = state.questions[state.index];
+    els.flagBtn.classList.toggle("flagged", currentQuestion.flagged);
+    els.flagBtn.setAttribute("aria-pressed", String(currentQuestion.flagged));
+    els.flagBtn.textContent = currentQuestion.flagged
+      ? "Markierung entfernen"
+      : "Zur Kontrolle markieren";
+
+    els.questionNavigator.innerHTML = "";
+    state.questions.forEach((question, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "nav-question";
+      if (question.selected.length > 0) button.classList.add("answered");
+      if (question.flagged) button.classList.add("flagged");
+      if (index === state.index) button.classList.add("current");
+      button.textContent = String(index + 1);
+      const statuses = [question.selected.length > 0 ? "beantwortet" : "offen"];
+      if (question.flagged) statuses.push("markiert");
+      if (index === state.index) statuses.push("aktuell");
+      button.setAttribute("aria-label", `Frage ${index + 1}: ${statuses.join(", ")}`);
+      button.addEventListener("click", () => goToQuestion(index));
+      els.questionNavigator.appendChild(button);
+    });
+  }
+
+  function goToQuestion(index) {
+    if (!state || state.mode !== "exam" || index < 0 || index >= state.questions.length) return;
+    state.index = index;
+    renderQuestion();
+    saveSession();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function toggleCurrentFlag() {
+    if (!state || state.mode !== "exam") return;
+    const question = state.questions[state.index];
+    question.flagged = !question.flagged;
+    renderQuestionNavigator();
+    saveSession();
+  }
+
   function renderQuestion() {
     const q = state.questions[state.index];
     const correctCount = q.answers.filter(a => a.correct).length;
@@ -1040,6 +1771,7 @@
           q.selected = q.selected.filter(id => id !== answer.uid);
         }
         renderQuestion();
+        saveSession();
       });
 
       const letter = document.createElement("span");
@@ -1062,6 +1794,7 @@
     els.prevBtn.disabled = state.index === 0;
     els.nextBtn.textContent = state.index === state.questions.length - 1 ? "Auswerten" : "Weiter";
     els.nextBtn.disabled = state.mode === "learn" && !q.checked;
+    renderQuestionNavigator();
   }
 
   function getCorrectIds(q) {
@@ -1083,6 +1816,7 @@
     }
     q.checked = true;
     renderQuestion();
+    saveSession();
   }
 
   function showQuestionFeedback(q) {
@@ -1109,6 +1843,7 @@
     }
     state.index += 1;
     renderQuestion();
+    saveSession();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1116,6 +1851,7 @@
     if (state.index <= 0) return;
     state.index -= 1;
     renderQuestion();
+    saveSession();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1147,10 +1883,37 @@
       .filter(q => !isQuestionCorrect(q))
       .map(q => String(q.id));
 
-    saveStats({
-      attempts: stats.attempts + 1,
-      errorIds: [...new Set([...previousErrorsOutsideQuiz, ...currentErrors])]
+    const categories = Object.fromEntries(
+      Object.entries(stats.categories).map(([name, values]) => [name, { ...values }])
+    );
+    state.questions.forEach(question => {
+      const category = getQuestionCategory(question);
+      const values = categories[category] || { total: 0, correct: 0 };
+      values.total += 1;
+      if (isQuestionCorrect(question)) values.correct += 1;
+      categories[category] = values;
     });
+
+    const updatedStats = {
+      attempts: stats.attempts + 1,
+      totalQuestions: stats.totalQuestions + state.questions.length,
+      totalCorrect: stats.totalCorrect + correct,
+      errorIds: [...new Set([...previousErrorsOutsideQuiz, ...currentErrors])],
+      categories,
+      history: [{
+        completedAt: new Date().toISOString(),
+        total: state.questions.length,
+        correct,
+        percent,
+        durationSeconds: elapsed,
+        mode: state.mode,
+        category: state.categoryFilter,
+        bankName: state.bankName
+      }, ...stats.history].slice(0, STATS_HISTORY_LIMIT)
+    };
+    saveStats(updatedStats);
+    clearSession();
+    renderStats();
 
     els.quizPanel.classList.add("hidden");
     els.resultPanel.classList.remove("hidden");
@@ -1163,7 +1926,7 @@
       ? "Die Zeit ist abgelaufen. Das Quiz wurde automatisch ausgewertet."
       : "Das Quiz wurde ausgewertet.";
 
-    els.retryErrorsBtn.disabled = currentErrors.length === 0;
+    els.retryErrorsBtn.disabled = updatedStats.errorIds.length === 0;
     renderReview();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -1210,14 +1973,24 @@
     els.quizPanel.classList.add("hidden");
     els.setupPanel.classList.remove("hidden");
     updateBankUI(`Fragenbank geladen: ${questionBank.length} Fragen.`, true);
+    renderStats();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   els.bankSelect.addEventListener("change", event => loadBundledBank(event.target.value));
+  els.themeSelect.addEventListener("change", event => applyTheme(event.target.value));
+  els.categoryFilter.addEventListener("change", rebuildQuestionCountOptions);
+  document.querySelectorAll('input[name="pool"]').forEach(input => {
+    input.addEventListener("change", rebuildQuestionCountOptions);
+  });
 
   els.startBtn.addEventListener("click", () => startQuiz());
+  els.resumeBtn.addEventListener("click", resumeQuiz);
+  els.discardSessionBtn.addEventListener("click", discardPendingSession);
   els.exportBtn.addEventListener("click", exportBank);
   els.clearBankBtn.addEventListener("click", clearBank);
+  els.resetStatsBtn.addEventListener("click", resetStats);
+  els.flagBtn.addEventListener("click", toggleCurrentFlag);
   els.checkBtn.addEventListener("click", checkCurrent);
   els.prevBtn.addEventListener("click", previousQuestion);
   els.nextBtn.addEventListener("click", nextQuestion);
@@ -1226,7 +1999,9 @@
   els.retryErrorsBtn.addEventListener("click", () => {
     els.resultPanel.classList.add("hidden");
     els.setupPanel.classList.remove("hidden");
+    els.categoryFilter.value = "";
     document.querySelector('input[name="pool"][value="errors"]').checked = true;
+    rebuildQuestionCountOptions();
     startQuiz("errors");
   });
   els.showReviewBtn.addEventListener("click", () => {
@@ -1242,8 +2017,13 @@
     if (event.key === "ArrowRight") nextQuestion();
   });
 
+  window.addEventListener("pagehide", saveSession);
+
+  loadTheme();
   loadSavedBank();
-  refreshBankList();
+  refreshBankList(BUNDLED_BANKS.includes(currentBankName) ? currentBankName : "");
+  renderStats();
+  loadPendingSession();
 })();
 </script>
 </body>
