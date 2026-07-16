@@ -130,7 +130,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Strafprozessrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -167,7 +167,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Strafprozessrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -209,7 +209,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Strafprozessrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -247,7 +247,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Betreuungsrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -288,7 +288,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Strafprozessrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -329,7 +329,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Strafprozessrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -370,7 +370,7 @@
                 "6"
             ],
             "generatedOptionCount": 5,
-            "category": "Allgemeines Strafrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -420,7 +420,7 @@
             "correctAnswerUids": [
                 "recht-011-D"
             ],
-            "category": "Strafprozessrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -458,7 +458,7 @@
             ],
             "correctStatementIds": [],
             "generatedOptionCount": 5,
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -493,7 +493,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Aufklärung",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -536,7 +536,7 @@
             "correctAnswerUids": [
                 "recht-014-C"
             ],
-            "category": "Behandlungsabbruch",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -630,7 +630,7 @@
                 "recht-016-A",
                 "recht-016-E"
             ],
-            "category": "Betreuungsrecht",
+            "category": "Freiheitsentziehende Maßnahmen",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -855,7 +855,7 @@
             "correctAnswerUids": [
                 "recht-021-D"
             ],
-            "category": "Einwilligung und Patientenwille",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -894,7 +894,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Einwilligung",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -931,7 +931,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Einwilligung und Patientenwille",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -957,7 +957,7 @@
             ],
             "correctStatementIds": [],
             "generatedOptionCount": 5,
-            "category": "Einwilligung und Patientenwille",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1000,7 +1000,7 @@
             "correctAnswerUids": [
                 "recht-025-B"
             ],
-            "category": "Einwilligung und Patientenwille",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1043,7 +1043,7 @@
             "correctAnswerUids": [
                 "recht-026-B"
             ],
-            "category": "Allgemeines Recht",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1086,7 +1086,7 @@
             "correctAnswerUids": [
                 "recht-027-D"
             ],
-            "category": "Freiheitsberaubung/-entziehung",
+            "category": "Freiheitsentziehende Maßnahmen",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1375,7 +1375,7 @@
             "correctAnswerUids": [
                 "recht-034-D"
             ],
-            "category": "Einwilligung und Patientenwille",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1783,7 +1783,7 @@
             "correctAnswerUids": [
                 "recht-043-B"
             ],
-            "category": "Garantenstellung",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1826,7 +1826,7 @@
             "correctAnswerUids": [
                 "recht-044-B"
             ],
-            "category": "Grundrechte",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1876,7 +1876,7 @@
             "correctAnswerUids": [
                 "recht-045-D"
             ],
-            "category": "Körperverletzung",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1926,7 +1926,7 @@
             "correctAnswerUids": [
                 "recht-046-D"
             ],
-            "category": "Allgemeines Recht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -1969,7 +1969,7 @@
             "correctAnswerUids": [
                 "recht-047-B"
             ],
-            "category": "Körperverletzung",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2019,7 +2019,7 @@
             "correctAnswerUids": [
                 "recht-048-E"
             ],
-            "category": "Mutmaßlicher Wille",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2069,7 +2069,7 @@
             "correctAnswerUids": [
                 "recht-049-D"
             ],
-            "category": "Notstand",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2108,7 +2108,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Notwehr",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2151,7 +2151,7 @@
             "correctAnswerUids": [
                 "recht-051-A"
             ],
-            "category": "Patientenverfügung",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2190,7 +2190,7 @@
                 "5"
             ],
             "generatedOptionCount": 6,
-            "category": "Allgemeines Recht",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2224,7 +2224,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Rechtfertigungsgrund",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2258,7 +2258,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Schweigepflicht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2291,7 +2291,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Schweigepflicht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2341,7 +2341,7 @@
             "correctAnswerUids": [
                 "recht-056-D"
             ],
-            "category": "Schweigepflicht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2379,7 +2379,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Schweigepflicht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2429,7 +2429,7 @@
             "correctAnswerUids": [
                 "recht-058-A"
             ],
-            "category": "Schweigepflicht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2479,7 +2479,7 @@
             "correctAnswerUids": [
                 "recht-059-B"
             ],
-            "category": "Schweigepflicht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2555,7 +2555,7 @@
             ],
             "correctStatementIds": [],
             "generatedOptionCount": 5,
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2605,7 +2605,7 @@
             "correctAnswerUids": [
                 "recht-062-C"
             ],
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2648,7 +2648,7 @@
             "correctAnswerUids": [
                 "recht-063-C"
             ],
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2691,7 +2691,7 @@
             "correctAnswerUids": [
                 "recht-065-D"
             ],
-            "category": "Einwilligung und Patientenwille",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2734,7 +2734,7 @@
             "correctAnswerUids": [
                 "recht-066-D"
             ],
-            "category": "Einwilligung und Patientenwille",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2777,7 +2777,7 @@
             "correctAnswerUids": [
                 "recht-067-C"
             ],
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2820,7 +2820,7 @@
             "correctAnswerUids": [
                 "recht-068-C"
             ],
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2863,7 +2863,7 @@
             "correctAnswerUids": [
                 "recht-069-D"
             ],
-            "category": "Allgemeines Strafrecht",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2906,7 +2906,7 @@
             "correctAnswerUids": [
                 "recht-070-B"
             ],
-            "category": "Allgemeines Recht",
+            "category": "Betreuungsrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2949,7 +2949,7 @@
             "correctAnswerUids": [
                 "recht-071-A"
             ],
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -2992,7 +2992,7 @@
             "correctAnswerUids": [
                 "recht-072-B"
             ],
-            "category": "Historische Rechtslage: Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3035,7 +3035,7 @@
             "correctAnswerUids": [
                 "recht-073-C"
             ],
-            "category": "Historische Rechtslage: Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3085,7 +3085,7 @@
             "correctAnswerUids": [
                 "recht-074-C"
             ],
-            "category": "Strafmündigkeit",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3135,7 +3135,7 @@
             "correctAnswerUids": [
                 "recht-075-C"
             ],
-            "category": "Tatbestandsschema",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3185,7 +3185,7 @@
             "correctAnswerUids": [
                 "recht-076-E"
             ],
-            "category": "Täter/Teilnehmer",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3235,7 +3235,7 @@
             "correctAnswerUids": [
                 "recht-077-A"
             ],
-            "category": "Totschlag",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3272,7 +3272,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3322,7 +3322,7 @@
             "correctAnswerUids": [
                 "recht-079-A"
             ],
-            "category": "Verbrechen",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3372,7 +3372,7 @@
             "correctAnswerUids": [
                 "recht-080-D"
             ],
-            "category": "Vergehen",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3422,7 +3422,7 @@
             "correctAnswerUids": [
                 "recht-081-B"
             ],
-            "category": "Zuordnung allgemein",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3472,7 +3472,7 @@
             "correctAnswerUids": [
                 "recht-082-D"
             ],
-            "category": "Notwehr",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3522,7 +3522,7 @@
             "correctAnswerUids": [
                 "recht-083-B"
             ],
-            "category": "Allgemeines Strafrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3572,7 +3572,7 @@
             "correctAnswerUids": [
                 "recht-084-B"
             ],
-            "category": "Tötungsdelikte und Sterbehilfe",
+            "category": "Sterbehilfe",
             "source": {
                 "document": "Allgemein Recht_111.docx"
             },
@@ -3600,7 +3600,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Freiheitsberaubung",
+            "category": "Freiheitsentziehende Maßnahmen",
             "source": {
                 "document": "MC_Recht.docx"
             },
@@ -3643,7 +3643,7 @@
             "correctAnswerUids": [
                 "recht-086-A"
             ],
-            "category": "Allgemeines Strafrecht",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3686,7 +3686,7 @@
             "correctAnswerUids": [
                 "recht-087-A"
             ],
-            "category": "Delegation und Verantwortung",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3729,7 +3729,7 @@
             "correctAnswerUids": [
                 "recht-088-A"
             ],
-            "category": "Delegation und Verantwortung",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3772,7 +3772,7 @@
             "correctAnswerUids": [
                 "recht-089-A"
             ],
-            "category": "Delegation und Verantwortung",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3815,7 +3815,7 @@
             "correctAnswerUids": [
                 "recht-090-A"
             ],
-            "category": "Delegation und Verantwortung",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3858,7 +3858,7 @@
             "correctAnswerUids": [
                 "recht-091-A"
             ],
-            "category": "Delegation und Verantwortung",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3901,7 +3901,7 @@
             "correctAnswerUids": [
                 "recht-092-A"
             ],
-            "category": "Täterschaft und Teilnahme",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3944,7 +3944,7 @@
             "correctAnswerUids": [
                 "recht-093-A"
             ],
-            "category": "Täterschaft und Teilnahme",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -3987,7 +3987,7 @@
             "correctAnswerUids": [
                 "recht-094-A"
             ],
-            "category": "Rechtsfolgen der Tat",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4030,7 +4030,7 @@
             "correctAnswerUids": [
                 "recht-095-A"
             ],
-            "category": "Notwehr",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4073,7 +4073,7 @@
             "correctAnswerUids": [
                 "recht-096-A"
             ],
-            "category": "Notwehr",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4116,7 +4116,7 @@
             "correctAnswerUids": [
                 "recht-097-A"
             ],
-            "category": "Vorsatz und Fahrlässigkeit",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4159,7 +4159,7 @@
             "correctAnswerUids": [
                 "recht-098-A"
             ],
-            "category": "Vorsatz und Fahrlässigkeit",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4202,7 +4202,7 @@
             "correctAnswerUids": [
                 "recht-099-A"
             ],
-            "category": "Unterlassungsdelikte",
+            "category": "Strafrecht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4245,7 +4245,7 @@
             "correctAnswerUids": [
                 "recht-100-A"
             ],
-            "category": "Delegation und Verantwortung",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Recht Klausurfragen.docx"
             },
@@ -4283,7 +4283,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Bürgerliches Recht",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 23
@@ -4324,7 +4324,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Zivilprozessrecht",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 24
@@ -4363,7 +4363,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Deliktsrecht",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 25
@@ -4414,7 +4414,7 @@
             "correctAnswerUids": [
                 "recht-104-D"
             ],
-            "category": "Schadensrecht",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 26
@@ -4455,7 +4455,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Delikts- und Schadensrecht",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 27
@@ -4494,7 +4494,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Organisationshaftung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 28
@@ -4534,7 +4534,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Vertragliche Haftung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 29
@@ -4574,7 +4574,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Arzthaftungsrecht und Beweislast",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 31
@@ -4625,7 +4625,7 @@
             "correctAnswerUids": [
                 "recht-148-B"
             ],
-            "category": "Zivilrecht: Vertragstypen",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 13
@@ -4656,7 +4656,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Zivilrecht: Gegenseitige Verträge",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 14
@@ -4707,7 +4707,7 @@
             "correctAnswerUids": [
                 "recht-150-C"
             ],
-            "category": "Zivilrecht: Haftung bei Pflegefehlern",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 15
@@ -4758,7 +4758,7 @@
             "correctAnswerUids": [
                 "recht-151-D"
             ],
-            "category": "Zivilrecht: Leistungsstörungen",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 16
@@ -4809,7 +4809,7 @@
             "correctAnswerUids": [
                 "recht-152-A"
             ],
-            "category": "Zivilrecht: Rechtsfähigkeit",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 17
@@ -4843,7 +4843,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Zivilrecht: Formvorschriften",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 18
@@ -4894,7 +4894,7 @@
             "correctAnswerUids": [
                 "recht-154-D"
             ],
-            "category": "Zivilrecht: Vertragstypen",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 18
@@ -4932,7 +4932,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Zivilrecht: Bürgerliches Gesetzbuch",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 19
@@ -4983,7 +4983,7 @@
             "correctAnswerUids": [
                 "recht-156-C"
             ],
-            "category": "Zivilrecht: Deliktsfähigkeit Minderjähriger",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 21
@@ -5034,7 +5034,7 @@
             "correctAnswerUids": [
                 "recht-157-D"
             ],
-            "category": "Zivilrecht: Immaterieller Schaden",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 22
@@ -5073,7 +5073,7 @@
                 "5"
             ],
             "generatedOptionCount": 5,
-            "category": "Rechtssystem: Privat- und öffentliches Recht",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 1
@@ -5112,7 +5112,7 @@
                 "4"
             ],
             "generatedOptionCount": 5,
-            "category": "Rechtssystem: Privatrechtliche Rechtssubjekte",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 2
@@ -5163,7 +5163,7 @@
             "correctAnswerUids": [
                 "recht-160-A"
             ],
-            "category": "Zivil- und Strafrecht: Altersgrenzen",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 3
@@ -5214,7 +5214,7 @@
             "correctAnswerUids": [
                 "recht-161-C"
             ],
-            "category": "Zivilrecht: Willenserklärungen",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 4
@@ -5265,7 +5265,7 @@
             "correctAnswerUids": [
                 "recht-162-A"
             ],
-            "category": "Zivilrecht: Vertragsschluss",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 5
@@ -5296,7 +5296,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Zivilrecht: Beschränkte Geschäftsfähigkeit",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 6
@@ -5347,7 +5347,7 @@
             "correctAnswerUids": [
                 "recht-164-B"
             ],
-            "category": "Zivilrecht: Vertragsfreiheit",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 7
@@ -5398,7 +5398,7 @@
             "correctAnswerUids": [
                 "recht-165-B"
             ],
-            "category": "Zivilrecht: Abstraktionsprinzip",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 8
@@ -5449,7 +5449,7 @@
             "correctAnswerUids": [
                 "recht-166-D"
             ],
-            "category": "Zivilrecht: Rechtsfähigkeit",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 9
@@ -5500,7 +5500,7 @@
             "correctAnswerUids": [
                 "recht-167-D"
             ],
-            "category": "Zivilrecht: Geschäftsfähigkeit",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 10
@@ -5551,7 +5551,7 @@
             "correctAnswerUids": [
                 "recht-168-B"
             ],
-            "category": "Zivilrecht: Deliktsfähigkeit Minderjähriger",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 11
@@ -5602,7 +5602,7 @@
             "correctAnswerUids": [
                 "recht-169-B"
             ],
-            "category": "Zivilrecht: Dienst- und Werkvertrag",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 12
@@ -5653,7 +5653,7 @@
             "correctAnswerUids": [
                 "recht-170-B"
             ],
-            "category": "Zivilrecht: Verjährung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 51
@@ -5697,7 +5697,7 @@
             "correctAnswerUids": [
                 "recht-171-A"
             ],
-            "category": "Pflegerecht: Expertenstandards und Haftung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 52
@@ -5748,7 +5748,7 @@
             "correctAnswerUids": [
                 "recht-172-B"
             ],
-            "category": "Organisationshaftung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 54
@@ -5799,7 +5799,7 @@
             "correctAnswerUids": [
                 "recht-173-A"
             ],
-            "category": "Zivilrecht: Vertragliche und deliktische Haftung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 41
@@ -5850,7 +5850,7 @@
             "correctAnswerUids": [
                 "recht-175-B"
             ],
-            "category": "Zivilrecht: Anfechtung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 44
@@ -5901,7 +5901,7 @@
             "correctAnswerUids": [
                 "recht-176-A"
             ],
-            "category": "Medizinrecht: Delegation ärztlicher Tätigkeiten",
+            "category": "Allgemeines Recht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 46
@@ -5940,7 +5940,7 @@
                 "3"
             ],
             "generatedOptionCount": 5,
-            "category": "Medizinrecht: Behandlungsdokumentation",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 47
@@ -5991,7 +5991,7 @@
             "correctAnswerUids": [
                 "recht-178-A"
             ],
-            "category": "Zivil- und Medizinrecht: Haftungszuordnung",
+            "category": "Vertragsrecht",
             "source": {
                 "document": "Vom Nutzer bereitgestelltes Bild",
                 "originalQuestion": 48

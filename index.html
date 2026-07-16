@@ -825,7 +825,8 @@
 (() => {
   "use strict";
 
-  const STORAGE_BANK = "rechtQuiz.questionBank.v1";
+  const STORAGE_BANK = "rechtQuiz.questionBank.v2";
+  const LEGACY_STORAGE_BANK = "rechtQuiz.questionBank.v1";
   const STORAGE_BANK_NAME = "rechtQuiz.questionBankName.v1";
   const STORAGE_STATS = "rechtQuiz.stats.v1";
   const STORAGE_SESSION = "rechtQuiz.session.v1";
@@ -1003,18 +1004,25 @@
   function saveBank() {
     localStorage.setItem(STORAGE_BANK, JSON.stringify(questionBank));
     if (currentBankName) localStorage.setItem(STORAGE_BANK_NAME, currentBankName);
+    localStorage.removeItem(LEGACY_STORAGE_BANK);
   }
 
   function loadSavedBank() {
     try {
+      currentBankName = localStorage.getItem(STORAGE_BANK_NAME) || "";
       const saved = localStorage.getItem(STORAGE_BANK);
-      if (!saved) return;
+      if (!saved) {
+        if (localStorage.getItem(LEGACY_STORAGE_BANK)) {
+          updateBankUI("Die Fragenbank wurde aktualisiert. Bitte den Katalog einmal neu auswählen.", false);
+        }
+        return;
+      }
       questionBank = normalizeBank(JSON.parse(saved));
-      currentBankName = localStorage.getItem(STORAGE_BANK_NAME) || "Gespeicherte Fragenbank";
       updateBankUI(`Gespeicherte Fragenbank geladen: ${questionBank.length} Fragen.`, true);
     } catch (error) {
       console.error(error);
       localStorage.removeItem(STORAGE_BANK);
+      localStorage.removeItem(LEGACY_STORAGE_BANK);
       localStorage.removeItem(STORAGE_BANK_NAME);
       updateBankUI("Die gespeicherte Fragenbank war beschädigt und wurde entfernt.", false);
     }
@@ -1290,6 +1298,7 @@
     questionBank = [];
     currentBankName = "";
     localStorage.removeItem(STORAGE_BANK);
+    localStorage.removeItem(LEGACY_STORAGE_BANK);
     localStorage.removeItem(STORAGE_BANK_NAME);
     localStorage.removeItem(STORAGE_STATS);
     clearSession();
@@ -2024,6 +2033,7 @@
   refreshBankList(BUNDLED_BANKS.includes(currentBankName) ? currentBankName : "");
   renderStats();
   loadPendingSession();
+  if (BUNDLED_BANKS.includes(currentBankName)) loadBundledBank(currentBankName);
 })();
 </script>
 </body>
