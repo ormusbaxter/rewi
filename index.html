@@ -369,10 +369,8 @@
         <label class="field-label" for="bankSelect">Fragendatenbank auswählen</label>
         <select id="bankSelect">
           <option value="">Bitte eine Datenbank auswählen</option>
-          <option value="fragenkatalog_allgemein_136_bearbeitet.json">Allgemeines Recht – 136 Fragen</option>
-          <option value="recht_fragenkatalog_europarecht_41_geprueft.json">Europarecht – 41 Fragen</option>
         </select>
-        <p class="help">Die ausgewählte JSON-Datei wird aus demselben Verzeichnis wie diese HTML-Datei geladen.</p>
+        <p class="help">Alle JSON-Dateien aus dem Stammverzeichnis des Webservers werden automatisch angezeigt.</p>
       </div>
 
       <div id="bankStatus" class="bank-status">
@@ -422,7 +420,7 @@
       </div>
 
       <p class="footer-note">
-        Die Fragenbank bleibt ausschließlich im lokalen Browser-Speicher. Es werden keine Daten übertragen.
+        Die Fragenbank wird vom lokalen Webserver geladen; Lernfortschritt und Fehlerfragen bleiben im Browser gespeichert.
       </p>
     </section>
 
@@ -631,6 +629,32 @@
     els.questionCount.appendChild(all);
   }
 
+  async function api(action, file = "") {
+    const query = new URLSearchParams({ action });
+    if (file) query.set("file", file);
+    const response = await fetch(`php/api.php?${query}`, { cache: "no-store" });
+    let result;
+    try {
+      result = await response.json();
+    } catch {
+      throw new Error(`Serverantwort ist kein JSON (HTTP ${response.status}).`);
+    }
+    if (!response.ok) throw new Error(result.error || `HTTP-Fehler ${response.status}`);
+    return result;
+  }
+
+  async function refreshBankList(selectedName = "") {
+    const result = await api("list");
+    els.bankSelect.innerHTML = '<option value="">Bitte eine Datenbank auswählen</option>';
+    result.files.forEach(filename => {
+      const option = document.createElement("option");
+      option.value = filename;
+      option.textContent = filename;
+      els.bankSelect.appendChild(option);
+    });
+    els.bankSelect.value = result.files.includes(selectedName) ? selectedName : "";
+  }
+
   async function loadBundledBank(filename) {
     if (!filename) return;
 
@@ -638,20 +662,13 @@
     updateBankUI(`Fragenbank „${filename}“ wird geladen …`, false);
 
     try {
-      const response = await fetch(new URL(filename, document.baseURI));
-      if (!response.ok) {
-        throw new Error(`HTTP-Fehler ${response.status}`);
-      }
-
-      questionBank = normalizeBank(await response.json());
+      const result = await api("load", filename);
+      questionBank = normalizeBank(result.data);
       saveBank();
       updateBankUI(`Fragenbank „${filename}“ geladen: ${questionBank.length} Fragen.`, true);
     } catch (error) {
       console.error(error);
-      const localHint = location.protocol === "file:"
-        ? " Der Browser verhindert den direkten Zugriff auf lokale JSON-Dateien. Öffne den Ordner über einen lokalen Webserver."
-        : "";
-      updateBankUI(`Fragenbank konnte nicht geladen werden: ${error.message}.${localHint}`, false);
+      updateBankUI(`Fragenbank konnte nicht geladen werden: ${error.message}`, false);
     } finally {
       els.bankSelect.disabled = false;
     }
@@ -1064,6 +1081,14 @@
   }
 
   els.bankSelect.addEventListener("change", event => loadBundledBank(event.target.value));
+  els.bankSelect.addEventListener("focus", async event => {
+    const selected = event.target.value;
+    try {
+      await refreshBankList(selected);
+    } catch (error) {
+      updateBankUI(`Katalogliste konnte nicht geladen werden: ${error.message}`, false);
+    }
+  });
 
   els.startBtn.addEventListener("click", () => startQuiz());
   els.exportBtn.addEventListener("click", exportBank);
@@ -1093,6 +1118,9 @@
   });
 
   loadSavedBank();
+  refreshBankList().catch(error => {
+    updateBankUI(`PHP-Backend nicht erreichbar: ${error.message}`, false);
+  });
 })();
 </script>
 </body>
